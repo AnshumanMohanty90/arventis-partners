@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ScrollProvider from "./components/ScrollProvider";
-import LoadingScreen from "./components/LoadingScreen";
+import IntroManager from "./components/IntroManager";
 
 export const metadata: Metadata = {
   title: "Arventis & Partners | Strategy & Legal Counsel",
@@ -21,7 +21,7 @@ export default function RootLayout({
       className="h-full antialiased selection:bg-[#c5a880] selection:text-[#081226]"
     >
       <body className="min-h-full bg-[#081226] text-white flex flex-col font-sans">
-        <LoadingScreen />
+        <IntroManager />
         <ScrollProvider>
           {children}
         </ScrollProvider>

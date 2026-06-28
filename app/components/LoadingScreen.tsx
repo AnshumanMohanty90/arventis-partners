@@ -3,7 +3,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
-export default function LoadingScreen() {
+interface LoadingScreenProps {
+  onComplete?: () => void;
+}
+
+export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -46,6 +50,9 @@ export default function LoadingScreen() {
             setIsVisible(false);
             // Re-trigger Locomotive Scroll update if needed
             window.dispatchEvent(new Event('resize'));
+            if (onComplete) {
+              onComplete();
+            }
           },
         });
       },
@@ -102,7 +109,7 @@ export default function LoadingScreen() {
           ref={subtitleRef}
           className="font-sans text-xs md:text-sm tracking-[0.4em] text-[#c5a880] uppercase mt-6 opacity-0"
         >
-          Strategic Counsel & Global Advisory
+          Where Strategy Meets Standing 
         </p>
       </div>
     </div>

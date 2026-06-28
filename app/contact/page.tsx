@@ -71,9 +71,6 @@ export default function ContactPage() {
 
       {/* 1. HERO HEADER */}
       <section className="relative w-full  pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16 border-b border-white/5">
-        {/* Subtle grid pattern background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none opacity-30" />
-        
         <div className="max-w-7xl mx-auto relative z-10">
        
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-normal text-white mb-6">
