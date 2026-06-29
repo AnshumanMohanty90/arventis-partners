@@ -249,7 +249,7 @@ export default function LegalPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5 relative min-h-[380px] rounded-[1px] overflow-hidden shadow-xl border border-primary-navy/10 group scroll-fade-up">
             <Image
-              src="/suman.png"
+              src="/Suman.jpg"
               alt="Kumar Suman Headshot"
               fill
               className="object-contain object-center p-4 filter contrast-[1.05]"

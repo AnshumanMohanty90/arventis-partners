@@ -28,6 +28,15 @@ function RevealHeading({ children, className = "" }: { children: string; classNa
 export default function ContactPage() {
   const [reachOutFor, setReachOutFor] = useState<'Legal' | 'Consulting' | 'Both'>('Both');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    organisation: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
   const [activeOffice, setActiveOffice] = useState<'hyderabad' | 'lucknow' | 'cuttack' | 'shimla'>('hyderabad');
 
   const offices = [
@@ -113,9 +122,36 @@ export default function ContactPage() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsLoading(true);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          reachOutFor,
+        }),
+      });
+
+      const result = await res.json();
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({ name: '', organisation: '', email: '', phone: '', message: '' });
+      } else {
+        setErrorMessage(result.error || 'Failed to submit enquiry. Please try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      setErrorMessage('A network error occurred. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -176,6 +212,12 @@ export default function ContactPage() {
                       </p>
                     </div>
 
+                    {errorMessage && (
+                      <div className="p-3 bg-red-500/10 border border-red-500/30 text-red-700 text-xs rounded-[1px] font-sans">
+                        {errorMessage}
+                      </div>
+                    )}
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block font-sans text-[10px] tracking-[0.2em] uppercase text-primary-navy/60 mb-2 font-semibold">
@@ -184,6 +226,8 @@ export default function ContactPage() {
                         <input
                           required
                           type="text"
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className="w-full bg-white/60 backdrop-blur-sm border border-primary-navy/15 px-4 py-3 text-xs md:text-sm text-primary-navy placeholder:text-primary-navy/35 focus:bg-white focus:outline-none focus:border-primary-gold focus:shadow-sm transition-all duration-300 font-sans"
                           placeholder="Your name or entity"
                         />
@@ -195,6 +239,8 @@ export default function ContactPage() {
                         </label>
                         <input
                           type="text"
+                          value={formData.organisation}
+                          onChange={(e) => setFormData({ ...formData, organisation: e.target.value })}
                           className="w-full bg-white/60 backdrop-blur-sm border border-primary-navy/15 px-4 py-3 text-xs md:text-sm text-primary-navy placeholder:text-primary-navy/35 focus:bg-white focus:outline-none focus:border-primary-gold focus:shadow-sm transition-all duration-300 font-sans"
                           placeholder="Organisation name"
                         />
@@ -209,6 +255,8 @@ export default function ContactPage() {
                         <input
                           required
                           type="email"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           className="w-full bg-white/60 backdrop-blur-sm border border-primary-navy/15 px-4 py-3 text-xs md:text-sm text-primary-navy placeholder:text-primary-navy/35 focus:bg-white focus:outline-none focus:border-primary-gold focus:shadow-sm transition-all duration-300 font-sans"
                           placeholder="email@domain.com"
                         />
@@ -221,6 +269,8 @@ export default function ContactPage() {
                         <input
                           required
                           type="tel"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           className="w-full bg-white/60 backdrop-blur-sm border border-primary-navy/15 px-4 py-3 text-xs md:text-sm text-primary-navy placeholder:text-primary-navy/35 focus:bg-white focus:outline-none focus:border-primary-gold focus:shadow-sm transition-all duration-300 font-sans"
                           placeholder="+91 99000 00000"
                         />
@@ -257,6 +307,8 @@ export default function ContactPage() {
                       <textarea
                         required
                         rows={4}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="w-full bg-white/60 backdrop-blur-sm border border-primary-navy/15 px-4 py-3 text-xs md:text-sm text-primary-navy placeholder:text-primary-navy/35 focus:bg-white focus:outline-none focus:border-primary-gold focus:shadow-sm transition-all duration-300 font-sans resize-none"
                         placeholder="Please describe the parameters of your enquiry..."
                       />
@@ -264,9 +316,17 @@ export default function ContactPage() {
 
                     <button
                       type="submit"
-                      className="w-full bg-primary-navy hover:bg-primary-gold-dark text-white text-xs font-semibold tracking-[0.2em] uppercase py-4 transition-all duration-300 hover-target shadow-lg hover:shadow-xl"
+                      disabled={isLoading}
+                      className="w-full bg-primary-navy hover:bg-primary-gold-dark disabled:bg-primary-navy/60 text-white text-xs font-semibold tracking-[0.2em] uppercase py-4 transition-all duration-300 hover-target shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                     >
-                      Start the Conversation
+                      {isLoading ? (
+                        <>
+                          <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                          <span>Initiating Mandate...</span>
+                        </>
+                      ) : (
+                        <span>Start the Conversation</span>
+                      )}
                     </button>
                   </form>
                 )}

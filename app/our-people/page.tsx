@@ -183,7 +183,9 @@ export default function OurPeoplePage() {
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight text-white mb-6">
             <RevealHeading>OUR PEOPLE.</RevealHeading>
           </h1>
-        
+          <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-white/70 font-light leading-relaxed max-w-3xl transition-delay-300">
+            Distinguished advocates, senior strategists, and domain advisors united by surgical precision and an unyielding commitment to client success.
+          </p>
         </div>
       </section>
 

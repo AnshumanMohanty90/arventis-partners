@@ -94,37 +94,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* 2. NAVIGATION COLUMNS */}
+        {/* 2. SOCIAL MEDIA LINKS (IN PLACE OF OUR PEOPLE / SERVICES LINKS) */}
         <div className="pt-2">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-3xl font-sans text-sm md:text-base font-semibold text-primary-navy">
-            <div>
-              <Link href="/our-people" className="hover:text-primary-gold-dark transition-colors duration-300">
-                Our People
-              </Link>
-            </div>
-            <div>
-              <Link href="/services" className="hover:text-primary-gold-dark transition-colors duration-300">
-                Services
-              </Link>
-            </div>
-            <div>
-              <Link href="/contact#map" className="hover:text-primary-gold-dark transition-colors duration-300">
-                Global Footprint
-              </Link>
-            </div>
-            <div>
-              <Link href="/about" className="hover:text-primary-gold-dark transition-colors duration-300">
-                About us
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* 3. THIN DIVIDER */}
-        <div className="border-t border-primary-navy/15 pt-8" />
-
-        {/* 4. BOTTOM ROW: SOCIAL ICONS */}
-        <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <a
               href="https://linkedin.com"
@@ -170,10 +141,6 @@ const Footer = () => {
               <RssIcon className="w-4 h-4" />
             </a>
           </div>
-
-          <Link href="/contact" className="hover-target font-sans text-xs font-semibold uppercase tracking-wider text-primary-navy hover:text-primary-gold-dark transition-colors">
-            Contact Us &rarr;
-          </Link>
         </div>
 
       </div>
