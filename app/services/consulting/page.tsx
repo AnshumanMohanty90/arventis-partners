@@ -175,7 +175,7 @@ export default function ConsultingPage() {
         {/* Background Image Layer */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none z-0" 
-          style={{ backgroundImage: "url('/Buisness-bg.jpg')" }}
+          style={{ backgroundImage: "url('/arvBuisness-bg.jpg')" }}
         />
 
         <div className="max-w-7xl mx-auto relative z-10 space-y-8">

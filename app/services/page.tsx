@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { ArrowUpRight, MapPin } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ContactUs from '../components/ContactUs';
 
 // Custom component to reveal text word-by-word with a calming stagger
 function RevealHeading({ children, className = "" }: { children: string; className?: string }) {
@@ -82,7 +83,7 @@ export default function ServicesPage() {
           <div className="group bg-white border border-black/10 rounded-[2px] overflow-hidden shadow-2xl transition-all duration-500 flex flex-col min-h-[480px]">
             <div className="relative h-[240px] w-full overflow-hidden">
               <Image
-                src="/Buisness-bg.jpg"
+                src="/arvBuisness-bg.jpg"
                 alt="Arventis Consulting"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -113,7 +114,7 @@ export default function ServicesPage() {
           <div className="group bg-white border border-black/10 rounded-[2px] overflow-hidden shadow-2xl transition-all duration-500 flex flex-col min-h-[480px]">
             <div className="relative h-[240px] w-full overflow-hidden">
               <Image
-                src="/legal-bg.jpg"
+                src = "/arvlegal-bg.jpg"
                 alt="Arventis Legal"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -351,24 +352,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CONTACT CTA SECTION */}
-      <section className="relative w-full bg-white py-20 px-6 md:px-16 border-t border-black/10 text-center text-black z-20">
-        <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-black">
-            Let's Start the Conversation
-          </h2>
-          <p className="font-sans text-sm md:text-base text-black/70 font-light max-w-2xl mx-auto leading-relaxed">
-            Establish a direct partner relationship or initiate a mandate. Our strategy and legal practices operate under strict NDA protocols.
-          </p>
-          <div className="pt-4">
-            <Link
-              href="/contact-us"
-              className="inline-block bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-10 py-4 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
-            >
-              CONTACT US
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ContactUs />
 
       <Footer/>
     </div>

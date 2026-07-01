@@ -215,7 +215,7 @@ export default function LegalPage() {
         {/* Background Image Layer */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none z-0" 
-          style={{ backgroundImage: "url('/legal-bg.jpg')" }}
+          style={{ backgroundImage: "url('/arvlegal-bg.jpg')" }}
         />
 
         <div className="max-w-7xl mx-auto relative z-10 space-y-8">

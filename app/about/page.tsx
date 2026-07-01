@@ -3,10 +3,9 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { CheckCircle2 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import gsap from 'gsap';
+import ContactUs from '../components/ContactUs';
 
 // Custom component to reveal text word-by-word with a calming stagger
 function RevealHeading({ children, className = "" }: { children: string; className?: string }) {
@@ -27,97 +26,8 @@ function RevealHeading({ children, className = "" }: { children: string; classNa
   );
 }
 
-// Capsule element with direction-aware hover fill animations using GSAP
-function IndustryCapsule({ name }: { name: string }) {
-  const capsuleRef = useRef<HTMLDivElement>(null);
-  const fillRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLSpanElement>(null);
-
-  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = capsuleRef.current?.getBoundingClientRect();
-    if (!rect || !fillRef.current || !textRef.current) return;
-
-    // Entry coordinates relative to capsule
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    gsap.set(fillRef.current, {
-      left: x,
-      top: y,
-      width: 0,
-      height: 0,
-      borderRadius: '50%',
-      backgroundColor: '#fa0249',
-    });
-
-    const distance = Math.max(
-      Math.hypot(x, y),
-      Math.hypot(rect.width - x, y),
-      Math.hypot(x, rect.height - y),
-      Math.hypot(rect.width - x, rect.height - y)
-    );
-
-    gsap.to(fillRef.current, {
-      width: distance * 2,
-      height: distance * 2,
-      left: x - distance,
-      top: y - distance,
-      duration: 0.45,
-      ease: 'power2.out',
-    });
-
-    gsap.to(textRef.current, {
-      color: '#ffffff',
-      duration: 0.3,
-    });
-  };
-
-  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = capsuleRef.current?.getBoundingClientRect();
-    if (!rect || !fillRef.current || !textRef.current) return;
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    gsap.to(fillRef.current, {
-      width: 0,
-      height: 0,
-      left: x,
-      top: y,
-      duration: 0.45,
-      ease: 'power2.inOut',
-    });
-
-    gsap.to(textRef.current, {
-      color: '#fa0249',
-      duration: 0.3,
-    });
-  };
-
-  return (
-    <div
-      ref={capsuleRef}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="relative overflow-hidden border border-[#fa0249] rounded-full px-6 py-2.5 cursor-pointer select-none transition-all duration-300 bg-white"
-    >
-      <div
-        ref={fillRef}
-        className="absolute pointer-events-none z-0"
-        style={{ transform: 'translate(0, 0)' }}
-      />
-      <span
-        ref={textRef}
-        className="relative z-10 font-sans text-xs sm:text-sm font-semibold tracking-wider text-[#fa0249] transition-colors duration-300"
-      >
-        {name}
-      </span>
-    </div>
-  );
-}
-
 export default function AboutPage() {
-  // Intersection Observer for scroll-triggered animations
+  // Intersection Observer for scroll-triggered entrance animations
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -189,23 +99,12 @@ export default function AboutPage() {
       </section>
 
       {/* 1. FIRM OVERVIEW HEADER */}
-      <section className="relative w-full bg-white py-12 md:py-16 px-6 md:px-16 border-b border-black/10">
-        <div className="max-w-7xl mx-auto relative z-10 space-y-8">
-          
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight text-black max-w-5xl">
-            <span className="block"><RevealHeading>One Firm.</RevealHeading></span>
-            <span className="block"><RevealHeading>Two Disciplines.</RevealHeading></span>
-            <span className="block"><RevealHeading>No Translation Required.</RevealHeading></span>
-          </h1>
-
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            <div className="lg:col-span-7">
-              <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-black/70 font-light leading-relaxed transition-delay-300">
-                Legal authority and strategy consulting, working under a single engagement model.
-              </p>
-            </div>
-            <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-md scroll-fade-up transition-delay-400">
+      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 border-b border-black/10">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
+            
+            {/* Left Column: Image */}
+            <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-md scroll-fade-up order-2 lg:order-1">
               <Image
                 src="/strategic_foresight.png"
                 alt="Strategic Foresight"
@@ -214,21 +113,38 @@ export default function AboutPage() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>
+
+            {/* Right Column: Title and Subtitle */}
+            <div className="lg:col-span-7 lg:h-[380px] flex flex-col justify-between py-2 order-1 lg:order-2">
+              <div className="space-y-4">
+                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-black">
+                  <span className="block"><RevealHeading>One Firm. Two Disciplines.</RevealHeading></span>
+                  <span className="block"><RevealHeading>No Translation Required.</RevealHeading></span>
+                </h1>
+                <div className="h-[1px] w-24 bg-[#fa0249]" />
+              </div>
+
+              <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-black/70 font-light leading-relaxed transition-delay-300">
+                Legal authority and strategy consulting, working under a single engagement model.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* 2. THE FIRM & WHY ONE FIRM (SPLIT LAYOUT) */}
-      <section className="relative w-full bg-white py-12 md:py-16 px-6 md:px-16 text-black border-b border-black/10">
-        <div className="max-w-7xl mx-auto relative z-10 space-y-16 md:space-y-20">
+      {/* 2. THE FIRM & WHY ONE FIRM */}
+      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black border-b border-black/10">
+        <div className="max-w-7xl mx-auto relative z-10 space-y-24">
           
-          {/* THE FIRM */}
-          <div className="space-y-6">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-[1.15] text-black w-full scroll-fade-up">
-              Built So Clients Don't Have to Choose
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-              <div className="lg:col-span-7 space-y-6 font-sans text-sm sm:text-base md:text-lg text-black/75 leading-relaxed font-light scroll-fade-up transition-delay-200">
+          {/* THE FIRM (TEXT LEFT, IMAGE RIGHT) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
+            {/* Left Column: Text */}
+            <div className="lg:col-span-7 lg:h-[380px] flex flex-col justify-between py-2">
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-[1.15] text-black w-full scroll-fade-up">
+                Built So Clients Don't Have to Choose
+              </h2>
+              <div className="space-y-4 font-sans text-sm sm:text-base text-black/75 leading-relaxed font-light scroll-fade-up transition-delay-200">
                 <p className="text-black font-normal text-base sm:text-lg md:text-xl leading-snug">
                   The businesses that grow fastest have one thing in common: their legal judgment and commercial strategy stay aligned from the first conversation, not after a deal closes or a dispute comes up.
                 </p>
@@ -239,40 +155,45 @@ export default function AboutPage() {
                   Most businesses end up managing two relationships, one with their lawyers, one with their strategists, and spend time and money reconciling advice from each side. At Arventis, that's one relationship, working to one standard.
                 </p>
               </div>
-              <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up transition-delay-300">
-                <Image
-                  src="/Buisness-bg.jpg"
-                  alt="Business Strategy"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
-              </div>
+            </div>
+
+            {/* Right Column: Image */}
+            <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
+              <Image
+                src="/Buisness-bg.jpg"
+                alt="Business Strategy"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
           </div>
 
-          {/* WHY ONE FIRM */}
-          <div className="space-y-6 pt-12 border-t border-black/10">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-[1.15] text-black w-full scroll-fade-up">
-              What Happens When Advice Works in Isolation
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-              <div className="lg:col-span-7 space-y-6 font-sans text-sm sm:text-base md:text-lg text-black/75 leading-relaxed font-light scroll-fade-up transition-delay-200">
-                <p className="bg-white border border-black/10 border-l-2 border-l-[#fa0249] p-6 text-black/90 font-serif italic text-base md:text-xl">
+          {/* WHY ONE FIRM (IMAGE LEFT, TEXT RIGHT) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch pt-24 border-t border-black/10">
+            {/* Left Column: Image */}
+            <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
+              <Image
+                src="/legal-bg.jpg"
+                alt="Legal Practice"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
+            
+            {/* Right Column: Text */}
+            <div className="lg:col-span-7 lg:h-[380px] flex flex-col justify-between py-2 order-1 lg:order-2">
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-[1.15] text-black w-full scroll-fade-up">
+                What Happens When Advice Works in Isolation
+              </h2>
+              <div className="space-y-4 font-sans text-sm sm:text-base text-black/75 leading-relaxed font-light scroll-fade-up transition-delay-200">
+                <p className="bg-white border border-black/10 border-l-2 border-l-[#fa0249] p-4 text-black/90 font-serif italic text-base">
                   "Legal counsel without commercial context can be technically correct and still miss the point. Strategy without legal grounding can look solid on paper and fall apart the moment it meets a regulator or a contract dispute."
                 </p>
                 <p>
                   Every legal mandate at Arventis accounts for the client's broader commercial position. Every strategy engagement is shaped with legal risk already factored in. This isn't a referral between two firms, it's one team, working from one engagement model, with one point of accountability.
                 </p>
-              </div>
-              <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up transition-delay-300">
-                <Image
-                  src="/legal-bg.jpg"
-                  alt="Legal Practice"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
               </div>
             </div>
           </div>
@@ -280,43 +201,45 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. GLOBAL REACH */}
-      <section className="relative w-full bg-white py-12 md:py-16 px-6 md:px-16 text-black border-b border-black/10">
-        <div className="max-w-7xl mx-auto relative z-10 space-y-8">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-black scroll-fade-up">
-            Local depth. International fluency.
-          </h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-            <div className="lg:col-span-7 space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="scroll-fade-up bg-white p-6 border-t-2 border-t-[#fa0249] border-x border-b border-black/10 rounded-[1px] space-y-4 shadow-sm hover:bg-white/30 transition-all duration-300">
-                  <h3 className="font-serif text-xl font-medium text-black">
+      {/* 3. GLOBAL REACH (TEXT LEFT, IMAGE RIGHT) */}
+      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black border-b border-black/10">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
+            {/* Left Column: Text */}
+            <div className="lg:col-span-7 lg:min-h-[380px] flex flex-col justify-between py-2 space-y-6">
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-black scroll-fade-up">
+                Local depth. International fluency.
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="scroll-fade-up bg-white p-4 border-t-2 border-t-[#fa0249] border-x border-b border-black/10 rounded-[1px] space-y-2 shadow-sm">
+                  <h3 className="font-serif text-lg font-medium text-black">
                     Legal Practice Scope
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-black/75 leading-relaxed font-light">
+                  <p className="font-sans text-xs text-black/75 leading-relaxed font-light">
                     Our advocates practice across courts and regulatory bodies in Delhi, Himachal Pradesh, and at the national level, representing businesses, landowners, institutions, and individuals in litigation and public interest matters. Our practice covers litigation, arbitration, corporate advisory, employment, intellectual property, real estate, and constitutional law.
                   </p>
                 </div>
 
-                <div className="scroll-fade-up bg-white p-6 border-t-2 border-t-[#fa0249] border-x border-b border-black/10 rounded-[1px] space-y-4 shadow-sm hover:bg-white/30 transition-all duration-300 transition-delay-200">
-                  <h3 className="font-serif text-xl font-medium text-black">
+                <div className="scroll-fade-up bg-white p-4 border-t-2 border-t-[#fa0249] border-x border-b border-black/10 rounded-[1px] space-y-2 shadow-sm transition-delay-200">
+                  <h3 className="font-serif text-lg font-medium text-black">
                     Consulting Engagement Footprint
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-black/75 leading-relaxed font-light">
+                  <p className="font-sans text-xs text-black/75 leading-relaxed font-light">
                     Our consulting practice has delivered engagements in India, Saudi Arabia, the UAE, Kuwait, the UK, the US, and South Korea, spanning government, BFSI, EdTech, manufacturing, and consumer businesses. We work with companies at every stage, from early founders building their first commercial model to established mid-market businesses redesigning operations for their next phase of growth.
                   </p>
                 </div>
               </div>
 
-              <div className="p-6 bg-white border border-black/10 text-black rounded-[1px] scroll-fade-up">
-                <p className="font-sans text-xs sm:text-sm md:text-base font-light leading-relaxed tracking-wide">
+              <div className="p-4 bg-white border border-black/10 text-black rounded-[1px] scroll-fade-up">
+                <p className="font-sans text-xs sm:text-sm font-light leading-relaxed tracking-wide">
                   Whether you're a domestic business, a family managing an estate, or an international company entering India or the GCC, every engagement gets the same level of preparation and delivery.
                 </p>
               </div>
             </div>
 
-            <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up transition-delay-300">
+            {/* Right Column: Image */}
+            <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
               <Image
                 src="/global_reach_bg.png"
                 alt="Global Footprint"
@@ -329,16 +252,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. WHO WE WORK WITH */}
-      <section className="relative w-full bg-white py-12 md:py-16 px-6 md:px-16 text-black border-b border-black/10">
-        <div className="max-w-7xl mx-auto relative z-10 space-y-8">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-black scroll-fade-up">
-            Who We Work With
-          </h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-            <div className="lg:col-span-7 space-y-8">
-              <div className="space-y-4 scroll-fade-up">
+      {/* 4. WHO WE WORK WITH (IMAGE LEFT, TEXT RIGHT) */}
+      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black border-b border-black/10">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
+            {/* Left Column: Image */}
+            <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
+              <Image
+                src="/prof_services_bg.png"
+                alt="Professional Services"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
+            
+            {/* Right Column: Text */}
+            <div className="lg:col-span-7 lg:min-h-[380px] flex flex-col justify-between py-2 order-1 lg:order-2 space-y-6">
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-black scroll-fade-up">
+                Who We Work With
+              </h2>
+              
+              <div className="space-y-3 scroll-fade-up">
                 {[
                   'Founders and CXOs navigating regulatory complexity in India and internationally',
                   'Startups and growth-stage companies building commercial and legal infrastructure from the ground up',
@@ -348,64 +283,56 @@ export default function AboutPage() {
                   'Landowners, communities, and individuals in litigation and public interest matters',
                   'International companies entering India or the GCC who need local expertise and cross-border experience'
                 ].map((profile, idx) => (
-                  <div key={idx} className="flex items-start gap-4 p-4 bg-white border border-black/10 rounded-[1px] hover:border-[#fa0249]/40 transition-all duration-300">
-                    <span className="w-5 h-5 rounded-full border border-[#fa0249] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs text-[#fa0249] font-bold font-sans">&#10003;</span>
-                    <span className="font-sans text-xs sm:text-sm text-black/85 font-normal">
+                  <div key={idx} className="flex items-start gap-3 p-3 bg-white border border-black/10 rounded-[1px] hover:border-[#fa0249]/40 transition-all duration-300">
+                    <span className="w-4 h-4 rounded-full border border-[#fa0249] flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] text-[#fa0249] font-bold font-sans">&#10003;</span>
+                    <span className="font-sans text-xs text-black/85 font-normal">
                       {profile}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-white border border-black/10 text-black p-6 rounded-[1px] space-y-4 shadow-md scroll-fade-up transition-delay-200">
-                <h3 className="font-serif text-xl font-light">
-                  <span className="block">Across India,</span>
-                  <span className="block">the GCC, and Beyond.</span>
+              <div className="bg-white border border-black/10 text-black p-4 rounded-[1px] space-y-2 shadow-md scroll-fade-up transition-delay-200">
+                <h3 className="font-serif text-lg font-light">
+                  <span className="block">Across India, the GCC, and Beyond.</span>
                 </h3>
                 <div className="h-[1px] w-12 bg-[#fa0249]" />
-                <p className="font-sans text-xs sm:text-sm text-black/80 leading-relaxed font-light">
+                <p className="font-sans text-xs text-black/80 leading-relaxed font-light">
                   BFSI, government, EdTech, manufacturing, infrastructure, consumer, and professional services.
                 </p>
               </div>
-            </div>
-
-            <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up transition-delay-300">
-              <Image
-                src="/prof_services_bg.png"
-                alt="Professional Services"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. INDUSTRIES SECTION (SPLIT LAYOUT) */}
+      {/* 5. INDUSTRIES SECTION (TEXT LEFT, IMAGE RIGHT) */}
       <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black border-b border-black/10">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="scroll-fade-up">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-black">
-              Industries
-            </h2>
-            <div className="h-[1px] w-16 bg-[#fa0249] mt-4" />
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
+            {/* Left Column: Text */}
+            <div className="lg:col-span-8 lg:min-h-[380px] flex flex-col justify-between py-2 space-y-6">
+              <div className="scroll-fade-up">
+                <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-black">
+                  Industries
+                </h2>
+                <div className="h-[1px] w-16 bg-[#fa0249] mt-4" />
+              </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start scroll-fade-up transition-delay-200">
-            {/* Left Column (3 columns of industry text items with thin bottom border) */}
-            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4">
-              {industries.map((ind, idx) => (
-                <div key={idx} className="border-b border-black/10 pb-3 pt-1 hover:border-[#fa0249]/30 transition-all duration-300">
-                  <span className="font-sans text-xs sm:text-sm font-semibold tracking-wider text-[#fa0249] hover:text-black transition-colors duration-300 block">
-                    {ind}
-                  </span>
-                </div>
-              ))}
+              {/* 3 columns of industry text items with thin bottom border */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4 scroll-fade-up transition-delay-200">
+                {industries.map((ind, idx) => (
+                  <div key={idx} className="border-b border-black/10 pb-3 pt-1 hover:border-[#fa0249]/30 transition-all duration-300">
+                    <span className="font-sans text-xs sm:text-sm font-semibold tracking-wider text-[#fa0249] hover:text-black transition-colors duration-300 block">
+                      {ind}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Right Column (Sample industry image) */}
-            <div className="lg:col-span-4 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl">
+            {/* Right Column: Image */}
+            <div className="lg:col-span-4 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
               <Image
                 src="/manufacturing_bg.png"
                 alt="Industries sector mapping"
@@ -419,24 +346,7 @@ export default function AboutPage() {
       </section>
 
       {/* CONTACT CTA SECTION */}
-      <section className="relative w-full bg-white py-12 md:py-14 px-6 md:px-16 border-t border-black/10 text-center text-black z-20">
-        <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-black">
-            Let's Start the Conversation
-          </h2>
-          <p className="font-sans text-sm md:text-base text-black/70 font-light max-w-2xl mx-auto leading-relaxed">
-            Establish a direct partner relationship or initiate a mandate. Our strategy and legal practices operate under strict NDA protocols.
-          </p>
-          <div className="pt-4">
-            <Link
-              href="/contact-us"
-              className="inline-block bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-10 py-4 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
-            >
-              CONTACT US
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ContactUs />
 
       <Footer />
     </div>

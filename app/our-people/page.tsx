@@ -8,15 +8,27 @@ import { peopleData, Person } from './peopleData';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+// Custom component to reveal text word-by-word with a calming stagger
+function RevealHeading({ children, className = "" }: { children: string; className?: string }) {
+  const words = children.split(' ');
+  return (
+    <span className={`reveal-text flex flex-wrap gap-x-2 gap-y-1 ${className}`}>
+      {words.map((word, idx) => (
+        <span key={idx} className="reveal-text-line inline-block overflow-hidden">
+          <span
+            className="reveal-text-word"
+            style={{ transitionDelay: `${idx * 0.04}s` }}
+          >
+            {word}
+          </span>
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export default function OurPeoplePage() {
-  const [activeFilter, setActiveFilter] = useState('All');
   const [selectedPerson, setSelectedPerson] = useState<Person | null>(null);
-
-  const filters = ['All', 'Strategy Consulting', 'Legal', 'Advocates'];
-
-  const filteredPeople = activeFilter === 'All' 
-    ? peopleData 
-    : peopleData.filter(person => person.discipline === activeFilter);
 
   // Prevent scrolling on body when modal is open
   useEffect(() => {
@@ -30,76 +42,131 @@ export default function OurPeoplePage() {
     };
   }, [selectedPerson]);
 
+  // Scroll animations observer
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const revealElements = document.querySelectorAll('.scroll-fade-up, .reveal-text');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('scroll-fade-up')) {
+              entry.target.classList.add('scroll-fade-up-active');
+            } else if (entry.target.classList.contains('reveal-text')) {
+              entry.target.classList.add('reveal-text-active');
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
+
+    revealElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const foundingPartners = [
+    peopleData.find(p => p.id === 'kumar-suman'),
+    peopleData.find(p => p.id === 'anshuman')
+  ].filter(Boolean) as Person[];
+
+  const otherMembers = [
+    peopleData.find(p => p.id === 'yash-thakur'),
+    peopleData.find(p => p.id === 'sweta'),
+    peopleData.find(p => p.id === 'adarsh')
+  ].filter(Boolean) as Person[];
+
+  function getDomainPosition(person: Person) {
+    if (person.id === 'anshuman') {
+      return 'Strategy Consulting | Founding Partner';
+    }
+    if (person.id === 'kumar-suman') {
+      return 'Legal | Founding Partner';
+    }
+    if (person.id === 'yash-thakur') {
+      return 'Legal | Associate Counsel';
+    }
+    if (person.id === 'sweta') {
+      return 'Legal | Advocate';
+    }
+    if (person.id === 'adarsh') {
+      return 'Legal | Advocate';
+    }
+    return `${person.discipline} | ${person.badge || 'Member'}`;
+  }
+
+  const renderCard = (person: Person) => (
+    <div 
+      key={person.id} 
+      onClick={() => setSelectedPerson(person)}
+      className="bg-white rounded-none cursor-pointer group flex flex-col w-full border border-black/5 hover:shadow-xl transition-all duration-300 pb-4"
+    >
+      <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-50">
+        <Image
+          src={person.imagePath}
+          alt={person.name}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-all duration-700 ease-in-out scale-100 group-hover:scale-105"
+        />
+      </div>
+      <div className="px-4 pt-4 flex flex-col">
+        <h3 className="text-lg sm:text-2xl font-serif text-black font-semibold group-hover:text-[#fa0249] transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
+          {person.name}
+        </h3>
+        <p className="text-xs sm:text-sm font-sans text-black/60 mt-1 font-medium">
+          {getDomainPosition(person)}
+        </p>
+      </div>
+    </div>
+  );
+
   return (
     <main className="min-h-screen bg-white pb-0">
       <Navbar />
       {/* 1. Hero Section */}
-      <section className="bg-white text-black pt-28 md:pt-36 pb-14 px-6 md:px-12 lg:px-24 border-b border-black/10">
-        <div className="max-w-3xl mx-auto text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-serif font-light mb-6">One Team, Two Disciplines</h1>
-          <p className="text-lg md:text-xl text-black/70 leading-relaxed">
+      <section className="bg-[#000000] text-white pt-28 md:pt-36 pb-14 px-6 md:px-12 lg:px-24 border-b border-white/10">
+        <div className="max-w-3xl mx-auto text-left">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light mb-6 text-white uppercase tracking-tight">
+            <RevealHeading>OUR PEOPLE</RevealHeading>
+          </h1>
+          <p className="scroll-fade-up font-sans text-sm sm:text-base md:text-lg text-white/70 leading-relaxed max-w-2xl transition-delay-300">
             Arventis is led by founding partners across strategy and law, supported by senior advocates and experienced consultants with decades of experience. Every engagement is handled by someone who has done the work before, not handed off to whoever is available.
           </p>
         </div>
       </section>
 
-      {/* 2. Filter Bar */}
-      <div className="sticky top-0 z-20 bg-white/90 backdrop-blur-md py-4 px-6 md:px-12 border-b border-black/10">
-        <div className="max-w-6xl mx-auto flex flex-wrap gap-3 justify-center md:justify-start">
-          {filters.map(filter => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeFilter === filter 
-                  ? 'bg-[#fa0249] text-white shadow-md' 
-                  : 'bg-white text-black hover:bg-black/5 border border-black/10'
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
+      {/* 2. Team Sections */}
+      <section className="max-w-6xl mx-auto px-6 md:px-12 py-16 space-y-16">
+        {/* Founding Partners */}
+        <div className="space-y-8">
+          <h2 className="text-2xl md:text-3xl font-serif font-light text-black border-b border-black/10 pb-4">
+            Founding Partners
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
+            {foundingPartners.map(renderCard)}
+          </div>
         </div>
-      </div>
 
-      {/* 3. The Grid & Cards */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 pt-10 pb-16">
-        <div className="flex flex-wrap justify-center gap-12">
-          {filteredPeople.map(person => (
-            <div 
-              key={person.id} 
-              onClick={() => setSelectedPerson(person)}
-              className="bg-white rounded-none cursor-pointer group hover:shadow-2xl transition-all duration-500 flex flex-col h-full w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] border border-black/5"
-            >
-              <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-50">
-                <Image
-                  src={person.imagePath}
-                  alt={person.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-all duration-700 ease-in-out scale-100 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-8 flex flex-col flex-grow">
-                <span className="text-xs font-bold text-[#fa0249] uppercase tracking-widest mb-3">
-                  {person.discipline}
-                </span>
-                <h3 className="text-3xl font-serif text-black mb-2 group-hover:text-black/70 transition-colors">
-                  {person.name}
-                </h3>
-                <p className="text-sm font-medium text-black/60 mb-6">
-                  {person.title}
-                </p>
-                <p className="text-sm text-black/70 line-clamp-3 mt-auto leading-relaxed">
-                  {person.shortBio}
-                </p>
-              </div>
-            </div>
-          ))}
+        {/* Other Team Members */}
+        <div className="space-y-8 pt-8">
+          <h2 className="text-2xl md:text-3xl font-serif font-light text-black border-b border-black/10 pb-4">
+            Other Team Members
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
+            {otherMembers.map(renderCard)}
+          </div>
         </div>
       </section>
 
-      {/* 4. The Detail View (Modal) */}
+      {/* 3. The Detail View (Modal) */}
       {selectedPerson && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 lg:p-12 bg-black/75 backdrop-blur-sm animate-in fade-in duration-300">
           <div 
@@ -175,6 +242,7 @@ export default function OurPeoplePage() {
           </div>
         </div>
       )}
+
       {/* CONTACT CTA SECTION */}
       <section className="relative w-full bg-white py-20 px-6 md:px-16 border-t border-black/10 text-center text-black z-20">
         <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">

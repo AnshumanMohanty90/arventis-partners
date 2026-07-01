@@ -95,7 +95,7 @@ export const peopleData: Person[] = [
   {
     id: 'sweta',
     slug: 'sweta',
-    name: 'Sweta',
+    name: 'Sweta Verma',
     discipline: 'Advocates',
     category: 'Legal',
     title: 'ADVOCATE – HIGH COURT & ARBITRAL ADVOCACY',
