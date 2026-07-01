@@ -66,7 +66,7 @@ export default function FAQPage() {
     {
       category: 'PRACTICE ARCHITECTURE',
       question: 'How does Arventis Partners combine legal counsel and strategy consulting?',
-      answer: 'Arventis Partners operates as a unified dual-discipline firm. High-stakes commercial decisions — whether cross-border market entry, corporate restructuring, or M&A — carry both commercial growth and legal regulatory implications. Our senior partners stay in the room from strategic design to courtroom advocacy, ensuring seamless alignment without institutional hand-offs.'
+      answer: 'Arventis Partners operates as a unified dual-discipline firm. High\u2011stakes commercial decisions — whether cross-border market entry, corporate restructuring, or M&A — carry both commercial growth and legal regulatory implications. Our senior partners stay in the room from strategic design to courtroom advocacy, ensuring seamless alignment without institutional hand-offs.'
     },
     {
       category: 'OFFICES & FOOTPRINT',

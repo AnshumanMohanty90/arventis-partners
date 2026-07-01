@@ -57,29 +57,7 @@ export default function AboutPage() {
     return () => observer.disconnect();
   }, []);
 
-  const industries = [
-    'Advanced Manufacturing & Services',
-    'Aerospace & Defense',
-    'Agribusiness',
-    'Automotive',
-    'Aviation',
-    'Chemicals',
-    'Construction & Infrastructure',
-    'Consumer Products',
-    'Energy & Natural Resources',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Machinery & Equipment',
-    'Media & Entertainment',
-    'Mining',
-    'Oil & Gas',
-    'Paper & Packaging',
-    'Private Equity',
-    'Retail',
-    'Social Impact',
-    'Technology',
-    'Telecommunications'
-  ];
+  
 
   return (
     <div className="relative w-full overflow-hidden bg-white text-black min-h-screen">
@@ -306,44 +284,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. INDUSTRIES SECTION (TEXT LEFT, IMAGE RIGHT) */}
-      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black border-b border-black/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
-            {/* Left Column: Text */}
-            <div className="lg:col-span-8 lg:min-h-[380px] flex flex-col justify-between py-2 space-y-6">
-              <div className="scroll-fade-up">
-                <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-black">
-                  Industries
-                </h2>
-                <div className="h-[1px] w-16 bg-[#fa0249] mt-4" />
-              </div>
-
-              {/* 3 columns of industry text items with thin bottom border */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4 scroll-fade-up transition-delay-200">
-                {industries.map((ind, idx) => (
-                  <div key={idx} className="border-b border-black/10 pb-3 pt-1 hover:border-[#fa0249]/30 transition-all duration-300">
-                    <span className="font-sans text-xs sm:text-sm font-semibold tracking-wider text-[#fa0249] hover:text-black transition-colors duration-300 block">
-                      {ind}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Column: Image */}
-            <div className="lg:col-span-4 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
-              <Image
-                src="/manufacturing_bg.png"
-                alt="Industries sector mapping"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 30vw"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* CONTACT CTA SECTION */}
       <ContactUs />
