@@ -167,14 +167,14 @@ export default function ConsultingPage() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden bg-primary-navy text-white min-h-screen">
+    <div className="relative w-full overflow-hidden bg-white text-black min-h-screen">
       <Navbar />
 
       {/* Hero Section with Back Button */}
-      <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-16 border-b border-white/10 bg-[#081226]">
+      <section className="relative w-full pt-28 pb-14 md:pt-36 md:pb-20 px-6 md:px-16 border-b border-black/10 bg-white">
         {/* Background Image Layer */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-[0.15] pointer-events-none z-0" 
+          className="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none z-0" 
           style={{ backgroundImage: "url('/Buisness-bg.jpg')" }}
         />
 
@@ -183,7 +183,7 @@ export default function ConsultingPage() {
           <div>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 bg-white/5 hover:bg-primary-gold hover:text-primary-navy text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/10 px-5 py-3 transition-all duration-300 hover-target"
+              className="inline-flex items-center gap-2 bg-black/5 hover:bg-[#fa0249] hover:text-white text-black text-xs tracking-[0.2em] font-bold uppercase border border-black/10 px-5 py-3 transition-all duration-300 hover-target"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>BACK TO OUR SERVICES</span>
@@ -192,10 +192,10 @@ export default function ConsultingPage() {
 
           <div>
             
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight text-white mb-6 max-w-4xl">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight text-black mb-6 max-w-4xl">
               <RevealHeading>ARVENTIS CONSULTING</RevealHeading>
             </h1>
-            <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-white/70 font-light leading-relaxed max-w-3xl transition-delay-300">
+            <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-black/70 font-light leading-relaxed max-w-3xl transition-delay-300">
               Senior strategy advisory engineered for execution. Engineering sustainable growth, operating models, and market expansion across global jurisdictions.
             </p>
           </div>
@@ -205,13 +205,10 @@ export default function ConsultingPage() {
    
 
       {/* Practice Accordions Section */}
-      <section className="relative w-full bg-bg-warm py-24 md:py-32 px-6 md:px-16 text-primary-navy">
+      <section className="relative w-full bg-white py-12 md:py-16 px-6 md:px-16 text-black">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 scroll-fade-up">
-            <span className="font-sans text-xs tracking-[0.3em] uppercase text-primary-gold-dark font-bold block mb-4">
-              DETAILED CAPABILITIES
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-primary-navy">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-black">
               Consulting Practice Disciplines
             </h2>
           </div>
@@ -229,6 +226,26 @@ export default function ConsultingPage() {
                 theme="consulting"
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT CTA SECTION */}
+      <section className="relative w-full bg-white py-20 px-6 md:px-16 border-t border-black/10 text-center text-black z-20">
+        <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-black">
+            Let's Start the Conversation
+          </h2>
+          <p className="font-sans text-sm md:text-base text-black/70 font-light max-w-2xl mx-auto leading-relaxed">
+            Establish a direct partner relationship or initiate a mandate. Our strategy and legal practices operate under strict NDA protocols.
+          </p>
+          <div className="pt-4">
+            <Link
+              href="/contact-us"
+              className="inline-block bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-10 py-4 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
+            >
+              CONTACT US
+            </Link>
           </div>
         </div>
       </section>

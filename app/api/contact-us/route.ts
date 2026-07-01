@@ -15,11 +15,11 @@ export async function POST(request: Request) {
     // 1. Send email to internal team
     const internalHtmlContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 4px; background-color: #ffffff;">
-        <div style="background-color: #081226; color: #ffffff; padding: 20px; text-align: center; border-radius: 4px 4px 0 0;">
+        <div style="background-color: #000000; color: #ffffff; padding: 20px; text-align: center; border-radius: 4px 4px 0 0;">
           <h1 style="margin: 0; font-size: 20px; letter-spacing: 2px;">ARVENTIS PARTNERS</h1>
-          <p style="margin: 5px 0 0 0; font-style: italic; font-size: 12px; color: #c5a880;">New Client Mandate Enquiry</p>
+          <p style="margin: 5px 0 0 0; font-style: italic; font-size: 12px; color: #fa0249;">New Client Mandate Enquiry</p>
         </div>
-        <div style="padding: 20px; color: #081226; line-height: 1.6;">
+        <div style="padding: 20px; color: #000000; line-height: 1.6;">
           <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
             <tr>
               <td style="padding: 8px 0; font-weight: bold; width: 30%;">Name:</td>
@@ -38,8 +38,8 @@ export async function POST(request: Request) {
               <td style="padding: 8px 0;"><a href="tel:${phone}">${phone}</a></td>
             </tr>
           </table>
-          <div style="margin-top: 20px; padding: 15px; background-color: #faf6ee; border-left: 4px solid #c5a880; border-radius: 2px;">
-            <strong style="display: block; margin-bottom: 8px; color: #081226;">Enquiry Parameters / Message:</strong>
+          <div style="margin-top: 20px; padding: 15px; background-color: #ffffff; border-left: 4px solid #fa0249; border-radius: 2px;">
+            <strong style="display: block; margin-bottom: 8px; color: #000000;">Enquiry Parameters / Message:</strong>
             <p style="margin: 0; white-space: pre-wrap; font-size: 14px; color: #333333;">${message}</p>
           </div>
         </div>
@@ -52,11 +52,11 @@ export async function POST(request: Request) {
     // 2. Send "Thank You" email to the user
     const userHtmlContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 4px; background-color: #ffffff;">
-        <div style="background-color: #081226; color: #ffffff; padding: 20px; text-align: center; border-radius: 4px 4px 0 0;">
+        <div style="background-color: #000000; color: #ffffff; padding: 20px; text-align: center; border-radius: 4px 4px 0 0;">
           <h1 style="margin: 0; font-size: 20px; letter-spacing: 2px;">ARVENTIS PARTNERS</h1>
         </div>
-        <div style="padding: 30px 20px; color: #081226; line-height: 1.6;">
-          <h2 style="color: #081226; font-size: 18px; margin-bottom: 20px;">Thank You for Your Interest</h2>
+        <div style="padding: 30px 20px; color: #000000; line-height: 1.6;">
+          <h2 style="color: #000000; font-size: 18px; margin-bottom: 20px;">Thank You for Your Interest</h2>
           <p>Dear ${name},</p>
           <p>We have successfully received your inquiry. Thank you for considering Arventis Partners for your strategic and legal needs.</p>
           <p>Our team will review your message and a partner will be in touch with you shortly to discuss your mandate.</p>

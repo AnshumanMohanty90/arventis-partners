@@ -19,7 +19,7 @@ export default function IntroManager() {
   }, []);
 
   if (stage === 'checking') {
-    return <div className="fixed inset-0 bg-[#081226] z-[99999]" />;
+    return <div className="fixed inset-0 bg-[#000000] z-[99999]" />;
   }
 
   if (stage === 'done') {

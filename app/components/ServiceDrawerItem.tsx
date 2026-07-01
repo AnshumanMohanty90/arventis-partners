@@ -51,12 +51,12 @@ export default function ServiceDrawerItem({
       ref={containerRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group relative overflow-hidden bg-white border border-primary-navy/10 rounded-[1px] shadow-sm hover:shadow-md transition-all duration-300 scroll-fade-up"
+      className="group relative overflow-hidden bg-white border border-black/10 rounded-[1px] shadow-sm hover:shadow-md transition-all duration-300 scroll-fade-up"
     >
       {/* GSAP Hover Accent Bar */}
       <div
         ref={accentBarRef}
-        className="absolute left-0 top-0 bottom-0 w-1 origin-left pointer-events-none z-20 bg-primary-gold"
+        className="absolute left-0 top-0 bottom-0 w-1 origin-left pointer-events-none z-20 bg-[#fa0249]"
         style={{ transform: 'scaleX(0)' }}
       />
 
@@ -66,20 +66,18 @@ export default function ServiceDrawerItem({
         className="relative z-10 w-full p-6 sm:p-8 flex items-center justify-between text-left focus:outline-none cursor-pointer select-none hover:bg-slate-50/50 transition-colors duration-300"
       >
         <div className="space-y-1 pr-4">
-          <span className="font-sans text-[10px] sm:text-xs tracking-[0.25em] text-primary-gold-dark uppercase font-bold block">
-            PRACTICE CAPABILITY {num}
-          </span>
+         
           <h3
             ref={titleRef}
-            className="font-serif text-xl sm:text-2xl md:text-3xl font-medium tracking-wide text-primary-navy transition-colors duration-300"
+            className="font-serif text-xl sm:text-2xl md:text-3xl font-medium tracking-wide text-black transition-colors duration-300"
           >
             {title}
           </h3>
         </div>
 
         <div
-          className={`w-8 h-8 rounded-full border border-primary-navy/15 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-            isOpen ? 'rotate-180 bg-primary-navy text-white' : 'text-primary-navy group-hover:border-primary-navy/40'
+          className={`w-8 h-8 rounded-full border border-black/15 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+            isOpen ? 'rotate-180 bg-[#fa0249] text-white border-[#fa0249]' : 'text-black group-hover:border-black/40'
           }`}
         >
           <ChevronDown className="w-4 h-4" />
@@ -94,26 +92,26 @@ export default function ServiceDrawerItem({
         onClick={(e) => e.stopPropagation()}
         style={{ maxHeight: isOpen ? '1200px' : '0px' }}
       >
-        <div className="px-6 sm:px-8 pb-8 pt-4 border-t border-primary-navy/10 font-sans text-xs sm:text-sm text-primary-navy/80 leading-relaxed font-light">
+        <div className="px-6 sm:px-8 pb-8 pt-4 border-t border-black/10 font-sans text-xs sm:text-sm text-black/80 leading-relaxed font-light">
           {/* Description Paragraphs */}
           <div className="space-y-3 mb-6">
             {descriptions.map((desc, dIdx) => (
-              <p key={dIdx} className="text-primary-navy/85 text-sm sm:text-base leading-relaxed max-w-5xl">
+              <p key={dIdx} className="text-black/85 text-sm sm:text-base leading-relaxed max-w-5xl">
                 {desc}
               </p>
             ))}
           </div>
 
           {/* Scope of Practice Bullets */}
-          <div className="pt-4 border-t border-primary-navy/5 space-y-4">
-            <span className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase font-bold block text-primary-gold-dark">
+          <div className="pt-4 border-t border-black/5 space-y-4">
+            <span className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase font-bold block text-[#fa0249]">
               SCOPE OF PRACTICE
             </span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               {bullets.map((bullet, bIdx) => (
-                <div key={bIdx} className="flex items-start gap-3 p-2.5 bg-slate-50/70 border border-primary-navy/5 rounded-[1px]">
-                  <span className="w-1.5 h-1.5 rounded-full mt-2 bg-primary-gold-dark flex-shrink-0" />
-                  <span className="font-sans text-xs sm:text-sm font-medium text-primary-navy/90 leading-normal">
+                <div key={bIdx} className="flex items-start gap-3 p-2.5 bg-slate-50/70 border border-black/5 rounded-[1px]">
+                  <span className="w-1.5 h-1.5 rounded-full mt-2 bg-[#fa0249] flex-shrink-0" />
+                  <span className="font-sans text-xs sm:text-sm font-medium text-black/90 leading-normal">
                     {bullet}
                   </span>
                 </div>

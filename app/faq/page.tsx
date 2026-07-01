@@ -109,7 +109,7 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-slate-50 text-primary-navy min-h-screen font-sans">
+    <div className="relative w-full overflow-hidden bg-white text-black min-h-screen font-sans">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -118,50 +118,50 @@ export default function FAQPage() {
       <Navbar />
 
       {/* 1. HERO BANNER (LIGHT THEME) */}
-      <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16 border-b border-primary-navy/10">
+      <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16 border-b border-black/10">
         <div className="max-w-5xl mx-auto relative z-10 space-y-4">
-          <span className="font-sans text-xs tracking-[0.3em] uppercase text-primary-gold-dark font-bold block">
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#fa0249] font-bold block">
             KNOWLEDGE BASE & MANDATE GUIDANCE
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-primary-navy leading-tight">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-black leading-tight">
             <RevealHeading>FREQUENTLY ASKED QUESTIONS</RevealHeading>
           </h1>
-          <p className="scroll-fade-up font-sans text-sm sm:text-base text-primary-navy/70 font-light leading-relaxed max-w-2xl pt-2">
+          <p className="scroll-fade-up font-sans text-sm sm:text-base text-black/70 font-light leading-relaxed max-w-2xl pt-2">
             Clear insights into our dual-discipline practice model, office locations, confidentiality protocols, and mandate initiation workflows.
           </p>
         </div>
       </section>
 
       {/* 2. FAQ ACCORDION SECTION */}
-      <section className="relative w-full py-20 px-6 md:px-16 text-primary-navy">
+      <section className="relative w-full py-20 px-6 md:px-16 text-black">
         <div className="max-w-4xl mx-auto space-y-6">
           
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="scroll-fade-up bg-white border border-primary-navy/10 rounded-[1px] shadow-sm overflow-hidden transition-all duration-300"
+              className="scroll-fade-up bg-white border border-black/10 rounded-[1px] shadow-sm overflow-hidden transition-all duration-300"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 className="w-full text-left p-6 sm:p-8 flex items-center justify-between gap-4 focus:outline-none hover:bg-slate-50/50 transition-colors duration-300"
               >
                 <div className="space-y-1">
-                  <span className="font-sans text-[10px] tracking-[0.25em] text-primary-gold-dark uppercase font-bold block">
+                  <span className="font-sans text-[10px] tracking-[0.25em] text-[#fa0249] uppercase font-bold block">
                     {faq.category}
                   </span>
-                  <h3 className="font-serif text-lg sm:text-xl font-medium text-primary-navy pr-4">
+                  <h3 className="font-serif text-lg sm:text-xl font-medium text-black pr-4">
                     {faq.question}
                   </h3>
                 </div>
-                <div className={`w-8 h-8 rounded-full border border-primary-navy/15 flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
-                  openIndex === idx ? 'rotate-180 bg-primary-navy text-white' : 'text-primary-navy'
+                <div className={`w-8 h-8 rounded-full border border-black/15 flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
+                  openIndex === idx ? 'rotate-180 bg-[#fa0249] text-white border-[#fa0249]' : 'text-black'
                 }`}>
                   <ChevronDown size={18} />
                 </div>
               </button>
 
               {openIndex === idx && (
-                <div className="px-6 pb-8 sm:px-8 pt-0 border-t border-primary-navy/5 font-sans text-xs sm:text-sm text-primary-navy/80 leading-relaxed font-light mt-2 animate-fadeIn">
+                <div className="px-6 pb-8 sm:px-8 pt-0 border-t border-black/5 font-sans text-xs sm:text-sm text-black/80 leading-relaxed font-light mt-2 animate-fadeIn">
                   <p className="pt-4">{faq.answer}</p>
                 </div>
               )}
@@ -169,14 +169,14 @@ export default function FAQPage() {
           ))}
 
           {/* Direct CTA Box */}
-          <div className="scroll-fade-up mt-12 p-8 sm:p-10 bg-white border border-primary-gold/40 rounded-[1px] shadow-md flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="scroll-fade-up mt-12 p-8 sm:p-10 bg-white border border-[#fa0249]/40 rounded-[1px] shadow-md flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
-              <h4 className="font-serif text-2xl font-light text-primary-navy mb-2">Have a Specific Mandate Inquiry?</h4>
-              <p className="font-sans text-xs sm:text-sm text-primary-navy/70 font-light">Connect directly with our strategy practice or legal bench leads.</p>
+              <h4 className="font-serif text-2xl font-light text-black mb-2">Have a Specific Mandate Inquiry?</h4>
+              <p className="font-sans text-xs sm:text-sm text-black/70 font-light">Connect directly with our strategy practice or legal bench leads.</p>
             </div>
             <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-primary-navy hover:bg-primary-gold-dark text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-4 transition-colors duration-300 shadow-md self-start md:self-auto"
+              href="/contact-us"
+              className="inline-flex items-center gap-2 bg-[#fa0249] hover:bg-black text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-4 transition-colors duration-300 shadow-md self-start md:self-auto"
             >
               <span>Initiate Contact</span>
               <ArrowRight size={14} />

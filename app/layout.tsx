@@ -89,7 +89,7 @@ export default function RootLayout({
         "url": "https://arventispartners.com",
         "logo": "https://arventispartners.com/logo-extended.png",
         "description": "Elite dual-discipline firm combining strategy consulting and legal advocacy.",
-        "slogan": "Where Strategy meets consulting",
+        "slogan": "Where Strategy meets standing",
         "address": [
           {
             "@type": "PostalAddress",
@@ -142,7 +142,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased selection:bg-[#c5a880] selection:text-[#081226]"
+      className="h-full antialiased selection:bg-[#fa0249] selection:text-[#000000]"
     >
       <head>
         <link rel="icon" href="/favicon.png?v=4" type="image/png" sizes="any" />
@@ -153,7 +153,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full bg-[#081226] text-white flex flex-col font-sans">
+      <body className="min-h-full bg-[#000000] text-white flex flex-col font-sans">
         <IntroManager />
         <ScrollProvider>
           {children}

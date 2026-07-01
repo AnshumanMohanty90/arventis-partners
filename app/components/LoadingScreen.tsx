@@ -107,7 +107,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 bg-[#081226] z-[99999] flex flex-col items-center justify-center select-none p-6"
+      className="fixed inset-0 bg-[#000000] z-[99999] flex flex-col items-center justify-center select-none p-6"
     >
       <div className="text-center flex flex-col items-center justify-center w-full max-w-4xl mx-auto">
         
@@ -126,7 +126,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         {/* Desktop Title */}
         <h1
           ref={textRef}
-          className="hidden md:block font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-[0.25em] text-[#faf6ee] font-normal leading-normal uppercase whitespace-nowrap"
+          className="hidden md:block font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-[0.25em] text-[#ffffff] font-normal leading-normal uppercase whitespace-nowrap"
         >
           ARVENTIS PARTNERS
         </h1>
@@ -134,9 +134,9 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         {/* Subtitle Tagline */}
         <p
           ref={subtitleRef}
-          className="font-sans text-xs md:text-sm tracking-[0.4em] text-[#c5a880] uppercase mt-4 md:mt-6 opacity-0 font-medium"
+          className="font-sans text-xs md:text-sm tracking-[0.4em] text-[#fa0249] uppercase mt-4 md:mt-6 opacity-0 font-medium"
         >
-          Where Strategy Meets Consulting
+          Where Strategy Meets Standing
         </p>
       </div>
     </div>

@@ -30,15 +30,15 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
   if (!isMounted || !isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[99990] bg-[#081226]/90 text-white backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 md:p-10 select-none animate-slide-fade-in-up">
+    <div className="fixed inset-0 z-[99990] bg-[#000000]/90 text-white backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 md:p-10 select-none animate-slide-fade-in-up">
       {/* Main Premium Card */}
-      <div className="relative z-10 max-w-2xl w-full bg-[#081226] border border-[#c5a880]/30 shadow-2xl p-6 sm:p-8 md:p-12 text-white overflow-hidden">
+      <div className="relative z-10 max-w-2xl w-full bg-[#000000] border border-[#fa0249]/30 shadow-2xl p-6 sm:p-8 md:p-12 text-white overflow-hidden">
         
 
         {/* Header */}
         <div className="flex items-center gap-4 mb-6">
           <div>
-            <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#c5a880] font-bold block mb-1">
+            <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#fa0249] font-bold block mb-1">
               REGULATORY COMPLIANCE & DISCLAIMER
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-light tracking-tight text-white">
@@ -71,8 +71,8 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
               onClick={() => setIsChecked(!isChecked)}
               className={`w-5 h-5 rounded-[2px] border transition-all duration-300 flex items-center justify-center flex-shrink-0 ${
                 isChecked
-                  ? 'bg-[#c5a880] border-[#c5a880] text-[#081226]'
-                  : 'border-white/30 group-hover:border-[#c5a880] bg-white/5'
+                  ? 'bg-[#fa0249] border-[#fa0249] text-[#000000]'
+                  : 'border-white/30 group-hover:border-[#fa0249] bg-white/5'
               }`}
             >
               {isChecked && <Check className="w-3.5 h-3.5 stroke-[3]" />}
@@ -87,7 +87,7 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
             disabled={!isChecked}
             className={`w-full py-4 text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300 ${
               isChecked
-                ? 'bg-[#c5a880] hover:bg-[#b59870] text-[#081226] shadow-lg shadow-[#c5a880]/20 cursor-pointer'
+                ? 'bg-[#fa0249] hover:bg-[#fa0249] text-[#000000] shadow-lg shadow-[#fa0249]/20 cursor-pointer'
                 : 'bg-white/10 text-white/40 cursor-not-allowed border border-white/5'
             }`}
           >
