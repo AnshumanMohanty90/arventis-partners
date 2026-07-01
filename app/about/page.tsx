@@ -151,7 +151,7 @@ export default function AboutPage() {
             {/* Right Column: Image */}
             <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
               <Image
-                src="/Buisness-bg.jpg"
+                src="/arvBuisness-bg.jpg"
                 alt="Business Strategy"
                 fill
                 className="object-cover"
@@ -165,7 +165,7 @@ export default function AboutPage() {
             {/* Left Column: Image */}
             <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
               <Image
-                src="/legal-bg.jpg"
+                src="/arvlegal-bg.jpg"
                 alt="Legal Practice"
                 fill
                 className="object-cover"
