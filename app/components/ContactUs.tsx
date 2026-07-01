@@ -9,7 +9,7 @@ const ContactUs = () => {
             Let's Start the Conversation
           </h2>
           <p className="font-sans text-sm md:text-base text-black/70 font-light max-w-2xl mx-auto leading-relaxed">
-            Establish a direct partner relationship or initiate a mandate. Our strategy and legal practices operate under strict NDA protocols.
+            Establish a direct partner relationship or initiate a mandate. <br />Our strategy and legal practices operate under strict NDA protocols.
           </p>
           <div className="pt-4">
             <Link

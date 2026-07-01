@@ -280,7 +280,7 @@ export default function Home() {
       
 
       {/* 4. OVERVIEW SECTION (5 Items) */}
-      <section id="overview" className="relative w-full bg-white text-black pt-6 pb-12 md:pt-8 md:pb-16 px-6 md:px-16 border-b border-black/10 relative z-20">
+      <section id="overview" className="relative w-full bg-white text-black pt-6 pb-12 md:pt-8 md:pb-16 px-6 md:px-16 relative z-20">
         <div className="max-w-7xl mx-auto space-y-15">
           <div className="scroll-fade-up max-w-2xl">
            
@@ -292,7 +292,7 @@ export default function Home() {
       </section>
 
       {/* 5. DETAILED FEATURES */}
-      <section className="relative w-full bg-white text-black py-12 md:py-16 px-6 md:px-16 border-b border-black/10 relative z-20">
+      <section className="relative w-full bg-white text-black pt-4 pb-12 md:pt-8 md:pb-16 px-6 md:px-16 relative z-20">
         <div className="max-w-7xl mx-auto space-y-16 md:space-y-20">
           {/* Feature 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
@@ -360,7 +360,7 @@ export default function Home() {
       </section>
 
       {/* 6. WHERE TO START (Dual Cards) */}
-      <section className="relative w-full bg-[#ffffff] text-[#000000] py-12 md:py-16 px-6 md:px-16 relative z-20">
+      <section className="relative w-full bg-[#ffffff] text-[#000000] pt-4 pb-12 md:pt-8 md:pb-16 px-6 md:px-16 relative z-20">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="scroll-fade-up text-center max-w-3xl mx-auto space-y-4">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-[#000000]">
@@ -392,7 +392,7 @@ export default function Home() {
                     Growth strategy, GTM expansion, and operational work for organizations that need execution, not just plans.
                   </p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-6 flex justify-center w-full">
                   <Link
                     href="/services/consulting"
                     className="inline-flex items-center gap-3 bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
@@ -424,7 +424,7 @@ export default function Home() {
                     Commercial dispute resolution and advocacy for businesses that need counsel as sharp as their ambition.
                   </p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-6 flex justify-center w-full">
                   <Link
                     href="/services/legal"
                     className="inline-flex items-center gap-3 bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
@@ -440,7 +440,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT CTA SECTION */}
-      <section className="relative w-full bg-[#fa0249] py-10 md:py-12 px-6 md:px-16 border-t border-black/10 text-center text-black z-20">
+      <section className="relative w-full bg-[#fa0249] py-10 md:py-12 px-6 md:px-16 text-center text-black z-20">
         <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-black">
             Let's Start the Conversation

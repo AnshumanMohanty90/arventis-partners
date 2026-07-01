@@ -91,8 +91,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* QUOTE HEADLINE */}
+      <section className="relative w-full bg-white pt-16 md:pt-24 pb-8 md:pb-12 px-6 md:px-16 text-center">
+        <div className="max-w-4xl mx-auto scroll-fade-up">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light leading-snug text-black">
+            "Whether you're a domestic business, a family managing an estate, or an international company entering India or the GCC, every engagement gets the same level of preparation and delivery."
+          </h2>
+        </div>
+      </section>
+
       {/* 1. FIRM OVERVIEW HEADER */}
-      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 border-b border-black/10">
+      <section className="relative w-full bg-white py-8 md:py-12 px-6 md:px-16">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             
@@ -127,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. THE FIRM & WHY ONE FIRM */}
-      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black border-b border-black/10">
+      <section className="relative w-full bg-white py-8 md:py-12 px-6 md:px-16 text-black">
         <div className="max-w-7xl mx-auto relative z-10 space-y-24">
           
           {/* THE FIRM (TEXT LEFT, IMAGE RIGHT) */}
@@ -161,7 +170,7 @@ export default function AboutPage() {
           </div>
 
           {/* WHY ONE FIRM (IMAGE LEFT, TEXT RIGHT) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch pt-24 border-t border-black/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Image */}
             <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
               <Image
@@ -193,7 +202,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. GLOBAL REACH (TEXT LEFT, IMAGE RIGHT) */}
-      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black border-b border-black/10">
+      <section className="relative w-full bg-white py-8 md:py-12 px-6 md:px-16 text-black">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Text */}
@@ -222,11 +231,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="p-4 bg-white border border-black/10 text-black rounded-[1px] scroll-fade-up">
-                <p className="font-sans text-xs sm:text-sm font-light leading-relaxed tracking-wide">
-                  Whether you're a domestic business, a family managing an estate, or an international company entering India or the GCC, every engagement gets the same level of preparation and delivery.
-                </p>
-              </div>
+
             </div>
 
             {/* Right Column: Image */}
@@ -244,7 +249,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. WHO WE WORK WITH (IMAGE LEFT, TEXT RIGHT) */}
-      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black border-b border-black/10">
+      <section className="relative w-full bg-white pt-8 md:pt-12 pb-16 md:pb-24 px-6 md:px-16 text-black">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Image */}

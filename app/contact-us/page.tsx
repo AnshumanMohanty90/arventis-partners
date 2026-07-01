@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { countryCodes } from './countryCodes';
 
 // Custom component to reveal text word-by-word with a calming stagger
 function RevealHeading({ children, className = "" }: { children: string; className?: string }) {
@@ -33,10 +34,13 @@ export default function ContactUsPage() {
   
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
+    countryCode: '+91',
     organisation: '',
     message: '',
   });
@@ -93,7 +97,7 @@ export default function ContactUsPage() {
           name: formData.name,
           email: formData.email,
           organisation: formData.organisation || 'Not Specified',
-          phone: formData.phone,
+          phone: `${formData.countryCode} ${formData.phone}`,
           message: `Service of Interest: ${serviceInterest}\n\nEnquiry details:\n${formData.message || 'No custom message provided.'}`,
           captchaToken
         }),
@@ -127,8 +131,8 @@ export default function ContactUsPage() {
         
         {/* Animated transparent heading banner */}
         <div className="text-center pt-10 pb-6 w-full max-w-4xl mx-auto z-10">
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#000000] tracking-wide leading-tight px-4 flex justify-center text-center">
-            <RevealHeading>Thank You for Showing Your Interest</RevealHeading>
+          <h1 className="font-serif text-[clamp(12px,4vw,4rem)] font-bold text-[#000000] tracking-wide leading-tight px-2 flex justify-center text-center whitespace-nowrap overflow-visible">
+            <RevealHeading className="!flex-nowrap !gap-x-[1vw] sm:!gap-x-2">Thank You for Showing Your Interest</RevealHeading>
           </h1>
         </div>
 
@@ -156,9 +160,14 @@ export default function ContactUsPage() {
             </div>
           ) : (
             <div className="max-w-2xl mx-auto w-full space-y-8">
-              <p className="font-sans text-sm sm:text-base text-slate-600 leading-relaxed font-light text-center">
-                We work with ambitious leaders who want to define the future, not hide from it. Together, we achieve extraordinary outcomes.
-              </p>
+              <div className="space-y-2">
+                <p className="font-sans text-sm sm:text-base text-black leading-relaxed font-light text-center">
+                  We work with ambitious leaders who want to define the future, not hide from it. Together, we achieve extraordinary outcomes.
+                </p>
+                <p className="font-sans text-xs sm:text-sm text-black/80 text-center font-light italic">
+                  Required fields are marked with an asterisk (<span className="text-[#fa0249]">*</span>).
+                </p>
+              </div>
 
               {errorMessage && (
                 <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-sm rounded-[1px] font-sans">
@@ -205,15 +214,28 @@ export default function ContactUsPage() {
                   <label htmlFor="phone" className="block font-sans text-xs uppercase tracking-widest text-[#000000] font-bold mb-2">
                     Phone Number <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    id="phone"
-                    required
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-white border border-black/20 px-4 py-3 text-sm text-[#000000] placeholder:text-slate-400 focus:outline-none focus:border-[#fa0249] transition-all duration-300 font-sans rounded-[1px]"
-                    placeholder="Your phone number"
-                  />
+                  <div className="flex w-full">
+                    <select
+                      value={formData.countryCode}
+                      onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
+                      className="bg-gray-50 border border-r-0 border-black/20 px-3 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#fa0249] transition-all duration-300 font-sans rounded-l-[1px] w-[120px] cursor-pointer"
+                    >
+                      {countryCodes.map((c, i) => (
+                        <option key={i} value={c.code}>
+                          {c.code} ({c.name})
+                        </option>
+                      ))}
+                    </select>
+                    <input
+                      id="phone"
+                      required
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="flex-1 w-full bg-white border border-black/20 px-4 py-3 text-sm text-[#000000] placeholder:text-slate-400 focus:outline-none focus:border-[#fa0249] transition-all duration-300 font-sans rounded-r-[1px]"
+                      placeholder="Your phone number"
+                    />
+                  </div>
                 </div>
 
                 {/* Organization field */}
@@ -257,16 +279,39 @@ export default function ContactUsPage() {
                 {/* Custom Message field */}
                 <div>
                   <label htmlFor="message" className="block font-sans text-xs uppercase tracking-widest text-[#000000] font-bold mb-2">
-                    Custom Message
+                    Custom Message <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="message"
+                    required
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full bg-white border border-black/20 px-4 py-3 text-sm text-[#000000] placeholder:text-slate-400 focus:outline-none focus:border-[#fa0249] transition-all duration-300 font-sans resize-none rounded-[1px]"
                     placeholder="Please describe your parameters of enquiry"
                   />
+                </div>
+
+                {/* Terms and Conditions */}
+                <div className="flex items-start gap-3 mt-4 mb-6">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    required
+                    checked={agreedToTerms}
+                    onChange={(e) => setAgreedToTerms(e.target.checked)}
+                    className="mt-1 w-4 h-4 text-[#fa0249] border-black/20 rounded focus:ring-[#fa0249] cursor-pointer"
+                  />
+                  <label htmlFor="terms" className="font-sans text-sm text-black/75 leading-relaxed">
+                    I agree to the{' '}
+                    <a href="/terms" className="text-black underline hover:text-[#fa0249] transition-colors duration-300">
+                      term and condition
+                    </a>
+                    {' '}and{' '}
+                    <a href="/privacy" className="text-black underline hover:text-[#fa0249] transition-colors duration-300">
+                      privacy policy
+                    </a>.
+                  </label>
                 </div>
 
                 {/* ReCAPTCHA */}
@@ -280,20 +325,22 @@ export default function ContactUsPage() {
                 </div>
 
                 {/* Submit button */}
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full bg-[#fa0249] hover:bg-[#000000] disabled:bg-[#fa0249]/50 text-white text-xs font-bold tracking-[0.2em] uppercase py-4 transition-all duration-300 rounded-[1px] shadow-md flex items-center justify-center gap-2"
-                >
-                  {isLoading ? (
-                    <>
-                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      <span>SENDING...</span>
-                    </>
-                  ) : (
-                    <span>CONTACT US</span>
-                  )}
-                </button>
+                <div className="flex justify-center pt-2">
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full sm:w-auto px-16 bg-[#fa0249] hover:bg-[#000000] disabled:bg-[#fa0249]/50 text-white text-xs font-bold tracking-[0.2em] uppercase py-4 transition-all duration-300 rounded-[1px] shadow-md flex items-center justify-center gap-2"
+                  >
+                    {isLoading ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <span>SENDING...</span>
+                      </>
+                    ) : (
+                      <span>CONTACT US</span>
+                    )}
+                  </button>
+                </div>
 
               </form>
             </div>

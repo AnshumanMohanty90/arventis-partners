@@ -87,22 +87,29 @@ export default function OurPeoplePage() {
   ].filter(Boolean) as Person[];
 
   function getDomainPosition(person: Person) {
+    let positionText = '';
     if (person.id === 'anshuman') {
-      return 'Strategy Consulting | Founding Partner';
+      positionText = 'Strategy Consulting | Founding Partner';
+    } else if (person.id === 'suman-thakur') {
+      positionText = 'Legal | Founding Partner';
+    } else if (person.id === 'yash-thakur') {
+      positionText = 'Legal | Associate Counsel';
+    } else if (person.id === 'sweta' || person.id === 'adarsh') {
+      positionText = 'Legal | Advocate';
+    } else {
+      positionText = `${person.discipline} | ${person.badge || 'Member'}`;
     }
-    if (person.id === 'suman-thakur') {
-      return 'Legal | Founding Partner';
+
+    const parts = positionText.split(' | ');
+    if (parts.length === 2) {
+      return (
+        <>
+          {parts[0]} | <br />
+          {parts[1]}
+        </>
+      );
     }
-    if (person.id === 'yash-thakur') {
-      return 'Legal | Associate Counsel';
-    }
-    if (person.id === 'sweta') {
-      return 'Legal | Advocate';
-    }
-    if (person.id === 'adarsh') {
-      return 'Legal | Advocate';
-    }
-    return `${person.discipline} | ${person.badge || 'Member'}`;
+    return positionText;
   }
 
   const renderCard = (person: Person) => (
@@ -120,11 +127,11 @@ export default function OurPeoplePage() {
           className="object-cover transition-all duration-700 ease-in-out scale-100 group-hover:scale-105"
         />
       </div>
-      <div className="px-4 pt-4 flex flex-col">
-        <h3 className="text-lg sm:text-xl font-serif text-black font-semibold group-hover:text-[#fa0249] transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
+      <div className="px-4 pt-6 flex flex-col items-center text-center w-full">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-serif text-black font-semibold group-hover:text-[#fa0249] transition-colors w-full leading-tight">
           {person.name}
         </h3>
-        <p className="text-xs sm:text-sm font-sans text-black/60 mt-1 font-medium">
+        <p className="text-xs sm:text-sm md:text-base font-sans text-black/60 mt-2 font-medium w-full">
           {getDomainPosition(person)}
         </p>
       </div>
@@ -156,35 +163,35 @@ export default function OurPeoplePage() {
             <RevealHeading>OUR PEOPLE</RevealHeading>
           </h1>
           <p className="scroll-fade-up font-sans text-sm sm:text-base md:text-lg text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            A bench of senior strategists and Supreme Court advocates drawn from the highest tiers of their respective disciplines.
+            A bench of senior strategists and Supreme Court advocates <br className="hidden sm:block" /> drawn from the highest tiers of their respective disciplines.
           </p>
         </div>
       </section>
 
       {/* 2. Team Sections */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 py-16 space-y-16">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 space-y-20">
         {/* Founding Partners */}
-        <div className="space-y-8">
+        <div className="space-y-12">
           <div className="relative flex flex-col items-center justify-center pb-6 scroll-fade-up">
             <h2 className="text-2xl md:text-3xl font-serif font-light text-black text-center">
               Founding Partners
             </h2>
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vw] h-[2px] bg-gradient-to-r from-transparent via-[#fa0249] to-transparent opacity-90" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-2xl mx-auto">
             {foundingPartners.map(renderCard)}
           </div>
         </div>
 
         {/* Other Team Members */}
-        <div className="space-y-8 pt-8">
+        <div className="space-y-12 pt-12">
           <div className="relative flex flex-col items-center justify-center pb-6 scroll-fade-up">
             <h2 className="text-2xl md:text-3xl font-serif font-light text-black text-center">
-              Other Team Members
+              Team
             </h2>
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vw] h-[2px] bg-gradient-to-r from-transparent via-[#fa0249] to-transparent opacity-90" />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 max-w-4xl mx-auto">
             {otherMembers.map(renderCard)}
           </div>
         </div>
@@ -216,10 +223,11 @@ export default function OurPeoplePage() {
                     src={selectedPerson.imagePath}
                     alt={selectedPerson.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, 30vw"
                     className="object-cover"
                   />
                 </div>
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-serif text-black mb-1 whitespace-nowrap tracking-tight leading-none overflow-hidden text-ellipsis">{selectedPerson.name}</h2>
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-serif text-black mb-1 tracking-tight leading-snug">{selectedPerson.name}</h2>
                 <div className="mb-6 space-y-1 mt-2">
                   <p className="text-black/80 font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.title}</p>
                   {selectedPerson.badge && <p className="text-[#fa0249] font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.badge}</p>}
@@ -230,10 +238,7 @@ export default function OurPeoplePage() {
 
               {/* Right Column */}
               <div className="w-full md:w-[65%] lg:w-[70%] p-6 md:p-8 pr-8 md:pr-12 flex flex-col justify-start bg-white">
-                <p className="text-xl md:text-2xl font-serif text-black leading-snug mb-4 font-medium mt-1">
-                  "{selectedPerson.shortBio}"
-                </p>
-                <div className="space-y-4 mb-6">
+                <div className="space-y-4 mb-4">
                   {selectedPerson.bio.map((paragraph, idx) => (
                     <p key={idx} className="text-sm md:text-[15px] text-black/75 leading-relaxed">
                       {paragraph}
@@ -242,8 +247,8 @@ export default function OurPeoplePage() {
                 </div>
 
                 {selectedPerson.customSectionTitle && selectedPerson.customSectionContent && (
-                  <div className="mb-6">
-                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3 border-b border-black/10 pb-2">
+                  <div className="mb-4">
+                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
                       {selectedPerson.customSectionTitle}
                     </h4>
                     <div className="space-y-3 text-sm md:text-[15px] text-black/75 leading-relaxed">
@@ -254,15 +259,14 @@ export default function OurPeoplePage() {
                   </div>
                 )}
 
-                <div className="mt-8 pt-6 border-t border-black/5">
+                <div className="mt-4 pt-2">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Left Data Column */}
                     <div className="space-y-6">
                       <div>
-                        <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3 border-b border-black/10 pb-2">
-                          Experience & Geographies
+                        <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
+                          Geographies
                         </h4>
-                        <p className="text-sm font-medium text-black">{selectedPerson.experience}</p>
                         {selectedPerson.geographies && selectedPerson.geographies.length > 0 && (
                           <ul className="mt-2 space-y-1.5">
                             {selectedPerson.geographies.map((geo, idx) => (
@@ -274,22 +278,13 @@ export default function OurPeoplePage() {
                           </ul>
                         )}
                       </div>
-                      
-                      {selectedPerson.credentials && (
-                        <div>
-                          <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3 border-b border-black/10 pb-2">
-                            Credentials
-                          </h4>
-                          <p className="text-xs md:text-sm font-medium text-black/80 leading-relaxed">{selectedPerson.credentials}</p>
-                        </div>
-                      )}
                     </div>
 
                     {/* Right Data Column */}
                     <div className="space-y-6">
                       {selectedPerson.clientList && selectedPerson.clientList.length > 0 && (
                         <div>
-                          <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3 border-b border-black/10 pb-2">
+                          <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
                             Representative Clients
                           </h4>
                           <div className="flex flex-wrap gap-2">
@@ -303,7 +298,7 @@ export default function OurPeoplePage() {
                       )}
 
                       <div>
-                        <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3 border-b border-black/10 pb-2">
+                        <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
                           Practice Highlights
                         </h4>
                         <ul className="space-y-3">
