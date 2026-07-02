@@ -51,7 +51,7 @@ export default function Home() {
       primaryBtnHref: "/about",
     },
     {
-      navTitle: "Strategy Built for Execution.",
+      navTitle: "Strategy Built for Execution",
       title: "Strategy Execution",
       subtitle: "We stay in the room until the strategy becomes the result,\nnot just a deck.",
       image: "/hero strategy.png",
