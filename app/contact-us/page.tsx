@@ -5,12 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { countryCodes } from './countryCodes';
-import dynamic from 'next/dynamic';
-
-const Map = dynamic(() => import('../components/Map'), {
-  ssr: false,
-  loading: () => <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-black">Loading Interactive Map...</div>
-});
+import { MapPin } from 'lucide-react';
 
 // Custom component to reveal text word-by-word with a calming stagger
 function RevealHeading({ children, className = "" }: { children: string; className?: string }) {
@@ -31,93 +26,20 @@ function RevealHeading({ children, className = "" }: { children: string; classNa
   );
 }
 
-const cities = [
-  {
-    name: "Delhi",
-    address: "HT House, Kasturba Gandhi Marg, Connaught Place",
-    region: "Delhi - 110001",
-    country: "India",
-    phone: "+91 (11) 4355 9000",
-    coords: [28.6278, 77.2238] as [number, number],
-    gmaps: "https://maps.google.com/?q=HT+House,+Kasturba+Gandhi+Marg,+Connaught+Place,+New+Delhi"
-  },
-  {
-    name: "Shimla",
-    address: "Anoop Sood Building, Paras Dass Garden, Near CPRI",
-    region: "Himachal Pradesh - 171001",
-    country: "India",
-    phone: "+91 (177) 265 7789",
-    coords: [31.1030, 77.1852] as [number, number],
-    gmaps: "https://maps.google.com/?q=Anoop+Sood+Building,+Paras+Dass+Garden,+Near+CPRI,+Shimla"
-  },
-  {
-    name: "Lucknow",
-    address: "110, First Floor Durgma Tower, Lalbagh",
-    region: "Uttar Pradesh - 226001",
-    country: "India",
-    phone: "+91 (522) 400 1289",
-    coords: [26.8450, 80.9416] as [number, number],
-    gmaps: "https://maps.google.com/?q=110,+First+Floor+Durgma+Tower,+Lalbagh,+Lucknow"
-  },
-  {
-    name: "Chandigarh",
-    address: "Elante Offices, Industrial & Business Park Phase - I",
-    region: "Chandigarh - 160002",
-    country: "India",
-    phone: "+91 (172) 455 6000",
-    coords: [30.7061, 76.8013] as [number, number],
-    gmaps: "https://maps.google.com/?q=Elante+Offices,+Industrial+Area+Phase+I,+Chandigarh"
-  },
-  {
-    name: "Hyderabad",
-    address: "House No 8-3-A/413, Krishna Nagar, Yusufguda",
-    region: "Telangana - 500045",
-    country: "India",
-    phone: "+91 (40) 4855 2499",
-    coords: [17.4332, 78.4312] as [number, number],
-    gmaps: "https://maps.google.com/?q=House+No+8-3-A/413,+Krishna+Nagar,+Yusufguda,+Hyderabad"
-  },
-  {
-    name: "Cuttack",
-    address: "Plot No C/71, Sector 8, CDA",
-    region: "Odisha - 753014",
-    country: "India",
-    phone: "+91 (671) 233 4567",
-    coords: [20.4646, 85.8458] as [number, number],
-    gmaps: "https://maps.google.com/?q=Plot+No+C/71,+Sector+8,+CDA,+Cuttack"
-  },
-  {
-    name: "Kolkata",
-    address: "Bengal Intelligent Park, Sector V, Salt Lake",
-    region: "West Bengal - 700091",
-    country: "India",
-    phone: "+91 (33) 2357 8000",
-    coords: [22.5735, 88.4331] as [number, number],
-    gmaps: "https://maps.google.com/?q=Bengal+Intelligent+Park,+Sector+V,+Salt+Lake,+Kolkata"
-  },
-  {
-    name: "Mumbai",
-    address: "Maker Chambers VI, Nariman Point",
-    region: "Maharashtra - 400021",
-    country: "India",
-    phone: "+91 (22) 6644 8000",
-    coords: [18.9272, 72.8229] as [number, number],
-    gmaps: "https://maps.google.com/?q=Maker+Chambers+VI,+Nariman+Point,+Mumbai"
-  },
-  {
-    name: "Pune",
-    address: "ICC Trade Tower, Senapati Bapat Road",
-    region: "Maharashtra - 411016",
-    country: "India",
-    phone: "+91 (20) 6744 3000",
-    coords: [18.5362, 73.8340] as [number, number],
-    gmaps: "https://maps.google.com/?q=ICC+Trade+Tower,+Senapati+Bapat+Road,+Pune"
-  }
+const officeLocations = [
+  { city: "Delhi", state: "Delhi", pin: "110001", country: "India", mapUrl: "https://maps.google.com/?q=HT+House,+Kasturba+Gandhi+Marg,+Connaught+Place,+New+Delhi" },
+  { city: "Shimla", state: "Himachal Pradesh", pin: "171001", country: "India", mapUrl: "https://maps.google.com/?q=Anoop+Sood+Building,+Paras+Dass+Garden,+Near+CPRI,+Shimla" },
+  { city: "Lucknow", state: "Uttar Pradesh", pin: "226001", country: "India", mapUrl: "https://maps.google.com/?q=110,+First+Floor+Durgma+Tower,+Lalbagh,+Lucknow" },
+  { city: "Chandigarh", state: "Chandigarh", pin: "160002", country: "India", mapUrl: "https://maps.google.com/?q=Elante+Offices,+Industrial+Area+Phase+I,+Chandigarh" },
+  { city: "Hyderabad", state: "Telangana", pin: "500045", country: "India", mapUrl: "https://maps.google.com/?q=House+No+8-3-A/413,+Krishna+Nagar,+Yusufguda,+Hyderabad" },
+  { city: "Cuttack", state: "Odisha", pin: "753014", country: "India", mapUrl: "https://maps.google.com/?q=Plot+No+C/71,+Sector+8,+CDA,+Cuttack" },
+  { city: "Kolkata", state: "West Bengal", pin: "700091", country: "India", mapUrl: "https://maps.google.com/?q=Bengal+Intelligent+Park,+Sector+V,+Salt+Lake,+Kolkata" },
+  { city: "Mumbai", state: "Maharashtra", pin: "400021", country: "India", mapUrl: "https://maps.google.com/?q=Maker+Chambers+VI,+Nariman+Point,+Mumbai" },
+  { city: "Pune", state: "Maharashtra", pin: "411016", country: "India", mapUrl: "https://maps.google.com/?q=ICC+Trade+Tower,+Senapati+Bapat+Road,+Pune" }
 ];
 
 export default function ContactUsPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [activeCityIdx, setActiveCityIdx] = useState(0);
 
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -198,7 +120,7 @@ export default function ContactUsPage() {
       const result = await res.json();
       if (result.success) {
         setIsSubmitted(true);
-        setFormData({ name: '', email: '', phone: '', organisation: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', countryCode: '+91', organisation: '', message: '' });
         setServiceInterest('Consulting');
       } else {
         setErrorMessage(result.error || 'Failed to submit enquiry. Please try again.');
@@ -370,7 +292,7 @@ export default function ContactUsPage() {
                 {/* Custom Message field */}
                 <div>
                   <label htmlFor="message" className="block font-sans text-xs uppercase tracking-widest text-[#000000] font-bold mb-2">
-                    Custom Message <span className="text-red-500">*</span>
+                     Message <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -438,60 +360,31 @@ export default function ContactUsPage() {
           )}
         </div>
 
-        {/* Map Section */}
-        <div className="w-full max-w-5xl mt-16 mb-8 space-y-6 z-10 flex flex-col">
-          
-          {/* Tabs Container - Right Aligned to match screenshot */}
-          <div className="w-full border-b border-neutral-200 flex flex-wrap justify-end bg-white">
-            {cities.map((city, idx) => (
-              <button
-                key={city.name}
-                type="button"
-                onClick={() => setActiveCityIdx(idx)}
-                className={`px-5 py-3 text-xs md:text-sm font-sans font-medium uppercase tracking-wider transition-all duration-300 border-t-2 border-x border-b cursor-pointer -mb-[1px] ${
-                  activeCityIdx === idx
-                    ? 'bg-neutral-100 text-[#fa0249] font-bold border-t-[#fa0249] border-x-neutral-200 border-b-transparent'
-                    : 'bg-white text-black/60 hover:text-black border-t-transparent border-x-transparent border-b-transparent'
-                }`}
-              >
-                {city.name}
-              </button>
-            ))}
+        {/* Offices Section */}
+        <div className="w-full max-w-5xl mt-16 mb-8 z-10 flex flex-col items-center px-4">
+          <div className="flex flex-col items-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-sans text-black text-center font-bold tracking-wide uppercase">
+              Offices
+            </h2>
+            <svg className="w-48 h-2 mt-2 text-[#fa0249]" viewBox="0 0 100 4" fill="currentColor" preserveAspectRatio="none">
+              <path d="M 0 2 Q 50 0 100 2 Q 50 4 0 2 Z" />
+            </svg>
           </div>
 
-          {/* Map Card Split Panel (approx 35% left / 65% right) */}
-          <div className="w-full flex flex-col lg:flex-row bg-white border border-neutral-200 rounded-[1px] overflow-hidden shadow-2xl min-h-[420px] lg:h-[450px]">
-            {/* Left Panel: City Details */}
-            <div className="w-full lg:w-[35%] bg-white text-black p-8 md:p-12 flex flex-col justify-center items-center text-center border-r border-neutral-200 relative min-h-[420px]">
-              <div className="space-y-4 flex flex-col items-center mt-8">
-                <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide text-black">
-                  {cities[activeCityIdx].name}
-                </h3>
-                <h3 className="font-sans text-xl md:text-2xl font-medium tracking-wide text-black/80">
-                  {cities[activeCityIdx].region}
-                </h3>
-                <h3 className="font-sans text-xl md:text-2xl font-bold tracking-wide text-black">
-                  {cities[activeCityIdx].country}
-                </h3>
-              </div>
-              
-              <div className="mt-auto pt-10 pb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-6 w-full max-w-4xl mx-auto font-sans text-sm md:text-base text-black/85 font-normal tracking-wide">
+            {officeLocations.map((office, idx) => (
+              <div key={idx} className="flex items-start gap-2.5 transition-colors duration-300 text-black/85 hover:text-[#fa0249]">
+                <MapPin className="w-5 h-5 text-[#fa0249] shrink-0 mt-0.5" />
                 <a
-                  href={cities[activeCityIdx].gmaps}
+                  href={office.mapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#fa0249] hover:border-black text-xs font-bold tracking-widest uppercase text-[#fa0249] hover:text-black transition-all duration-300 hover:shadow-lg rounded-sm"
+                  className="leading-relaxed text-inherit hover:underline transition-colors duration-300"
                 >
-                  <span>Open in Google Maps</span>
-                  <span>&rarr;</span>
+                  {office.city}, {office.state}, {office.pin}, {office.country}
                 </a>
               </div>
-            </div>
-
-            {/* Right Panel: Interactive Map */}
-            <div className="w-full lg:w-[65%] h-[350px] lg:h-[450px] relative bg-neutral-100 flex items-center justify-center">
-              <Map cities={cities as any} activeCityIdx={activeCityIdx} onCitySelect={setActiveCityIdx} />
-            </div>
+            ))}
           </div>
         </div>
 
