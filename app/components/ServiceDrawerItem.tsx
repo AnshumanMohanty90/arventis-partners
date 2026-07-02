@@ -92,7 +92,7 @@ export default function ServiceDrawerItem({
         onClick={(e) => e.stopPropagation()}
         style={{ maxHeight: isOpen ? '1200px' : '0px' }}
       >
-        <div className="px-6 sm:px-8 pb-8 pt-4 border-t border-black/10 font-sans text-xs sm:text-sm text-black/80 leading-relaxed font-light">
+        <div className="px-6 sm:px-8 pb-8 pt-4 font-sans text-xs sm:text-sm text-black/80 leading-relaxed font-light">
           {/* Description Paragraphs */}
           <div className="space-y-3 mb-6">
             {descriptions.map((desc, dIdx) => (
@@ -103,13 +103,13 @@ export default function ServiceDrawerItem({
           </div>
 
           {/* Scope of Practice Bullets */}
-          <div className="pt-4 border-t border-black/5 space-y-4">
+          <div className="pt-4 space-y-4">
             <span className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase font-bold block text-[#fa0249]">
               SCOPE OF PRACTICE
             </span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               {bullets.map((bullet, bIdx) => (
-                <div key={bIdx} className="flex items-start gap-3 p-2.5 bg-slate-50/70 border border-black/5 rounded-[1px]">
+                <div key={bIdx} className="flex items-start gap-3 py-1 px-0">
                   <span className="w-1.5 h-1.5 rounded-full mt-2 bg-[#fa0249] flex-shrink-0" />
                   <span className="font-sans text-xs sm:text-sm font-medium text-black/90 leading-normal">
                     {bullet}

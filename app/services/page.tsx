@@ -29,27 +29,19 @@ function RevealHeading({ children, className = "" }: { children: string; classNa
 
 export default function ServicesPage() {
   const industries = [
-    'Advanced Manufacturing & Services',
-    'Aerospace & Defense',
-    'Agribusiness',
-    'Automotive',
-    'Aviation',
+    'Agriculture',
+    'Automotive & Assembly',
     'Chemicals',
-    'Construction & Infrastructure',
-    'Consumer Products',
-    'Energy & Natural Resources',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Machinery & Equipment',
-    'Media & Entertainment',
-    'Mining',
-    'Oil & Gas',
-    'Paper & Packaging',
-    'Private Equity',
-    'Retail',
-    'Social Impact',
+    'Consumer Packaged Goods',
+    'Education',
+    'Infrastructure',
+    'Real Estate',
+    'Public Sector',
+    'Social Sector',
     'Technology',
-    'Telecommunications'
+    'Media & Telecommunications',
+    'Healthcare',
+    'Financial Services'
   ];
 
   // Scroll animations observer
@@ -109,7 +101,7 @@ export default function ServicesPage() {
             <RevealHeading>SERVICES</RevealHeading>
           </h1>
           <p className="scroll-fade-up font-sans text-sm sm:text-base md:text-lg text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            Unified strategic management consulting and elite legal advocacy, engineered for <br className="hidden sm:inline" />
+            Unified strategic management consulting and elite legal advocacy,<br className="hidden sm:inline" /> engineered for 
            high-stakes execution.
           </p>
         </div>
@@ -138,7 +130,7 @@ export default function ServicesPage() {
                   Senior strategy advisory engineered for execution. From growth planning, sales transformation, and operating model design to AI integration and cross-border market expansion.
                 </p>
               </div>
-              <div className="pt-6">
+              <div className="pt-6 flex justify-center">
                 <Link
                   href="/services/consulting"
                   className="inline-flex items-center gap-3 bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
@@ -169,7 +161,7 @@ export default function ServicesPage() {
                   Courtroom credibility and senior advocacy across trial courts, high courts, arbitral tribunals, and the Supreme Court of India. Covering litigation, corporate compliance, and constitutional law.
                 </p>
               </div>
-              <div className="pt-6">
+              <div className="pt-6 flex justify-center">
                 <Link
                   href="/services/legal"
                   className="inline-flex items-center gap-3 bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
@@ -185,7 +177,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 2. INDUSTRIES SECTION (TEXT LEFT, IMAGE RIGHT) */}
-      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black border-b border-black/10">
+      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Text */}
@@ -224,11 +216,12 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. OPERATIONAL FLOW SECTION */}
-      <section className="relative w-full bg-white py-24 md:py-32 px-6 md:px-16 text-black border-t border-black/5">
+      <section className="relative w-full bg-white py-24 md:py-32 px-6 md:px-16 text-black">
         <div className="max-w-7xl mx-auto">
           <div className="text-left mb-16">
             <h2 className="font-serif text-3xl md:text-5xl font-light tracking-tight leading-tight text-black">
-              <RevealHeading>THREE STEPS. ONE ACCOUNTABLE TEAM.</RevealHeading>
+              <span className="block whitespace-nowrap"><RevealHeading>THREE STEPS.</RevealHeading></span>
+              <span className="block whitespace-nowrap"><RevealHeading>ONE ACCOUNTABLE TEAM.</RevealHeading></span>
             </h2>
           </div>
 

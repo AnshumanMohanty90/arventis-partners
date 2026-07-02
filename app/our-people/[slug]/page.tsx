@@ -42,7 +42,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
       <Navbar />
 
       {/* 1. HERO BANNER WITH PERSON'S NAME */}
-      <section className="relative w-full bg-[#000000] pt-28 pb-12 md:pt-36 md:pb-16 px-6 md:px-16 border-b border-white/10">
+      <section className="relative w-full bg-[#000000] pt-28 pb-12 md:pt-36 md:pb-16 px-6 md:px-16">
         <div className="max-w-7xl mx-auto relative z-10 space-y-6">
           {/* Back Button */}
           <div>
@@ -218,12 +218,12 @@ export default function DedicatedProfilePage({ params }: PageProps) {
       </section>
 
       {/* CONTACT CTA SECTION */}
-      <section className="relative w-full bg-black py-10 md:py-12 px-6 md:px-16 border-t border-white/10 text-left text-white z-20">
-        <div className="max-w-7xl mx-auto space-y-6 scroll-fade-up">
+      <section className="relative w-full bg-black py-10 md:py-12 px-6 md:px-16 text-center text-white z-20">
+        <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-white">
             Let's Start the Conversation
           </h2>
-          <p className="font-sans text-sm md:text-base text-white/70 font-light max-w-2xl leading-relaxed">
+          <p className="font-sans text-sm md:text-base text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
             Establish a direct partner relationship or initiate a mandate. Our strategy and legal practices operate under strict NDA protocols.
           </p>
           <div className="pt-4">

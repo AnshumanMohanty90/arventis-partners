@@ -118,7 +118,7 @@ export default function FAQPage() {
       <Navbar />
 
       {/* 1. HERO BANNER (LIGHT THEME) */}
-      <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16 border-b border-black/10">
+      <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto relative z-10 space-y-4">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#fa0249] font-bold block">
             KNOWLEDGE BASE & MANDATE GUIDANCE
@@ -161,7 +161,7 @@ export default function FAQPage() {
               </button>
 
               {openIndex === idx && (
-                <div className="px-6 pb-8 sm:px-8 pt-0 border-t border-black/5 font-sans text-xs sm:text-sm text-black/80 leading-relaxed font-light mt-2 animate-fadeIn">
+                <div className="px-6 pb-8 sm:px-8 pt-0 font-sans text-xs sm:text-sm text-black/80 leading-relaxed font-light mt-2 animate-fadeIn">
                   <p className="pt-4">{faq.answer}</p>
                 </div>
               )}
@@ -169,14 +169,14 @@ export default function FAQPage() {
           ))}
 
           {/* Direct CTA Box */}
-          <div className="scroll-fade-up mt-12 p-8 sm:p-10 bg-white border border-[#fa0249]/40 rounded-[1px] shadow-md flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="scroll-fade-up mt-12 p-8 sm:p-10 bg-white border border-[#fa0249]/40 rounded-[1px] shadow-md flex flex-col items-center text-center gap-6">
             <div>
               <h4 className="font-serif text-2xl font-light text-black mb-2">Have a Specific Mandate Inquiry?</h4>
               <p className="font-sans text-xs sm:text-sm text-black/70 font-light">Connect directly with our strategy practice or legal bench leads.</p>
             </div>
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 bg-[#fa0249] hover:bg-black text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-4 transition-colors duration-300 shadow-md self-start md:self-auto"
+              className="inline-flex items-center gap-2 bg-[#fa0249] hover:bg-black text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-4 transition-colors duration-300 shadow-md"
             >
               <span>Initiate Contact</span>
               <ArrowRight size={14} />

@@ -66,7 +66,7 @@ export default function Navbar() {
   return (
     <>
       <header className={`fixed top-0 left-0 w-full z-50 h-14 sm:h-16 md:h-18 px-2 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between transition-all duration-500 ${
-        isHeaderWhite ? 'bg-white/95 backdrop-blur-md border-b border-black/10 shadow-sm text-black' : 'bg-transparent border-b border-white/10 text-white'
+        isHeaderWhite ? 'bg-white/95 backdrop-blur-md shadow-sm text-black' : 'bg-transparent text-white'
       }`}>
         {/* Left column: Logo */}
         <div className="flex items-center justify-start h-full py-1.5 sm:py-2 z-20">

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowUpRight, Scale, Globe, ShieldCheck, Mail, MapPin } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ContactUs from './components/ContactUs';
 
 // Custom component to reveal text word-by-word with a calming stagger
 function RevealHeading({ children, className = "" }: { children: string; className?: string }) {
@@ -90,7 +91,7 @@ export default function Home() {
     if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 10000);
   };
 
   const handleSlideClick = () => {
@@ -160,7 +161,7 @@ export default function Home() {
       {/* 2. HERO BANNER WITH BACKGROUND IMAGE SLIDER */}
       <section 
         onClick={handleSlideClick}
-        className="relative w-full h-screen flex items-center justify-center pt-28 pb-40 px-6 md:px-16 overflow-hidden cursor-pointer select-none bg-white"
+        className="relative w-full h-screen flex items-end justify-center pt-28 pb-40 px-6 md:px-16 overflow-hidden cursor-pointer select-none bg-white"
       >
         
         {/* Background Image Slider Stacks */}
@@ -186,15 +187,15 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Hero Content Container */}
-        <div className="relative z-10 max-w-7xl w-full pt-16 pb-28 text-left flex flex-col items-start justify-center min-h-[350px] md:min-h-[400px]">
+        {/* Hero Content Container - aligned to the bottom (justify-end) */}
+        <div className="relative z-10 max-w-7xl w-full pt-16 pb-12 text-left flex flex-col items-start justify-end min-h-[350px] md:min-h-[400px]">
           {slides.map((slide, idx) => (
             <div
               key={idx}
               className={`slide-text-transition flex flex-col items-start text-left w-full ${
                 currentSlide === idx
                   ? ' translate-y-0 relative z-10'
-                  : 'opacity-0 translate-y-6 absolute inset-x-0 top-16 pointer-events-none z-0'
+                  : 'opacity-0 translate-y-6 absolute inset-x-0 bottom-12 pointer-events-none z-0'
               }`}
             >
               <h1 className="text-white font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal tracking-tight leading-[1.1] max-w-5xl mb-4 sm:mb-6">
@@ -205,8 +206,6 @@ export default function Home() {
                   </span>
                 )}
               </h1>
-
-           
             </div>
           ))}
         </div>
@@ -237,7 +236,7 @@ export default function Home() {
                   
                   {/* Title */}
                   <span className={`font-sans text-[10px] sm:text-xs md:text-sm font-semibold tracking-wider transition-colors duration-300 uppercase block w-full text-center ${
-                    currentSlide === idx ? 'text-white' : 'text-white/40 group-hover:text-black'
+                    currentSlide === idx ? 'text-white font-bold' : 'text-white/60 group-hover:text-white'
                   }`}>
                     {slide.navTitle}
                   </span>
@@ -256,12 +255,12 @@ export default function Home() {
               }}
               className="flex flex-col items-center gap-1.5 group cursor-pointer focus:outline-none"
             >
-              <span className="text-[10px] uppercase tracking-[0.22em] text-black/50 group-hover:text-black transition-colors duration-300 font-sans font-medium">
+              <span className="text-[10px] uppercase tracking-[0.22em] text-white/50 group-hover:text-white transition-colors duration-300 font-sans font-medium">
                 Scroll
               </span>
-              <div className="w-9 h-9 rounded-full border border-black/15 flex items-center justify-center group-hover:border-black/40 transition-colors duration-300">
+              <div className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 transition-colors duration-300">
                 <svg
-                  className="w-3.5 h-3.5 text-black/60 group-hover:text-black transition-transform duration-300 group-hover:translate-y-0.5"
+                  className="w-3.5 h-3.5 text-white/60 group-hover:text-white transition-transform duration-300 group-hover:translate-y-0.5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -280,7 +279,7 @@ export default function Home() {
       
 
       {/* 4. OVERVIEW SECTION (5 Items) */}
-      <section id="overview" className="relative w-full bg-white text-black pt-6 pb-12 md:pt-8 md:pb-16 px-6 md:px-16 border-b border-black/10 relative z-20">
+      <section id="overview" className="relative w-full bg-white text-black pt-6 pb-12 md:pt-8 md:pb-16 px-6 md:px-16 relative z-20">
         <div className="max-w-7xl mx-auto space-y-15">
           <div className="scroll-fade-up max-w-2xl">
            
@@ -292,20 +291,34 @@ export default function Home() {
       </section>
 
       {/* 5. DETAILED FEATURES */}
-      <section className="relative w-full bg-white text-black py-12 md:py-16 px-6 md:px-16 border-b border-black/10 relative z-20">
+      <section className="relative w-full bg-white text-black py-12 md:py-16 px-6 md:px-16 relative z-20">
         <div className="max-w-7xl mx-auto space-y-16 md:space-y-20">
           {/* Feature 1 */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            <div className="lg:col-span-6 space-y-6 scroll-fade-up">
-             
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
+            {/* Left Column: Text */}
+            <div className="lg:col-span-6 lg:h-[400px] flex flex-col justify-between py-2 scroll-fade-up order-1">
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-black">
                 One Team, Start to Finish
               </h2>
-              <p className="font-sans text-base text-black/75 leading-relaxed font-light">
-                Most clients brief one advisor on strategy and a different one on legal risk, 
-                then deal with the two not lining up. At Arventis, the same leadership handles both from the start. You explain the problem once.
-              </p>
-              <div className="pt-4">
+              <div className="font-sans text-base text-black/75 leading-relaxed font-light space-y-3">
+                <p>
+                  Most clients brief one advisor on strategy and a different one on legal risk, <br /> 
+                  then deal with the two not lining up and face consequences.
+                </p>
+                <p>
+                  At Arventis, the same leadership handles both of the domains from the start. Thus, saving you from the hastle of jumping between two diffrent practices.
+                </p>
+                <p>
+                 Every step is taken with both business goals and legal implications in mind.
+                </p>
+                <p>
+                 Your time is spent making decisions, not coordinating between advisors.
+                </p>
+                <p>
+                  You explain the problem once. 
+                </p>
+              </div>
+              <div className="flex justify-center w-full">
                 <Link
                   href="/our-people"
                   className="inline-flex items-center gap-3 bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
@@ -315,7 +328,8 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="lg:col-span-6 scroll-fade-up relative h-[300px] sm:h-[400px] border border-black/10 rounded-[1px] overflow-hidden shadow-lg">
+            {/* Right Column: Image */}
+            <div className="lg:col-span-6 scroll-fade-up relative h-[300px] lg:h-[400px] border border-black/10 rounded-[1px] overflow-hidden shadow-lg order-2">
               <Image
                 src="/strategic_foresight.png"
                 alt="One Team, Start to Finish"
@@ -327,16 +341,35 @@ export default function Home() {
           </div>
 
           {/* Feature 2 */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            <div className="lg:col-span-6 lg:order-2 space-y-6 scroll-fade-up">
-              
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch pt-8">
+            {/* Left Column: Image */}
+            <div className="lg:col-span-6 scroll-fade-up relative h-[300px] lg:h-[400px] border border-black/10 rounded-[1px] overflow-hidden shadow-lg order-2 lg:order-1">
+              <Image
+                src="/global_reach_bg.png"
+                alt="Experience Across Markets"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            {/* Right Column: Text */}
+            <div className="lg:col-span-6 lg:h-[400px] flex flex-col justify-between py-2 scroll-fade-up order-1 lg:order-2">
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-black">
                 Experience Across Markets
               </h2>
-              <p className="font-sans text-base text-black/75 leading-relaxed font-light">
-                Over more than a decade, our leadership has worked on market entry, government mandates, and enterprise strategy across India, the GCC, the UK, the US, and South Korea. That range means we've already dealt with the regulatory, cultural, and commercial differences most firms are encountering for the first time.
-              </p>
-              <div className="pt-4">
+              <div className="font-sans text-base text-black/75 leading-relaxed font-light space-y-3">
+                <p>
+                  Over more than a decade, our leadership has worked on market entry, government mandates, and enterprise strategy across India, the GCC, the UK, the US, and South Korea.
+                </p>
+                <p>
+                  That range means we've already dealt with the regulatory, cultural, and commercial differences most firms are encountering for the first time.
+                </p>
+                <p>
+                  We believe in learning from the past, not repeating it. <br />
+                  Our experience helps you avoid familiar pitfalls before they cost you money and time.
+                </p>
+              </div>
+              <div className="flex justify-center w-full">
                 <Link
                   href="/services"
                   className="inline-flex items-center gap-3 bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
@@ -346,29 +379,21 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="lg:col-span-6 lg:order-1 scroll-fade-up relative h-[300px] sm:h-[400px] border border-black/10 rounded-[1px] overflow-hidden shadow-lg">
-              <Image
-                src="/global_reach_bg.png"
-                alt="Experience Across Markets"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
           </div>
         </div>
       </section>
 
       {/* 6. WHERE TO START (Dual Cards) */}
       <section className="relative w-full bg-[#ffffff] text-[#000000] py-12 md:py-16 px-6 md:px-16 relative z-20">
-        <div className="max-w-7xl mx-auto space-y-16">
+        <div className="max-w-7xl mx-auto space-y-8">
           <div className="scroll-fade-up text-center max-w-3xl mx-auto space-y-4">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-[#000000]">
-              Where Would You Like to Start?
+            <h2 className="font-serif text-[20px] sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-[#000000] whitespace-nowrap">
+              Which one would you like to start with ? 
             </h2>
-            <p className="font-sans text-base text-[#000000]/75 leading-relaxed font-light">
-              Most engagements need both eventually. Start with whichever one fits your problem right now.
-            </p>
+            <div className="font-sans text-base text-[#000000]/75 leading-relaxed font-light space-y-2">
+              <p>Most engagements need both eventually.</p>
+              <p>Start with whichever one fits your problem, right now.</p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -392,7 +417,7 @@ export default function Home() {
                     Growth strategy, GTM expansion, and operational work for organizations that need execution, not just plans.
                   </p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-6 flex justify-center">
                   <Link
                     href="/services/consulting"
                     className="inline-flex items-center gap-3 bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
@@ -424,7 +449,7 @@ export default function Home() {
                     Commercial dispute resolution and advocacy for businesses that need counsel as sharp as their ambition.
                   </p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-6 flex justify-center">
                   <Link
                     href="/services/legal"
                     className="inline-flex items-center gap-3 bg-[#fa0249] hover:bg-black text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
@@ -439,25 +464,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT CTA SECTION */}
-      <section className="relative w-full bg-[#fa0249] py-10 md:py-12 px-6 md:px-16 border-t border-black/10 text-center text-black z-20">
-        <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-black">
-            Let's Start the Conversation
-          </h2>
-          <p className="font-sans text-sm md:text-base text-black/70 font-light max-w-2xl mx-auto leading-relaxed">
-            Establish a direct partner relationship or initiate a mandate. Our strategy and legal practices operate under strict NDA protocols.
-          </p>
-          <div className="pt-4">
-            <Link
-              href="/contact-us"
-              className="inline-block bg-white text-black hover:bg-gray-200 font-bold text-xs tracking-[0.2em] uppercase px-10 py-4 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
-            >
-              CONTACT US
-            </Link>
-          </div>
-        </div>
-      </section>
+       <ContactUs/>
 
       {/* 7. FOOTER */}
       <Footer />

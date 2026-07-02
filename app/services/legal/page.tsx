@@ -212,7 +212,7 @@ export default function LegalPage() {
       <Navbar />
 
       {/* Hero Section with Back Button */}
-      <section className="relative w-full pt-28 pb-14 md:pt-36 md:pb-20 px-6 md:px-16 border-b border-black/10 bg-white">
+      <section className="relative w-full pt-28 pb-14 md:pt-36 md:pb-20 px-6 md:px-16 bg-white">
         {/* Background Image Layer */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none z-0" 

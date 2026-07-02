@@ -60,7 +60,7 @@ export default function DisclaimerPage() {
       <Navbar />
 
       {/* 1. HERO BANNER (LIGHT THEME) */}
-      <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16 border-b border-black/10">
+      <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto relative z-10 space-y-4">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#fa0249] font-bold block">
             STATUTORY COMPLIANCE & LEGAL NOTICE
@@ -91,7 +91,7 @@ export default function DisclaimerPage() {
 
           {/* Section 1: Non-Solicitation */}
           <div className="scroll-fade-up bg-white p-8 md:p-10 border border-black/10 shadow-sm space-y-4">
-            <h3 className="font-serif text-2xl font-light text-black border-b border-black/10 pb-4 flex items-center gap-3">
+            <h3 className="font-serif text-2xl font-light text-black flex items-center gap-3">
               <Scale className="w-5 h-5 text-[#fa0249]" />
               <span>1. Purpose of Information & Non-Solicitation</span>
             </h3>
@@ -107,7 +107,7 @@ export default function DisclaimerPage() {
 
           {/* Section 2: No Binding Legal Advice */}
           <div className="scroll-fade-up bg-white p-8 md:p-10 border border-black/10 shadow-sm space-y-4">
-            <h3 className="font-serif text-2xl font-light text-black border-b border-black/10 pb-4 flex items-center gap-3">
+            <h3 className="font-serif text-2xl font-light text-black flex items-center gap-3">
               <FileText className="w-5 h-5 text-[#fa0249]" />
               <span>2. Informational Accuracy & Limitation of Liability</span>
             </h3>
@@ -123,7 +123,7 @@ export default function DisclaimerPage() {
 
           {/* Section 3: Intellectual Property & Contact */}
           <div className="scroll-fade-up bg-white p-8 md:p-10 border border-black/10 shadow-sm space-y-4">
-            <h3 className="font-serif text-2xl font-light text-black border-b border-black/10 pb-4 flex items-center gap-3">
+            <h3 className="font-serif text-2xl font-light text-black flex items-center gap-3">
               <CheckCircle2 className="w-5 h-5 text-[#fa0249]" />
               <span>3. Intellectual Property & Mandate Engagement</span>
             </h3>
@@ -131,7 +131,7 @@ export default function DisclaimerPage() {
               <p>
                 All brand trade names, logos, original editorial publications, and strategic frameworks displayed on this platform are the exclusive intellectual property of Arventis Partners. Reproduction without prior written consent is strictly prohibited.
               </p>
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center">
                 <Link
                   href="/contact-us"
                   className="inline-flex items-center gap-2 bg-[#fa0249] hover:bg-black text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-3.5 transition-colors duration-300 shadow-md"

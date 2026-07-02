@@ -172,7 +172,7 @@ export default function ConsultingPage() {
       <Navbar />
 
       {/* Hero Section with Back Button */}
-      <section className="relative w-full pt-28 pb-14 md:pt-36 md:pb-20 px-6 md:px-16 border-b border-black/10 bg-white">
+      <section className="relative w-full pt-28 pb-14 md:pt-36 md:pb-20 px-6 md:px-16 bg-white">
         {/* Background Image Layer */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none z-0" 
@@ -231,7 +231,7 @@ export default function ConsultingPage() {
       </section>
 
       {/* CONTACT CTA SECTION */}
-      <section className="relative w-full bg-[#fa0249] py-10 md:py-12 px-6 md:px-16 border-t border-black/10 text-center text-black z-20">
+      <section className="relative w-full bg-[#fa0249] py-10 md:py-12 px-6 md:px-16 text-center text-black z-20">
         <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-black">
             Let's Start the Conversation
