@@ -73,7 +73,7 @@ export default function Home() {
     {
       navTitle: "International Fluency",
       title: "Local Depth.\nInternational Fluency.",
-      subtitle: "A bench built across India and the GCC, with a team that knows every market firsthand.",
+      subtitle: "A bench built across India and the GCC,\nwith a team that knows every market firsthand.",
       description: "Litigation and advisory across Indian courts and regulatory bodies. Consulting engagements delivered in India, Saudi Arabia, the UAE, Kuwait, the UK, the US, and South Korea — with the same preparation and the same standard of delivery, every time.",
       image: "/hero international.png",
       primaryBtnText: "Our Story",
@@ -161,7 +161,7 @@ export default function Home() {
       {/* 2. HERO BANNER WITH BACKGROUND IMAGE SLIDER */}
       <section 
         onClick={handleSlideClick}
-        className="relative w-full h-screen flex items-end justify-center pt-28 pb-40 px-6 md:px-16 overflow-hidden cursor-pointer select-none bg-white"
+        className="relative w-full h-screen flex items-center justify-center px-6 md:px-16 overflow-hidden cursor-pointer select-none bg-white"
       >
         
         {/* Background Image Slider Stacks */}
@@ -183,25 +183,27 @@ export default function Home() {
                   currentSlide === idx ? 'scale-105' : 'scale-100'
                 }`}
               />
+              {/* Dark Gradient Overlay for Readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 z-10" />
             </div>
           ))}
         </div>
 
-        {/* Hero Content Container - aligned to the bottom (justify-end) */}
-        <div className="relative z-10 max-w-7xl w-full pt-16 pb-12 text-left flex flex-col items-start justify-end min-h-[350px] md:min-h-[400px]">
+        {/* Hero Content Container - aligned to the center vertically */}
+        <div className="relative z-10 max-w-7xl w-full text-left flex flex-col items-start justify-start h-[300px] md:h-[350px] mt-16 md:mt-32">
           {slides.map((slide, idx) => (
             <div
               key={idx}
-              className={`slide-text-transition flex flex-col items-start text-left w-full ${
+              className={`slide-text-transition flex flex-col items-start text-left w-full transition-all duration-1000 ease-in-out ${
                 currentSlide === idx
-                  ? ' translate-y-0 relative z-10'
-                  : 'opacity-0 translate-y-6 absolute inset-x-0 bottom-12 pointer-events-none z-0'
+                  ? ' opacity-100 translate-y-0 relative z-10'
+                  : 'opacity-0 translate-y-6 absolute inset-x-0 top-0 pointer-events-none z-0'
               }`}
             >
               <h1 className="text-white font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal tracking-tight leading-[1.1] max-w-5xl mb-4 sm:mb-6">
                 {formatSliderText(slide.title)}
                 {slide.subtitle && (
-                  <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white/60 mt-2 font-sans font-light">
+                  <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white/90 mt-2 font-sans">
                     {formatSliderText(slide.subtitle)}
                   </span>
                 )}
@@ -211,7 +213,7 @@ export default function Home() {
         </div>
 
         {/* BOTTOM NAVIGATION BAR */}
-        <div className="absolute bottom-0 left-0 w-full z-20 px-6 md:px-16 pb-8 pt-12 ">
+        <div className="absolute bottom-0 left-0 w-full z-20 px-6 md:px-16 pb-4 pt-8">
           <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
             
             {/* Navigation Items (2x2 on mobile, 4 columns on desktop) */}
@@ -236,7 +238,7 @@ export default function Home() {
                   
                   {/* Title */}
                   <span className={`font-sans text-[10px] sm:text-xs md:text-sm font-semibold tracking-wider transition-colors duration-300 uppercase block w-full text-center ${
-                    currentSlide === idx ? 'text-white font-bold' : 'text-white/60 group-hover:text-white'
+                    currentSlide === idx ? 'text-white font-bold' : 'text-white/90 group-hover:text-white'
                   }`}>
                     {slide.navTitle}
                   </span>
@@ -253,22 +255,17 @@ export default function Home() {
                   overviewSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="flex flex-col items-center gap-1.5 group cursor-pointer focus:outline-none"
+              className="group cursor-pointer focus:outline-none mt-2"
             >
-              <span className="text-[10px] uppercase tracking-[0.22em] text-white/50 group-hover:text-white transition-colors duration-300 font-sans font-medium">
-                Scroll
-              </span>
-              <div className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 transition-colors duration-300">
-                <svg
-                  className="w-3.5 h-3.5 text-white/60 group-hover:text-white transition-transform duration-300 group-hover:translate-y-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
-              </div>
+              <svg
+                className="w-5 h-5 text-white/80 group-hover:text-white transition-transform duration-300 group-hover:translate-y-1"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
             </button>
 
           </div>
@@ -390,9 +387,8 @@ export default function Home() {
             <h2 className="font-serif text-[20px] sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-[#000000] whitespace-nowrap">
               Which one would you like to start with ? 
             </h2>
-            <div className="font-sans text-base text-[#000000]/75 leading-relaxed font-light space-y-2">
-              <p>Most engagements need both eventually.</p>
-              <p>Start with whichever one fits your problem, right now.</p>
+            <div className="font-sans text-base text-[#000000]/75 leading-relaxed font-light mt-2">
+              <p>Most engagements need both eventually. Start with whichever one fits your problem, right now.</p>
             </div>
           </div>
 
@@ -408,8 +404,8 @@ export default function Home() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
-              <div className="p-8 sm:p-10 flex flex-col justify-between flex-1 bg-white">
-                <div className="space-y-4">
+              <div className="p-8 sm:p-10 flex flex-col justify-between items-center flex-1 bg-white text-center">
+                <div className="space-y-4 flex flex-col items-center">
                   <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-wider leading-tight text-black">
                     Strategy Consulting
                   </h3>
@@ -440,8 +436,8 @@ export default function Home() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
-              <div className="p-8 sm:p-10 flex flex-col justify-between flex-1 bg-white">
-                <div className="space-y-4">
+              <div className="p-8 sm:p-10 flex flex-col justify-between items-center flex-1 bg-white text-center">
+                <div className="space-y-4 flex flex-col items-center">
                   <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-wider leading-tight text-black">
                     Legal Advisory
                   </h3>

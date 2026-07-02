@@ -41,6 +41,7 @@ export default function ServicesPage() {
     'Technology',
     'Media & Telecommunications',
     'Healthcare',
+    '',
     'Financial Services'
   ];
 
@@ -194,9 +195,9 @@ export default function ServicesPage() {
               {/* 3 columns of industry text items with thin bottom border */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4 scroll-fade-up transition-delay-200">
                 {industries.map((ind, idx) => (
-                  <div key={idx} className="border-b border-black/10 pb-3 pt-1 hover:border-[#fa0249]/30 transition-all duration-300">
-                    <span className="font-sans text-xs sm:text-sm font-semibold tracking-wider text-[#fa0249] hover:text-black transition-colors duration-300 block">
-                      {ind}
+                  <div key={idx} className={ind ? "border-b border-black/10 pb-3 pt-1 hover:border-[#fa0249]/30 transition-all duration-300" : "pb-3 pt-1"}>
+                    <span className={`font-sans text-xs sm:text-sm font-semibold tracking-wider block ${ind ? 'text-[#fa0249] hover:text-black transition-colors duration-300' : 'opacity-0 select-none'}`}>
+                      {ind || 'Spacer'}
                     </span>
                   </div>
                 ))}

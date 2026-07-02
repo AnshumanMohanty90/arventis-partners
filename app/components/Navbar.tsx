@@ -75,14 +75,14 @@ export default function Navbar() {
             className="hover-target inline-flex items-center h-full relative transition-transform duration-300 hover:scale-[1.02]"
           >
             <Image
-              src="/logo-final.png"
+              src={isHeaderWhite ? "/logo.png" : "/logo-final.png"}
               alt="Arventis Partners Logo"
               width={450}
-              height={100}
+              height={120}
               priority
               unoptimized
-              className={`h-full max-h-10 sm:max-h-12 md:max-h-14 w-auto object-contain transition-all duration-500 scale-200 sm:scale-140 md:scale-140 origin-left ${
-                isHeaderWhite ? 'mix-blend-multiply filter contrast-[1.08]' : 'filter brightness-0 invert opacity-90'
+              className={`h-full max-h-10 sm:max-h-12 md:max-h-14 w-auto object-contain transition-all duration-500 scale-200 sm:scale-120 md:scale-180 origin-left ${
+                isHeaderWhite ? 'mix-blend-multiply filter contrast-[1.08]' : 'opacity-90'
               }`}
             />
           </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
                       ? 'bg-[#fa0249] text-white border-[#fa0249]'
                       : isHeaderWhite
                         ? 'border-black/80 text-black hover:bg-[#fa0249] hover:text-white hover:border-black'
-                        : 'border-white/80 text-white hover:bg-white hover:text-black hover:border-white'
+                        : 'border-[#fa0249] text-white hover:bg-[#fa0249] hover:text-white hover:border-[#fa0249]'
                   }`}
                 >
                   {item.label}
@@ -121,7 +121,7 @@ export default function Navbar() {
                     ? 'text-[#fa0249] font-bold border-b-2 border-[#fa0249] pb-1 after:hidden'
                     : isHeaderWhite
                       ? 'text-black/85 hover:text-[#fa0249]'
-                      : 'text-white/80 hover:text-[#fa0249]'
+                      : 'text-white hover:text-[#fa0249]'
                 }`}
               >
                 {item.label}
