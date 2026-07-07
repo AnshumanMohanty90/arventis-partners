@@ -64,11 +64,11 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 h-14 sm:h-16 md:h-18 px-2 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between transition-all duration-500 ${
+      <header className={`fixed top-0 left-0 w-full z-50 h-[64px] sm:h-[78px] md:h-[92px] px-2 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between transition-all duration-500 ${
         isHeaderWhite ? 'bg-white/95 backdrop-blur-md shadow-sm text-black' : 'bg-transparent text-white'
       }`}>
         {/* Left column: Logo */}
-        <div className="flex items-center justify-start h-full py-1.5 sm:py-2 z-20">
+        <div className="flex items-center justify-start h-full py-1 sm:py-1 z-20">
           <Link 
             href="/" 
             onClick={() => setIsMenuOpen(false)}
@@ -81,7 +81,7 @@ export default function Navbar() {
               height={120}
               priority
               unoptimized
-              className={`h-full max-h-12 sm:max-h-14 md:max-h-16 w-auto object-contain transition-all duration-500 origin-left ${
+              className={`h-full max-h-[54px] sm:max-h-[68px] md:max-h-[82px] w-auto object-contain transition-all duration-500 origin-left ${
                 isHeaderWhite ? 'mix-blend-multiply filter contrast-[1.08]' : 'opacity-90'
               }`}
             />

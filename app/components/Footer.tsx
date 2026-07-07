@@ -20,7 +20,7 @@ const Footer = () => {
               width={450}
               height={120}
               unoptimized
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain origin-left mix-blend-multiply filter contrast-[1.08]"
+              className="h-[54px] sm:h-[68px] md:h-[82px] w-auto object-contain origin-left mix-blend-multiply filter contrast-[1.08]"
             />
           </div>
 

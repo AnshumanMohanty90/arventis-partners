@@ -428,7 +428,7 @@ export default function Home() {
             <div className="group bg-white border border-black/10 rounded-[2px] overflow-hidden shadow-2xl transition-all duration-500 flex flex-col min-h-[440px]">
               <div className="relative h-[200px] w-full overflow-hidden">
                 <Image
-                  src="/arvlegal-bg.jpg"
+                  src="/arvLegal-bg.jpeg"
                   alt="Legal Advisory"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

@@ -148,7 +148,7 @@ export default function ServicesPage() {
           <div className="scroll-fade-up transition-delay-100 group bg-white border border-black/10 rounded-[2px] overflow-hidden shadow-2xl transition-all duration-500 flex flex-col min-h-[480px]">
             <div className="relative h-[240px] w-full overflow-hidden">
               <Image
-                src = "/arvlegal-bg.jpg"
+                src="/arvLegal-bg.jpeg"
                 alt="Arventis Legal"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
