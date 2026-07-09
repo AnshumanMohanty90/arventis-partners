@@ -139,7 +139,7 @@ export default function RootLayout({
           }
         ],
         "founder": [
-          { "@type": "Person", "name": "Suman Thakur", "jobTitle": "Founding Partner - Legal Practice" },
+          { "@type": "Person", "name": "Kumar Suman", "jobTitle": "Founding Partner - Legal Practice" },
           { "@type": "Person", "name": "Anshuman Mohanty", "jobTitle": "Founding Partner - Strategy Consulting Practice" }
         ],
         "employee": [

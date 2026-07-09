@@ -78,7 +78,7 @@ export default function Navbar() {
             className="hover-target inline-flex items-center h-full relative transition-transform duration-300 hover:scale-[1.02]"
           >
             <Image
-              src={isHeaderWhite ? "/logo-whitebg.png" : "/logo-blackbg.png"}
+              src={isHeaderWhite ? "/logo-Whitebg.png" : "/logo-Black-bg.png"}
               alt="Arventis Partners Logo"
               width={450}
               height={120}

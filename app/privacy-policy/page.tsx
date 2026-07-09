@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="font-serif text-2xl font-bold mb-4">6. International Data Transfers</h2>
               <p className="font-sans text-base md:text-lg leading-[1.8]">
-                As a firm engaged in cross-border work across India, the GCC, and other jurisdictions, information may be processed or stored outside your home country. We take reasonable steps to ensure an appropriate standard of protection in such cases.
+                As a firm engaged in cross-border work across India, GCC, and other jurisdictions, information may be processed or stored outside your home country. We take reasonable steps to ensure an appropriate standard of protection in such cases.
               </p>
             </section>
 

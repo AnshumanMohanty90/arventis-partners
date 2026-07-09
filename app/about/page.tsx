@@ -86,7 +86,7 @@ export default function AboutPage() {
             <RevealHeading>ABOUT</RevealHeading>
           </h1>
           <p className="scroll-fade-up font-sans text-[15px] sm:text-[17px] md:text-[19px] text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            A premier advisory firm combining senior strategy consulting and elite legal authority under a single engagement framework.
+            A premier advisory firm combining senior strategy consulting<br/> and  elite legal authority under a single engagement framework.
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default function AboutPage() {
       <section className="relative w-full bg-white pt-16 md:pt-24 pb-8 md:pb-12 px-6 md:px-16 text-center">
         <div className="max-w-6xl mx-auto scroll-fade-up">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light leading-snug text-black">
-           &quot;Whether you&apos;re a domestic business, a family managing an estate, or an international company entering India or the GCC, every engagement gets the same level of preparation and delivery.&quot;
+           &quot;Whether you&apos;re a domestic business, a family managing an estate, or an international company entering India or GCC,<br/> every engagement gets the same level of preparation and delivery.&quot;
           </h2>
         </div>
       </section>
@@ -108,7 +108,7 @@ export default function AboutPage() {
             {/* Left Column: Image */}
             <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-auto w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
               <Image
-                src="/strategic_foresight.png"
+                src="/about-1.jpeg"
                 alt="Strategic Foresight"
                 fill
                 className="object-cover"
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-3 mt-6 mb-4 font-sans text-[15px] sm:text-[17px] text-black/75 leading-relaxed font-light scroll-fade-up transition-delay-200">
                   <p>
-                    Founded by Suman Thakur, an advocate with a decade in litigation, and Anshuman Mohanty, a strategy leader with 11 years across global markets.
+                    Founded by Kumar Suman, an advocate with 13 years in litigation, and Anshuman Mohanty, a strategy leader with 13 years across global markets.
                   </p>
                   <p>
                     Most businesses run two advisors: one for strategy, one for law. Then spend weeks reconciling what the two don't agree on.
@@ -179,7 +179,7 @@ export default function AboutPage() {
             {/* Right Column: Image */}
             <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
               <Image
-                src="/arvBuisness-bg.jpg"
+                src="/about-2.jpg"
                 alt="Business Strategy"
                 fill
                 className="object-cover"
@@ -229,7 +229,7 @@ export default function AboutPage() {
                     'Government-linked entities that need law and strategy in the same room',
                     'Family businesses planning succession or entering institutional capital',
                     'Landowners and individuals fighting for what\'s theirs',
-                    'International companies entering India or the GCC, without local blind spots'
+                    'International companies entering India or GCC, without local blind spots'
                   ].map((profile, idx) => (
                     <li key={idx} className="font-sans text-[15px] sm:text-[17px] text-black/85 font-light pl-1">
                       {profile}

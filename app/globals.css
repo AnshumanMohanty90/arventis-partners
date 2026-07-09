@@ -8,14 +8,22 @@
 
 @theme {
   --font-serif: var(--font-playfair), serif;
-  --font-sans: var(--font-graphik), sans-serif;
+  --font-sans: var(--font-playfair), serif;
+}
+
+body, p, span, li, a, button, div, input, textarea, select {
+  font-family: var(--font-playfair), serif !important;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif !important;
+  font-weight: 700 !important;
 }
 
 /* --- LOCOMOTIVE SMOOTH SCROLL V5 / LENIS STYLES --- */

@@ -38,20 +38,20 @@ export const peopleData: Person[] = [
     name: 'Anshuman Mohanty',
     discipline: 'Strategy Consulting',
     category: 'Founding Partner',
-    title: 'FOUNDING PARTNER, STRATEGY CONSULTING SERVICES',
-    experience: '11+ Years',
+    title: ' STRATEGY CONSULTING SERVICES',
+    experience: '13+ Years',
     geographies: ['India', 'GCC', 'UK', 'US', 'South Korea'],
-    shortBio: 'Eleven years at the sharp end of growth decisions, holding P&L ownership across consulting, BFSI, government, and technology-led businesses.',
-    shortDesc: 'Strategy consulting leader with 11+ years of P&L ownership across consulting, BFSI, government, and tech.',
-    fullBio: 'Anshuman Mohanty has spent eleven years at the sharp end of growth decisions: holding P&L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border entries across five geographies.\nThe discipline he brings to every engagement is the same: rigorous diagnosis, a strategy built to be executed rather than presented, and the commitment to stay in the room through implementation. Clients who work with Anshuman get a partner who has done the work before, across sectors and at scale.',
+    shortBio: 'Thirteen years at the sharp end of growth decisions, holding P&L ownership across consulting, BFSI, government, and technology-led businesses.',
+    shortDesc: 'Strategy consulting leader with 13+ years of P&L ownership across consulting, BFSI, government, and tech.',
+    fullBio: 'Anshuman Mohanty has spent thirteen years at the sharp end of growth decisions: holding P&L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border entries across five geographies.\nThe discipline he brings to every engagement is the same: rigorous diagnosis, a strategy built to be executed rather than presented, and the commitment to stay in the room through implementation. Clients who work with Anshuman get a partner who has done the work before, across sectors and at scale.',
     bio: [
-      'Anshuman Mohanty has spent eleven years at the sharp end of growth decisions: holding P&L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border entries across five geographies.',
+      'Anshuman Mohanty has spent thirteen years at the sharp end of growth decisions: holding P&L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border entries across five geographies.',
       'The discipline he brings to every engagement is the same: rigorous diagnosis, a strategy built to be executed rather than presented, and the commitment to stay in the room through implementation. Clients who work with Anshuman get a partner who has done the work before, across sectors and at scale.'
     ],
     customSectionTitle: 'THE CONSULTING NETWORK',
     customSectionContent: [
       'Every engagement is led directly by Anshuman Mohanty and supported by a curated global bench of academicians, domain specialists, and sector experts, activated by mandate rather than assigned by default. This gives clients something rare: a senior partner who is present throughout, backed by specialist depth exactly where the work demands it.',
-      'The network spans strategy, operations, digital, finance, and sector verticals across India, the GCC, Europe, and the US. It includes senior academics, IIM faculty, central banking alumni, and industry principals with deep P&L experience. Clients receive senior expertise without the overhead of a large firm.'
+      'The network spans strategy, operations, digital, finance, and sector verticals across India, GCC, Europe, and the US. It includes senior academics, IIM faculty, central banking alumni, and industry principals with deep P&L experience. Clients receive senior expertise without the overhead of a large firm.'
     ],
     highlights: [
       { id: 'a1', text: 'P&L leadership across multi-geography corporate and state initiatives' },
@@ -60,25 +60,25 @@ export const peopleData: Person[] = [
     ],
     imagePath: '/Anshuman.png',
     image: '/Anshuman.png',
-    badge: '11+ Years Experience',
-    credentials: 'MBA, IIM Lucknow  |  11+ Years  |  India – GCC – UK – US – South Korea',
+    badge: '13+ Years Experience',
+    credentials: 'MBA, IIM Lucknow  |  13+ Years  |  India – GCC – UK – US – South Korea',
     linkedin: 'https://linkedin.com',
     instagram: 'https://instagram.com'
   },
   {
     id: 'suman-thakur',
-    slug: 'suman-thakur',
-    name: 'Suman Thakur',
+    slug: 'kumar-suman',
+    name: 'Kumar Suman',
     discipline: 'Legal',
     category: 'Founding Partner',
-    title: 'FOUNDING PARTNER, LEGAL  |  ADVOCATE',
-    experience: '10+ Years',
+    title: ' LEGAL  |  ADVOCATE',
+    experience: '13+ Years',
     geographies: ['Delhi', 'Himachal Pradesh'],
-    shortBio: 'A decade of advocacy, litigation, and public interest law, with a focus on arbitration, land acquisition, infrastructure, and public law.',
+    shortBio: 'Thirteen years of advocacy, litigation, and public interest law, with a focus on arbitration, land acquisition, infrastructure, and public law.',
     shortDesc: 'Supreme Court advocate specialising in commercial litigation, arbitration, infrastructure, and public law.',
-    fullBio: 'Suman Thakur has built his practice from the ground up across a decade of advocacy, litigation, and public interest law. His focus is arbitration, land acquisition, infrastructure, and public law. He comes to each mandate not as an advisor offering opinions, but as a litigator accountable for outcomes in high-stakes disputes.\nHis work is defined by cases that carry real consequence: landowners displaced by acquisition, communities navigating rehabilitation, infrastructure projects caught between private enterprise and regulatory complexity. He brings to Arventis Legal the discipline of someone whose practice has been tested in contested terrain, across courts, arbitral tribunals, and policy forums.',
+    fullBio: 'Kumar Suman has built his practice from the ground up across thirteen years of advocacy, litigation, and public interest law. His focus is arbitration, land acquisition, infrastructure, and public law. He comes to each mandate not as an advisor offering opinions, but as a litigator accountable for outcomes in high-stakes disputes.\nHis work is defined by cases that carry real consequence: landowners displaced by acquisition, communities navigating rehabilitation, infrastructure projects caught between private enterprise and regulatory complexity. He brings to Arventis Legal the discipline of someone whose practice has been tested in contested terrain, across courts, arbitral tribunals, and policy forums.',
     bio: [
-      'Suman Thakur has built his practice from the ground up across a decade of advocacy, litigation, and public interest law. His focus is arbitration, land acquisition, infrastructure, and public law. He comes to each mandate not as an advisor offering opinions, but as a litigator accountable for outcomes in high-stakes disputes.',
+      'Kumar Suman has built his practice from the ground up across thirteen years of advocacy, litigation, and public interest law. His focus is arbitration, land acquisition, infrastructure, and public law. He comes to each mandate not as an advisor offering opinions, but as a litigator accountable for outcomes in high-stakes disputes.',
       'His work is defined by cases that carry real consequence: landowners displaced by acquisition, communities navigating rehabilitation, infrastructure projects caught between private enterprise and regulatory complexity. He brings to Arventis Legal the discipline of someone whose practice has been tested in contested terrain, across courts, arbitral tribunals, and policy forums.'
     ],
     highlights: [
@@ -88,8 +88,8 @@ export const peopleData: Person[] = [
     ],
     imagePath: '/Suman_new.png',
     image: '/Suman_new.png',
-    badge: '10+ Years Experience',
-    credentials: 'Faculty of Law, Delhi University  |  10+ Years  |  Delhi – Himachal Pradesh',
+    badge: '13+ Years Experience',
+    credentials: 'Faculty of Law, Delhi University  |  13+ Years  |  Delhi – Himachal Pradesh',
     linkedin: 'https://linkedin.com',
     instagram: 'https://instagram.com'
   },

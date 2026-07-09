@@ -71,7 +71,7 @@ export default function FAQPage() {
     {
       category: 'OFFICES & FOOTPRINT',
       question: 'Where are Arventis Partners offices and practice footprints located?',
-      answer: 'We maintain physical offices in Hyderabad (Yusufguda), Lucknow (Lalbagh), Cuttack (CDA Sector 8), and Shimla (CPRI). Additionally, our team regularly appears before High Courts, arbitral tribunals, and regulatory bodies across Delhi, Mumbai, Pune, Chandigarh, and Kolkata, as well as managing international consulting mandates across the GCC, UK, US, and South Korea.'
+      answer: 'We maintain physical offices in Hyderabad (Yusufguda), Lucknow (Lalbagh), Cuttack (CDA Sector 8), and Shimla (CPRI). Additionally, our team regularly appears before High Courts, arbitral tribunals, and regulatory bodies across Delhi, Mumbai, Pune, Chandigarh, and Kolkata, as well as managing international consulting mandates across GCC, UK, US, and South Korea.'
     },
     {
       category: 'CONFIDENTIALITY & NDAs',

@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Left: Brand Header */}
           <div className="flex items-center justify-start py-0">
             <Image
-              src="/logo-whitebg.png"
+              src="/logo-Whitebg.png"
               alt="Arventis footer logo"
               width={450}
               height={120}
@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
 
             <p className="text-[11px] text-black/50 pt-1">
-              © 2026 Arventis Partners. All rights reserved. SEC1 & Statutory Compliance.
+              © 2026 Arventis Partners. All rights reserved. Statutory Compliance.
             </p>
           </div>
         </div>

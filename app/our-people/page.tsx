@@ -90,9 +90,9 @@ export default function OurPeoplePage() {
   function getDomainPosition(person: Person) {
     let positionText = '';
     if (person.id === 'anshuman') {
-      positionText = 'Founding Partner | Strategy Consulting Services'; 
+      positionText = 'Strategy Consulting Services'; 
     } else if (person.id === 'suman-thakur') {
-      positionText = 'Founding Partner | Legal Services';
+      positionText = 'Legal Services';
     } else if (person.id === 'yash-thakur') {
       positionText = 'Associate Counsel | Legal Services';
     } else if (person.id === 'sweta' || person.id === 'adarsh') {
@@ -234,7 +234,23 @@ export default function OurPeoplePage() {
                   <p className="text-black/80 font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.title}</p>
                   {selectedPerson.badge && <p className="text-[#0a0862] font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.badge}</p>}
                 </div>
-                
+
+                {/* Geographies shifted below the name section */}
+                {selectedPerson.geographies && selectedPerson.geographies.length > 0 && (
+                  <div className="mt-4 pt-4 border-t border-black/10">
+                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
+                      Geographies
+                    </h4>
+                    <div className="flex flex-wrap gap-x-4 gap-y-2">
+                      {selectedPerson.geographies.map((geo, idx) => (
+                        <div key={idx} className="flex items-center text-xs md:text-sm font-medium text-black/80">
+                          <MapPin className="w-3.5 h-3.5 mr-1.5 text-black/40 shrink-0" />
+                          <span>{geo}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>  
 
               {/* Right Column */}
@@ -260,60 +276,36 @@ export default function OurPeoplePage() {
                   </div>
                 )}
 
-                <div className="mt-4 pt-2">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Left Data Column */}
-                    <div className="space-y-6">
-                      <div>
-                        <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
-                          Geographies
-                        </h4>
-                        {selectedPerson.geographies && selectedPerson.geographies.length > 0 && (
-                          <ul className="mt-2 space-y-1.5">
-                            {selectedPerson.geographies.map((geo, idx) => (
-                              <li key={idx} className="flex items-start text-xs md:text-sm font-medium text-black/80">
-                                <MapPin className="w-3.5 h-3.5 mr-1.5 text-black/40 shrink-0 mt-0.5" />
-                                <span>{geo}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+                <div className="mt-4 pt-2 space-y-6">
+                  {selectedPerson.clientList && selectedPerson.clientList.length > 0 && (
+                    <div>
+                      <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
+                        Representative Clients
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedPerson.clientList.map((client, idx) => (
+                          <span key={idx} className="bg-black/5 px-3 py-1.5 text-[10px] md:text-xs font-medium text-black/80 rounded-sm">
+                            {client}
+                          </span>
+                        ))}
                       </div>
                     </div>
+                  )}
 
-                    {/* Right Data Column */}
-                    <div className="space-y-6">
-                      {selectedPerson.clientList && selectedPerson.clientList.length > 0 && (
-                        <div>
-                          <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
-                            Representative Clients
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {selectedPerson.clientList.map((client, idx) => (
-                              <span key={idx} className="bg-black/5 px-3 py-1.5 text-[10px] md:text-xs font-medium text-black/80 rounded-sm">
-                                {client}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      <div>
-                        <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
-                          Practice Highlights
-                        </h4>
-                        <ul className="space-y-3">
-                          {selectedPerson.highlights.map(highlight => (
-                            <li key={highlight.id} className="flex items-start group">
-                              <CheckCircle2 className="w-4 h-4 mr-3 text-[#0a0862] shrink-0 mt-0.5 opacity-80 group-hover:opacity-100 transition-opacity" />
-                              <span className="text-xs md:text-sm text-black/80 leading-snug font-medium group-hover:text-black transition-colors">
-                                {highlight.text}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                  <div>
+                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
+                      Practice Highlights
+                    </h4>
+                    <ul className="space-y-3 w-full">
+                      {selectedPerson.highlights.map(highlight => (
+                        <li key={highlight.id} className="flex items-start group w-full">
+                          <CheckCircle2 className="w-4 h-4 mr-3 text-[#0a0862] shrink-0 mt-0.5 opacity-80 group-hover:opacity-100 transition-opacity" />
+                          <span className="text-xs md:text-sm text-black/80 leading-snug font-medium group-hover:text-black transition-colors w-full">
+                            {highlight.text}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>

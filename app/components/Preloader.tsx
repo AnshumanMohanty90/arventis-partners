@@ -123,7 +123,7 @@ export default function Preloader() {
         {/* Logo Image */}
         <div className="preloader-logo py-2 flex items-center justify-center">
           <Image
-            src="/logo-blackbg.png"
+            src="/logo-Black-bg.png"
             alt="Arventis Partners Logo"
             width={450}
             height={120}
@@ -147,7 +147,7 @@ export default function Preloader() {
         {/* Logo Image */}
         <div className="preloader-logo py-2 flex items-center justify-center">
           <Image
-            src="/logo-blackbg.png"
+            src="/logo-Black-bg.png"
             alt="Arventis Partners Logo"
             width={380}
             height={100}

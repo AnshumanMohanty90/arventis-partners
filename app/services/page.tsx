@@ -102,7 +102,7 @@ export default function ServicesPage() {
             <RevealHeading>SERVICES</RevealHeading>
           </h1>
           <p className="scroll-fade-up font-sans text-[15px] sm:text-[17px] md:text-[19px] text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            Unified strategic management consulting and elite legal advocacy, <br className="hidden sm:inline" />
+            Unified strategic management consulting<br/> and  elite legal advocacy, 
             engineered for high-stakes execution.
           </p>
         </div>

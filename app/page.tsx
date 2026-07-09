@@ -44,8 +44,8 @@ export default function Home() {
   const slides = [
     {
       navTitle: "Two Disciplines",
-      title: "One Firm, Two Disciplines.",
-      subtitle: "Strategy consulting and legal advocacy, led by the same founding partners from day one.",
+      title: "One Firm, Two Disciplines",
+      subtitle: "Strategy consulting and legal advocacy, led by \n the same founding partners from day one",
       image: "/hero building.png",
       primaryBtnText: "Meet the Firm",
       primaryBtnHref: "/about",
@@ -53,7 +53,7 @@ export default function Home() {
     {
       navTitle: "Strategy Consulting",
       title: "Strategy Consulting",
-      subtitle: "Growth, GTM, and operating model design, delivered across India, the GCC, the UK, the US, and South Korea.",
+      subtitle: "Growth, GTM, and operating model design,\n delivered across India, GCC, UK, US, and South Korea",
       image: "/ArvBiz-bg.jpg",
       primaryBtnText: "Explore Consulting",
       primaryBtnHref: "/services#consulting",
@@ -63,7 +63,7 @@ export default function Home() {
     {
       navTitle: "Legal Advisory",
       title: "Legal Advisory",
-      subtitle: "Litigation, compliance, and constitutional law, from trial courts to the Supreme Court of India.",
+      subtitle: "Litigation, compliance, and constitutional law, \n from Trial Courts to the Supreme Court of India",
       image: "/Hero-legal.png",
       primaryBtnText: "Explore Practice Areas",
       primaryBtnHref: "/services#legal",
@@ -72,8 +72,8 @@ export default function Home() {
     },
     {
       navTitle: "International Fluency",
-      title: "Local Depth.\nInternational Fluency.",
-      subtitle: "Full-spectrum legal and strategy advisory for clients across India, the GCC, the UK, the US, and South Korea.",
+      title: "Local Depth.\nInternational Fluency",
+      subtitle: "Full-spectrum legal and strategy advisory for \n  clients across India, GCC, UK, US, and South Korea",
       description: "Litigation and advisory across Indian courts and regulatory bodies. Consulting engagements delivered in India, Saudi Arabia, the UAE, Kuwait, the UK, the US, and South Korea — with the same preparation and the same standard of delivery, every time.",
       image: "/hero international.png",
       primaryBtnText: "Our Story",
@@ -183,8 +183,9 @@ export default function Home() {
                   currentSlide === idx ? 'scale-105' : 'scale-100'
                 }`}
               />
-              {/* Dark Gradient Overlay for Readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 z-10" />
+              {/* Dark Overlay and Gradient for Readability */}
+              <div className="absolute inset-0 bg-black/45 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 z-10" />
             </div>
           ))}
         </div>
@@ -200,10 +201,10 @@ export default function Home() {
                   : 'opacity-0 translate-y-6 absolute inset-x-0 top-0 pointer-events-none z-0'
               }`}
             >
-              <h1 className="text-white font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal tracking-tight leading-[1.1] max-w-5xl mb-4 sm:mb-6">
+              <h1 className="text-white font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal tracking-tight leading-[1.1] max-w-5xl mb-4 sm:mb-6 drop-shadow-md">
                 {formatSliderText(slide.title)}
                 {slide.subtitle && (
-                  <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white/90 mt-2 font-sans">
+                  <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white/95 mt-2 font-sans">
                     {formatSliderText(slide.subtitle)}
                   </span>
                 )}
@@ -355,7 +356,7 @@ export default function Home() {
                 </h2>
                 <div className="font-sans text-[17px] text-black/75 leading-relaxed font-light space-y-3">
                   <p>
-                    Over more than a decade, our leadership has worked on market entry, government mandates, and enterprise strategy across India, the GCC, the UK, the US, and South Korea.
+                    Over more than a decade, our leadership has worked on market entry, government mandates, and enterprise strategy across India, GCC, UK, US, and South Korea.
                   </p>
                   <p>
                     That experience covers the regulatory, cultural, and commercial considerations specific to each jurisdiction, which shapes how we advise you in new markets.

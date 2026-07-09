@@ -209,7 +209,7 @@ export default function ContactUsPage() {
                 {/* Email field */}
                 <div>
                   <label htmlFor="email" className="block font-sans text-xs uppercase tracking-widest text-[#000000] font-bold mb-2">
-                    Contact Email <span className="text-red-500">*</span>
+                    Email <span className="text-red-500">*</span>
                   </label>
                   <input
                     id="email"
