@@ -38,11 +38,9 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
         
         {/* Header */}
         <div className="mb-6">
-          <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#0a0862] font-bold block mb-1">
-            REGULATORY DISCLAIMER
-          </span>
+          
           <h2 className="font-serif text-2xl sm:text-3xl font-light tracking-tight text-black">
-            Disclaimer & Terms
+            Disclaimer 
           </h2>
         </div>
 

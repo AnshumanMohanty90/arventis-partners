@@ -16,14 +16,13 @@ const graphik = localFont({
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
-  weight: ['900'],
   display: 'swap',
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arventispartners.com"),
   title: {
-    default: "Arventis Partners | Strategy & Legal Advisory",
+    default: "Arventis Partners ",
     template: "%s | Arventis Partners",
   },
   description:
