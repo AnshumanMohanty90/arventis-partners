@@ -152,7 +152,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-3 mt-6 mb-4 font-sans text-[15px] sm:text-[17px] text-black/75 leading-relaxed font-light scroll-fade-up transition-delay-200">
                   <p>
-                    Founded by Kumar Suman, an advocate with 13 years in litigation, and Anshuman Mohanty, a strategy leader with 13 years across global markets.
+                    Founded by Kumar Suman, an advocate with 13 years in litigation, and Anshuman Mohanty, a strategy leader with 10 years across global markets.
                   </p>
                   <p>
                     Most businesses run two advisors: one for strategy, one for law. Then spend weeks reconciling what the two don't agree on.

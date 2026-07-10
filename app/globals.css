@@ -6,6 +6,18 @@
   --foreground: #000000;
 }
 
+::-moz-selection {
+  background: transparent;
+  text-decoration: underline;
+  text-decoration-color: #1915e1;
+}
+
+::selection {
+  background: transparent;
+  text-decoration: underline;
+  text-decoration-color: #1915e1;
+}
+
 @theme {
   --font-serif: var(--font-playfair), serif;
   --font-sans: var(--font-playfair), serif;

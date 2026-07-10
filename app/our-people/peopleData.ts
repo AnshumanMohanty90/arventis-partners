@@ -45,7 +45,7 @@ export const peopleData: Person[] = [
     shortDesc: 'Strategy consulting leader with 13+ years of P&L ownership across consulting, BFSI, government, and tech.',
     fullBio: 'Anshuman Mohanty has spent thirteen years at the sharp end of growth decisions: holding P&L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border entries across five geographies.\nThe discipline he brings to every engagement is the same: rigorous diagnosis, a strategy built to be executed rather than presented, and the commitment to stay in the room through implementation. Clients who work with Anshuman get a partner who has done the work before, across sectors and at scale.',
     bio: [
-      'Anshuman Mohanty has spent thirteen years at the sharp end of growth decisions: holding P&L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border entries across five geographies.',
+      'Anshuman Mohanty has spent ten years at the sharp end of growth decisions: holding P&L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border entries across five geographies.',
       'The discipline he brings to every engagement is the same: rigorous diagnosis, a strategy built to be executed rather than presented, and the commitment to stay in the room through implementation. Clients who work with Anshuman get a partner who has done the work before, across sectors and at scale.'
     ],
     customSectionTitle: 'THE CONSULTING NETWORK',
@@ -60,8 +60,8 @@ export const peopleData: Person[] = [
     ],
     imagePath: '/Anshuman.png',
     image: '/Anshuman.png',
-    badge: '13+ Years Experience',
-    credentials: 'MBA, IIM Lucknow  |  13+ Years  |  India – GCC – UK – US – South Korea',
+    badge: '10+ Years Experience',
+    credentials: 'MBA, IIM Lucknow  |  10+ Years  |  India – GCC – UK – US – South Korea',
     linkedin: 'https://linkedin.com',
     instagram: 'https://instagram.com'
   },

@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Left: Brand Header */}
           <div className="flex items-center justify-start py-0">
             <Image
-              src="/logo-Whitebg.png"
+              src="/logo-whitebg.png"
               alt="Arventis footer logo"
               width={450}
               height={120}
