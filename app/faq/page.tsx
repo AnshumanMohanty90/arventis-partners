@@ -66,15 +66,15 @@ export default function FAQPage() {
     {
       category: 'PRACTICE ARCHITECTURE',
       question: 'How does Arventis Partners combine legal counsel and strategy consulting?',
-      answer: 'Arventis Partners operates as a unified dual-discipline firm. High\u2011stakes commercial decisions — whether cross-border market entry, corporate restructuring, or M&A — carry both commercial growth and legal regulatory implications. Our senior partners stay in the room from strategic design to courtroom advocacy, ensuring seamless alignment without institutional hand-offs.'
+      answer: 'Arventis Partners operates as a unified dual-discipline firm. High\u2011stakes commercial decisions — whether cross-border market entry, corporate restructuring, or M and A — carry both commercial growth and legal regulatory implications. Our senior partners stay in the room from strategic design to courtroom advocacy, ensuring seamless alignment without institutional hand-offs.'
     },
     {
-      category: 'OFFICES & FOOTPRINT',
+      category: 'OFFICES and FOOTPRINT',
       question: 'Where are Arventis Partners offices and practice footprints located?',
       answer: 'We maintain physical offices in Hyderabad (Yusufguda), Lucknow (Lalbagh), Cuttack (CDA Sector 8), and Shimla (CPRI). Additionally, our team regularly appears before High Courts, arbitral tribunals, and regulatory bodies across Delhi, Mumbai, Pune, Chandigarh, and Kolkata, as well as managing international consulting mandates across GCC, UK, US, and South Korea.'
     },
     {
-      category: 'CONFIDENTIALITY & NDAs',
+      category: 'CONFIDENTIALITY and NDAs',
       question: 'What confidentiality standards govern mandate enquiries?',
       answer: 'All communications, preliminary documentation, and mandate enquiries submitted to Arventis Partners are protected under strict attorney-client privilege protocols and institutional non-disclosure agreements (NDAs). Data is handled through encrypted channels.'
     },
@@ -91,7 +91,7 @@ export default function FAQPage() {
     {
       category: 'STRATEGY CONSULTING',
       question: 'What types of consulting engagements do you lead?',
-      answer: 'Our strategy practice leads GTM (Go-To-Market) expansion, sales operating model transformations, organizational restructuring, digital infrastructure implementation, and P&L optimization across BFSI, government, tech, manufacturing, and EdTech sectors.'
+      answer: 'Our strategy practice leads GTM (Go-To-Market) expansion, sales operating model transformations, organizational restructuring, digital infrastructure implementation, and P and L optimization across BFSI, government, tech, manufacturing, and EdTech sectors.'
     }
   ];
 
@@ -120,8 +120,8 @@ export default function FAQPage() {
       {/* 1. HERO BANNER (LIGHT THEME) */}
       <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto relative z-10 space-y-4">
-          <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#0a0862] font-bold block">
-            KNOWLEDGE BASE & MANDATE GUIDANCE
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#16284C] font-bold block">
+            KNOWLEDGE BASE and MANDATE GUIDANCE
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-black leading-tight">
             <RevealHeading>FREQUENTLY ASKED QUESTIONS</RevealHeading>
@@ -146,7 +146,7 @@ export default function FAQPage() {
                 className="w-full text-left p-6 sm:p-8 flex items-center justify-between gap-4 focus:outline-none hover:bg-slate-50/50 transition-colors duration-300"
               >
                 <div className="space-y-1">
-                  <span className="font-sans text-[10px] tracking-[0.25em] text-[#0a0862] uppercase font-bold block">
+                  <span className="font-sans text-[10px] tracking-[0.25em] text-[#16284C] uppercase font-bold block">
                     {faq.category}
                   </span>
                   <h3 className="font-serif text-lg sm:text-xl font-medium text-black pr-4">
@@ -154,7 +154,7 @@ export default function FAQPage() {
                   </h3>
                 </div>
                 <div className={`w-8 h-8 rounded-full border border-black/15 flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
-                  openIndex === idx ? 'rotate-180 bg-[#0a0862] text-white border-[#0a0862]' : 'text-black'
+                  openIndex === idx ? 'rotate-180 bg-[#16284C] text-white border-[#16284C]' : 'text-black'
                 }`}>
                   <ChevronDown size={18} />
                 </div>
@@ -169,14 +169,14 @@ export default function FAQPage() {
           ))}
 
           {/* Direct CTA Box */}
-          <div className="scroll-fade-up mt-12 p-8 sm:p-10 bg-white border border-[#0a0862]/40 rounded-[1px] shadow-md flex flex-col items-center text-center gap-6">
+          <div className="scroll-fade-up mt-12 p-8 sm:p-10 bg-white border border-[#16284C]/40 rounded-[1px] shadow-md flex flex-col items-center text-center gap-6">
             <div>
               <h4 className="font-serif text-2xl font-light text-black mb-2">Have a Specific Mandate Inquiry?</h4>
               <p className="font-sans text-xs sm:text-sm text-black/70 font-light">Connect directly with our strategy practice or legal bench leads.</p>
             </div>
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 bg-[#0a0862] hover:bg-[#1915e1] text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-4 transition-colors duration-300 shadow-md"
+              className="inline-flex items-center gap-2 bg-[#16284C] text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-4 transition-colors duration-300 shadow-md"
             >
               <span>Initiate Contact</span>
               <ArrowRight size={14} />

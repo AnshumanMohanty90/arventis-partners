@@ -71,9 +71,9 @@ export default function Home() {
       secondaryBtnHref: "/contact-us"
     },
     {
-      navTitle: "International Fluency",
-      title: "Local Depth.\nInternational Fluency",
-      subtitle: "Full-spectrum legal and strategy advisory for \n  clients across India, GCC, UK, US, and South Korea",
+      navTitle: "International Reach",
+      title: "Local Depth.\nInternational Reach.",
+      subtitle: "Legal and strategy advisory for  clients across India,\n  the Gulf, the UK, the US, and South Korea.",
       description: "Litigation and advisory across Indian courts and regulatory bodies. Consulting engagements delivered in India, Saudi Arabia, the UAE, Kuwait, the UK, the US, and South Korea — with the same preparation and the same standard of delivery, every time.",
       image: "/hero international.png",
       primaryBtnText: "Our Story",
@@ -228,7 +228,7 @@ export default function Home() {
                   {/* Horizontal Progress Bar above the title */}
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-white/20 overflow-hidden">
                     <div
-                      className={`h-full bg-[#0a0862] transition-all ${
+                      className={`h-full bg-[#16284C] transition-all ${
                         currentSlide === idx ? 'w-full animate-slide-progress' : 'w-0'
                       }`}
                       style={{
@@ -300,14 +300,16 @@ export default function Home() {
                 </h2>
                 <div className="font-sans text-[17px] text-black/75 leading-relaxed font-light space-y-3">
                   <p>
-                    Most clients brief one advisor on strategy and a separate advisor on legal risk, then manage the gaps between the two on their own.
+                    Most clients engage separate advisors for strategy and for legal risk, then absorb the cost when the two are not aligned.
                   </p>
                   <p>
-                    At Arventis, the same leadership handles both domains from the start, so you are not moving between two disconnected practices.
+                    At Arventis, the same leadership is responsible for both domains from the outset, so clients are not required to coordinate between separate practices.
                   </p>
                   <p>
-                    Every recommendation accounts for business goals and legal implications together.
-
+                    Each recommendation accounts for both the business objective and its legal implications.
+                  </p>
+                  <p>
+                    Client time is spent on decisions rather than on coordinating between advisors.
                   </p>
                   
                   
@@ -316,7 +318,7 @@ export default function Home() {
               <div className="flex justify-center w-full">
                 <Link
                   href="/our-people"
-                  className="inline-flex items-center gap-3 bg-[#0a0862] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                  className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                 >
                   <span>MEET THE TEAM</span>
                   <span>&rarr;</span>
@@ -356,17 +358,17 @@ export default function Home() {
                 </h2>
                 <div className="font-sans text-[17px] text-black/75 leading-relaxed font-light space-y-3">
                   <p>
-                    Over more than a decade, our leadership has worked on market entry, government mandates, and enterprise strategy across India, GCC, UK, US, and South Korea.
+                    Over more than a decade, our leadership has advised on market entry, government mandates, and enterprise strategy across India, the GCC, the UK, the US, and South Korea.
                   </p>
                   <p>
-                    That experience covers the regulatory, cultural, and commercial considerations specific to each jurisdiction, which shapes how we advise you in new markets.
+                    That experience spans the regulatory, cultural, and commercial complexity specific to each of these jurisdictions.
                   </p>
                 </div>
               </div>
               <div className="flex justify-center w-full">
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-3 bg-[#0a0862] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                  className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                 >
                   <span>SEE OUR EXPERTISE</span>
                   <span>&rarr;</span>
@@ -383,10 +385,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto space-y-8">
           <div className="scroll-fade-up text-center max-w-3xl mx-auto space-y-4">
             <h2 className="font-serif text-[20px] sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-[#000000] whitespace-nowrap">
-              Which one would you like to start with ? 
+              Which Practice Would You Like to Start With?
             </h2>
             <div className="font-sans text-[17px] text-[#000000]/75 leading-relaxed font-light mt-2">
-              <p>Most engagements need both eventually. Start with whichever one fits your problem, right now.</p>
+              <p>Most engagements ultimately involve both practices.<br/> Begin with whichever one matches the immediate need.</p>
             </div>
           </div>
 
@@ -408,14 +410,13 @@ export default function Home() {
                     Strategy Consulting
                   </h3>
                   <p className="font-sans text-[15px] text-black/70 font-light leading-relaxed">
-                    Growth strategy, GTM expansion, and operational work 
-                    <br/>  for organizations that need execution, not just plans.
+                    Growth strategy, GTM expansion, and operational work for <br/> organisations that require execution alongside planning.
                   </p>
                 </div>
                 <div className="pt-6 flex justify-center">
                   <Link
                     href="/services/consulting"
-                    className="inline-flex items-center gap-3 bg-[#0a0862] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                    className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                   >
                     <span>EXPLORE CONSULTING</span>
                     <span>&rarr;</span>
@@ -441,14 +442,13 @@ export default function Home() {
                     Legal Advisory
                   </h3>
                   <p className="font-sans text-[15px] text-black/75 font-light leading-relaxed">
-                    Commercial dispute resolution and advocacy for businesses
-                    <br/> that need counsel as sharp as their ambition.
+                    Commercial dispute resolution and advocacy for<br/> businesses operating at scale.
                   </p>
                 </div>
                 <div className="pt-6 flex justify-center">
                   <Link
                     href="/services/legal"
-                    className="inline-flex items-center gap-3 bg-[#0a0862] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                    className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                   >
                     <span>EXPLORE LEGAL</span>
                     <span>&rarr;</span>

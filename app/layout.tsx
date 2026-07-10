@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Arventis Partners",
   },
   description:
-    "Arventis Partners is an elite dual-discipline firm combining strategy consulting and legal advocacy across corporate litigation, arbitration, regulatory compliance, and GTM expansion.",
+    "Arventis Partners is a dual-discipline firm combining strategy consulting and legal advocacy across corporate litigation, arbitration, regulatory compliance, and GTM expansion.",
   keywords: [
     "Arventis Partners",
     "Strategy Consulting",
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Arventis Partners | Strategy & Legal Advisory",
-    description: "Elite advisory for the architecture of international commerce and the preservation of legal integrity.",
+    title: "Arventis Partners | Strategy and Legal Advisory",
+    description: "Strategy consulting and legal advocacy for clients operating across international commerce and legal risk.",
     url: "https://arventispartners.com",
     siteName: "Arventis Partners",
     images: [
@@ -73,8 +73,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arventis Partners | Strategy & Legal Advisory",
-    description: "Elite advisory for international commerce and legal advocacy.",
+    title: "Arventis Partners | Strategy and Legal Advisory",
+    description: "Strategy consulting and legal advocacy for international commerce.",
     images: ["/logo-extended.png"],
   },
   robots: {
@@ -161,7 +161,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased selection:bg-[#0a0862] selection:text-[#000000] ${graphik.variable} ${playfair.variable}`}
+      className={`h-full antialiased selection:bg-[#16284C] selection:text-[#000000] ${graphik.variable} ${playfair.variable}`}
     >
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" sizes="any" />

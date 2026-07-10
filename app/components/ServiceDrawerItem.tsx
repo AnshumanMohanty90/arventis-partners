@@ -8,7 +8,7 @@ interface ServiceDrawerItemProps {
   num: string;
   title: string;
   description: string | string[];
-  bullets: string[];
+  bullets?: string[];
   isOpen: boolean;
   onToggle: () => void;
   theme?: 'consulting' | 'legal';
@@ -18,7 +18,6 @@ export default function ServiceDrawerItem({
   num,
   title,
   description,
-  bullets,
   isOpen,
   onToggle,
   theme = 'consulting',
@@ -56,7 +55,7 @@ export default function ServiceDrawerItem({
       {/* GSAP Hover Accent Bar */}
       <div
         ref={accentBarRef}
-        className="absolute left-0 top-0 bottom-0 w-1 origin-left pointer-events-none z-20 bg-[#0a0862]"
+        className="absolute left-0 top-0 bottom-0 w-1 origin-left pointer-events-none z-20 bg-[#16284C]"
         style={{ transform: 'scaleX(0)' }}
       />
 
@@ -77,7 +76,7 @@ export default function ServiceDrawerItem({
 
         <div
           className={`w-8 h-8 rounded-full border border-black/15 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-            isOpen ? 'rotate-180 bg-[#0a0862] text-white border-[#0a0862]' : 'text-black group-hover:border-black/40'
+            isOpen ? 'rotate-180 bg-[#16284C] text-white border-[#16284C]' : 'text-black group-hover:border-black/40'
           }`}
         >
           <ChevronDown className="w-4 h-4" />
@@ -102,22 +101,8 @@ export default function ServiceDrawerItem({
             ))}
           </div>
 
-          {/* Scope of Practice Bullets */}
-          <div className="pt-4 space-y-4">
-            <span className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase font-bold block text-[#0a0862]">
-              SCOPE OF PRACTICE
-            </span>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-              {bullets.map((bullet, bIdx) => (
-                <div key={bIdx} className="flex items-start gap-3 py-1 px-0">
-                  <span className="w-1.5 h-1.5 rounded-full mt-2 bg-[#0a0862] flex-shrink-0" />
-                  <span className="font-sans text-[13px] sm:text-[15px] font-medium text-black/90 leading-normal">
-                    {bullet}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+         
+          
         </div>
       </div>
     </div>

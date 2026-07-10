@@ -39,29 +39,29 @@ export const peopleData: Person[] = [
     discipline: 'Strategy Consulting',
     category: 'Founding Partner',
     title: ' STRATEGY CONSULTING SERVICES',
-    experience: '13+ Years',
+    experience: '11+ Years',
     geographies: ['India', 'GCC', 'UK', 'US', 'South Korea'],
-    shortBio: 'Thirteen years at the sharp end of growth decisions, holding P&L ownership across consulting, BFSI, government, and technology-led businesses.',
-    shortDesc: 'Strategy consulting leader with 13+ years of P&L ownership across consulting, BFSI, government, and tech.',
-    fullBio: 'Anshuman Mohanty has spent thirteen years at the sharp end of growth decisions: holding P&L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border entries across five geographies.\nThe discipline he brings to every engagement is the same: rigorous diagnosis, a strategy built to be executed rather than presented, and the commitment to stay in the room through implementation. Clients who work with Anshuman get a partner who has done the work before, across sectors and at scale.',
+    shortBio: 'Eleven years at the sharp end of growth decisions, holding P and L ownership across consulting, BFSI, government, and technology-led businesses.',
+    shortDesc: 'Strategy consulting leader with 11+ years of P and L ownership across consulting, BFSI, government, and tech.',
+    fullBio: 'Anshuman Mohanty has eleven years of experience in growth strategy, holding P and L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border market entries across five geographies.\nThe approach applied to every engagement is consistent: a diagnostic phase precedes strategy design, the strategy is built for execution rather than presentation, and Anshuman remains directly involved through implementation. Clients working with him engage a partner with direct operating experience, across sectors and at scale.',
     bio: [
-      'Anshuman Mohanty has spent ten years at the sharp end of growth decisions: holding P&L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border entries across five geographies.',
-      'The discipline he brings to every engagement is the same: rigorous diagnosis, a strategy built to be executed rather than presented, and the commitment to stay in the room through implementation. Clients who work with Anshuman get a partner who has done the work before, across sectors and at scale.'
+      'Anshuman Mohanty has eleven years of experience in growth strategy, holding P and L ownership across consulting, BFSI, government, and technology-led businesses as Co-Founder, Business Head, and Strategic Sales Leader. He has built markets, run sales organisations, led government digital transformation, and executed cross-border market entries across five geographies.',
+      'The approach applied to every engagement is consistent: a diagnostic phase precedes strategy design, the strategy is built for execution rather than presentation, and Anshuman remains directly involved through implementation. Clients working with him engage a partner with direct operating experience, across sectors and at scale.'
     ],
     customSectionTitle: 'THE CONSULTING NETWORK',
     customSectionContent: [
-      'Every engagement is led directly by Anshuman Mohanty and supported by a curated global bench of academicians, domain specialists, and sector experts, activated by mandate rather than assigned by default. This gives clients something rare: a senior partner who is present throughout, backed by specialist depth exactly where the work demands it.',
-      'The network spans strategy, operations, digital, finance, and sector verticals across India, GCC, Europe, and the US. It includes senior academics, IIM faculty, central banking alumni, and industry principals with deep P&L experience. Clients receive senior expertise without the overhead of a large firm.'
+      'Every engagement is led directly by Anshuman Mohanty and supported by a global network of academics, domain specialists, and sector experts, engaged by mandate rather than assigned by default. This structure gives clients a senior partner present throughout the engagement, supported by specialist expertise where the work requires it.',
+      'The network spans strategy, operations, digital, finance, and sector verticals across India, the GCC, Europe, and the US, and includes senior academics, IIM faculty, central banking alumni, and industry principals with direct P and L experience. Clients receive senior-level expertise without the overhead structure of a large firm.'
     ],
     highlights: [
-      { id: 'a1', text: 'P&L leadership across multi-geography corporate and state initiatives' },
-      { id: 'a2', text: 'Architect of sales operating models & GTM strategies in 5 countries' },
+      { id: 'a1', text: 'P and L leadership across multi-geography corporate and state initiatives' },
+      { id: 'a2', text: 'Architect of sales operating models and GTM strategies in 5 countries' },
       { id: 'a3', text: 'Digital transformation lead recognised at World Economic Forum' }
     ],
     imagePath: '/Anshuman.png',
     image: '/Anshuman.png',
-    badge: '10+ Years Experience',
-    credentials: 'MBA, IIM Lucknow  |  10+ Years  |  India – GCC – UK – US – South Korea',
+    badge: '11+ Years Experience',
+    credentials: 'MBA, IIM Lucknow  |  11+ Years  |  India – GCC – UK – US – South Korea',
     linkedin: 'https://linkedin.com',
     instagram: 'https://instagram.com'
   },
@@ -86,8 +86,8 @@ export const peopleData: Person[] = [
       { id: 's2', text: 'Handled arbitration and infrastructure litigation involving private enterprises, government agencies, and affected communities' },
       { id: 's3', text: 'Public interest litigation and policy advocacy on displacement and equitable development, achieving real-world impact for vulnerable populations' }
     ],
-    imagePath: '/Suman_new.png',
-    image: '/Suman_new.png',
+    imagePath: '/s-sir.png',
+    image: '/s-sir.png',
     badge: '13+ Years Experience',
     credentials: 'Faculty of Law, Delhi University  |  13+ Years  |  Delhi – Himachal Pradesh',
     linkedin: 'https://linkedin.com',
@@ -99,20 +99,20 @@ export const peopleData: Person[] = [
     name: 'Sweta Verma',
     discipline: 'Advocates',
     category: 'Legal',
-    title: 'ADVOCATE – HIGH COURT & ARBITRAL ADVOCACY',
+    title: 'ADVOCATE – HIGH COURT and ARBITRAL ADVOCACY',
     experience: '15+ Years',
     geographies: ['High Court of Himachal Pradesh', 'District Courts', 'Arbitral Tribunals'],
     shortBio: 'Fifteen years representing institutions and individuals navigating complex disputes, criminal prosecutions, and infrastructure litigation.',
     shortDesc: 'Extensive experience in High Court litigation, civil disputes, criminal prosecutions, and institutional arbitration.',
-    fullBio: 'Sweta has built her practice across fifteen years representing institutions and individuals where the stakes are real - government bodies, public sector undertakings, financial institutions, and corporate organisations navigating complex disputes, criminal prosecutions, and infrastructure-related litigation.\nHer work has been shaped by the mandates others find difficult: NHAI, NHIDCL, NTPC, Adani Cement, IL&FS, Punjab National Bank, SBI Life Insurance. These are not clients who retain counsel for appearances. They retain counsel when the matter carries consequence - and she has carried those matters, across arbitration, commercial disputes, banking recovery proceedings, construction and infrastructure law, and regulatory compliance.\nShe appears regularly before the High Court of Himachal Pradesh and district courts across the state. The practice she brings to each matter is defined by meticulous preparation, litigation strategy built around the specific facts on record, and the kind of advocacy that earns institutional confidence over time - not once, but repeatedly, across matters and across years.',
+    fullBio: 'Sweta has built her practice across fifteen years representing institutions and individuals where the stakes are real - government bodies, public sector undertakings, financial institutions, and corporate organisations navigating complex disputes, criminal prosecutions, and infrastructure-related litigation.\nHer work has been shaped by the mandates others find difficult: NHAI, NHIDCL, NTPC, Adani Cement, IL and FS, Punjab National Bank, SBI Life Insurance. These are not clients who retain counsel for appearances. They retain counsel when the matter carries consequence - and she has carried those matters, across arbitration, commercial disputes, banking recovery proceedings, construction and infrastructure law, and regulatory compliance.\nShe appears regularly before the High Court of Himachal Pradesh and district courts across the state. The practice she brings to each matter is defined by meticulous preparation, litigation strategy built around the specific facts on record, and the kind of advocacy that earns institutional confidence over time - not once, but repeatedly, across matters and across years.',
     bio: [
       'Sweta has built her practice across fifteen years of representing institutions and individuals where the stakes are real - government bodies, public sector undertakings, financial institutions, and corporate organisations navigating complex disputes, criminal prosecutions, and infrastructure-related litigation.',
       'She appears regularly before the High Court of Himachal Pradesh and district courts across the state. The practice she brings to each matter is defined by meticulous preparation, litigation strategy built around the specific facts on record, and the kind of advocacy that earns institutional confidence over time - not once, but repeatedly, across matters and across years.'
     ],
     highlights: [
-      { id: 'sw1', text: 'High Court of Himachal Pradesh Standing & District Courts' },
-      { id: 'sw2', text: 'Institutional & Ad-Hoc Arbitral Proceedings in Infrastructure & Construction' },
-      { id: 'sw3', text: 'Banking Recovery Proceedings & Regulatory Compliance' }
+      { id: 'sw1', text: 'High Court of Himachal Pradesh Standing and District Courts' },
+      { id: 'sw2', text: 'Institutional and Ad-Hoc Arbitral Proceedings in Infrastructure and Construction' },
+      { id: 'sw3', text: 'Banking Recovery Proceedings and Regulatory Compliance' }
     ],
     imagePath: '/Sweta_new.png',
     image: '/Sweta_new.png',
@@ -128,7 +128,7 @@ export const peopleData: Person[] = [
     cardName: 'Adarsh Asthana',
     discipline: 'Advocates',
     category: 'Legal',
-    title: 'ADVOCATE – HIGH COURT & BANKING APPELLATE',
+    title: 'ADVOCATE – HIGH COURT and BANKING APPELLATE',
     experience: '14+ Years',
     geographies: ['Allahabad High Court', 'Lucknow Bench', 'DRT'],
     shortBio: 'Fourteen years building a practice defined by results in contested terrain: civil litigation, debt recovery, banking and financial disputes, revenue matters, arbitration, and bail.',
@@ -140,9 +140,9 @@ export const peopleData: Person[] = [
       'Clients who work with Adv. Asthana get an advocate who has stood on the right side of difficult disputes, across judicial and quasi-judicial forums, for over a decade. He does not offer opinions at a distance. He takes the brief, builds the position, and sees it through.'
     ],
     highlights: [
-      { id: 'ad1', text: 'Allahabad High Court (Judicature & Lucknow Bench) Standing' },
-      { id: 'ad2', text: 'Debts Recovery Tribunal (DRT) & Revenue Courts Practice' },
-      { id: 'ad3', text: 'Banking & Financial Disputes, Debt Recovery & Bail Advocacy' }
+      { id: 'ad1', text: 'Allahabad High Court (Judicature and Lucknow Bench) Standing' },
+      { id: 'ad2', text: 'Debts Recovery Tribunal (DRT) and Revenue Courts Practice' },
+      { id: 'ad3', text: 'Banking and Financial Disputes, Debt Recovery and Bail Advocacy' }
     ],
     imagePath: '/Adarsh_new.png',
     image: '/Adarsh_new.png',
@@ -157,7 +157,7 @@ export const peopleData: Person[] = [
     name: 'Yash Thakur',
     discipline: 'Advocates',
     category: 'Legal',
-    title: 'ADVOCATE – LITIGATION & DISPUTE RESOLUTION',
+    title: 'ADVOCATE – LITIGATION and DISPUTE RESOLUTION',
     experience: '20+ Years',
     geographies: ['Supreme Court', 'Delhi High Court', 'Tribunals'],
     shortBio: 'Over 20 years of experience in litigation, dispute resolution, and legal advisory across judicial and quasi-judicial forums in India.',
@@ -167,16 +167,16 @@ export const peopleData: Person[] = [
       'Yash Thakur is an Advocate with over 20 years of experience in litigation, dispute resolution, and legal advisory, representing individuals, corporates, financial institutions, and government bodies before judicial and quasi-judicial forums across India.',
       'His practice combines meticulous legal research, strategic advocacy, and commercially grounded counsel, earning him the trust of both corporate and individual clients across a wide range of contentious and advisory matters.'
     ],
-    customSectionTitle: 'PRACTICE AREAS & FORUMS',
+    customSectionTitle: 'PRACTICE AREAS and FORUMS',
     customSectionContent: [
-      'Practice Areas: Criminal Litigation · Civil Litigation · Land Acquisition & Compensation Matters · Property & Real Estate Disputes · Motor Accident Claims (MACT) · Consumer Protection & Litigation · Arbitration & Alternative Dispute Resolution',
-      'Courts & Forums: Supreme Court of India · Delhi High Court · District Courts · National Company Law Tribunal (NCLT) · National Consumer Disputes Redressal Commission (NCDRC) · Arbitral Tribunals',
+      'Practice Areas: Criminal Litigation · Civil Litigation · Land Acquisition and Compensation Matters · Property and Real Estate Disputes · Motor Accident Claims (MACT) · Consumer Protection and Litigation · Arbitration and Alternative Dispute Resolution',
+      'Courts and Forums: Supreme Court of India · Delhi High Court · District Courts · National Company Law Tribunal (NCLT) · National Consumer Disputes Redressal Commission (NCDRC) · Arbitral Tribunals',
       'Additional Roles: Panel Advocate to several corporates and institutions, advising on litigation strategy, contractual disputes, regulatory compliance, recovery proceedings, and risk management.'
     ],
     highlights: [
-      { id: 'y1', text: 'Criminal & Civil Litigation' },
-      { id: 'y2', text: 'Property, Land & Real Estate Disputes' },
-      { id: 'y3', text: 'Arbitration & Corporate Advisory' }
+      { id: 'y1', text: 'Criminal and Civil Litigation' },
+      { id: 'y2', text: 'Property, Land and Real Estate Disputes' },
+      { id: 'y3', text: 'Arbitration and Corporate Advisory' }
     ],
     imagePath: '/Yash_new.png',
     image: '/Yash_new.png',

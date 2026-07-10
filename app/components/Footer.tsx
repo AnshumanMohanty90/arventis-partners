@@ -33,10 +33,10 @@ const Footer = () => {
               <Link href="/faq" className="hover:underline hover:text-black">
                 FAQ
               </Link>
-              <Link href="/privacy-policy" className="hover:underline hover:text-black hover:text-[#0a0862] transition-colors">
+              <Link href="/privacy-policy" className="hover:underline hover:text-black hover:text-[#16284C] transition-colors">
                 Privacy policy
               </Link>
-              <Link href="/terms-of-use" className="hover:underline hover:text-black hover:text-[#0a0862] transition-colors">
+              <Link href="/terms-of-use" className="hover:underline hover:text-black hover:text-[#16284C] transition-colors">
                 Terms of use
               </Link>
             </div>

@@ -86,7 +86,7 @@ export default function AboutPage() {
             <RevealHeading>ABOUT</RevealHeading>
           </h1>
           <p className="scroll-fade-up font-sans text-[15px] sm:text-[17px] md:text-[19px] text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            A premier advisory firm combining senior strategy consulting<br/> and  elite legal authority under a single engagement framework.
+            An advisory firm combining strategy consulting and <br/> legal counsel under a single engagement framework.
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default function AboutPage() {
       <section className="relative w-full bg-white pt-16 md:pt-24 pb-8 md:pb-12 px-6 md:px-16 text-center">
         <div className="max-w-6xl mx-auto scroll-fade-up">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light leading-snug text-black">
-           &quot;Whether you&apos;re a domestic business, a family managing an estate, or an international company entering India or GCC,<br/> every engagement gets the same level of preparation and delivery.&quot;
+            &quot;Whether it is a domestic business, a family managing an estate, or an international company entering India or the GCC,<br/> <span className="lg:whitespace-nowrap">every engagement receives the same standard of preparation and delivery.</span>&quot;
           </h2>
         </div>
       </section>
@@ -124,12 +124,12 @@ export default function AboutPage() {
                   <span className="block md:whitespace-nowrap"><RevealHeading>Two Disciplines.</RevealHeading></span>
                   <span className="block md:whitespace-nowrap"><RevealHeading>No Translation Required.</RevealHeading></span>
                 </h2>
-                <div className="h-[1px] w-24 bg-[#0a0862] mt-4" />
+                <div className="h-[1px] w-24 bg-[#16284C] mt-4" />
               </div>
 
               <div className="space-y-3 mt-8 font-sans text-[15px] sm:text-[17px] text-black/75 leading-relaxed font-light scroll-fade-up transition-delay-200">
                 <p>Legal authority and strategy consulting, working under a single engagement model.</p>
-                <p>Every decision here is weighed twice before it reaches you: once for what it builds, once for what it risks.</p>
+                <p>Every decision here is weighed twice before it reaches you: once for what it builds, <br/> once for what it risks.</p>
                 <p>You get one answer, already tested from both sides.</p>
               </div>
             </div>
@@ -152,10 +152,10 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-3 mt-6 mb-4 font-sans text-[15px] sm:text-[17px] text-black/75 leading-relaxed font-light scroll-fade-up transition-delay-200">
                   <p>
-                    Founded by Kumar Suman, an advocate with 13 years in litigation, and Anshuman Mohanty, a strategy leader with 10 years across global markets.
+                    Founded by Kumar Suman, an advocate with 13 years in litigation,<br/> and Anshuman Mohanty, a strategy leader with 10 years across global markets.
                   </p>
                   <p>
-                    Most businesses run two advisors: one for strategy, one for law. Then spend weeks reconciling what the two don't agree on.
+                    Most businesses run two advisors: one for strategy, one for law.<br/> Then spend weeks reconciling what the two don't agree on.
                   </p>
                   <p>
                     We built Arventis to skip that step. One team carries the idea from first strategy call to final legal execution. Nothing gets lost in the handoff, because there is no handoff.
@@ -168,7 +168,7 @@ export default function AboutPage() {
               <div className="flex justify-center w-full mt-6 scroll-fade-up transition-delay-300">
                 <Link
                   href="/our-people"
-                  className="inline-flex items-center gap-3 bg-[#0a0862] hover:bg-[#1915e1] text-white hover:text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                  className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                 >
                   <span>MEET OUR TEAM</span>
                   <span>&rarr;</span>
@@ -221,7 +221,7 @@ export default function AboutPage() {
                 <p className="font-sans text-[15px] sm:text-[17px] text-black/85 font-light">
                   If you're building, defending, or expanding something that matters, <br /> you're probably on this list.
                 </p>
-                <ul className="list-disc pl-5 space-y-2 marker:text-[#0a0862]">
+                <ul className="list-disc pl-5 space-y-2 marker:text-[#16284C]">
                   {[
                     'Founders and CXOs navigating regulatory complexity, in India and abroad',
                     'Startups building commercial and legal infrastructure from day one',

@@ -1,6 +1,12 @@
 @import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'CalibriNumbers';
+  src: local('Calibri'), local('Calibri Regular'), local('calibri');
+  unicode-range: U+0030-0039;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #000000;
@@ -24,7 +30,7 @@
 }
 
 body, p, span, li, a, button, div, input, textarea, select {
-  font-family: var(--font-playfair), serif !important;
+  font-family: 'CalibriNumbers', var(--font-playfair), serif !important;
 }
 
 body {
@@ -34,7 +40,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), serif !important;
+  font-family: 'CalibriNumbers', var(--font-playfair), serif !important;
   font-weight: 700 !important;
 }
 

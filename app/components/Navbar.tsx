@@ -66,9 +66,7 @@ export default function Navbar() {
       <header className={`fixed top-0 left-0 w-full z-50 h-[64px] sm:h-[78px] md:h-[92px] px-2 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between transition-all duration-500 ${
         isHeaderWhite 
           ? 'bg-white/95 backdrop-blur-sm text-black' 
-          : pathname === '/'
-            ? 'bg-black/25 backdrop-blur-sm border-b border-white/10 text-white'
-            : 'bg-transparent text-white'
+          : 'bg-black/25 backdrop-blur-sm border-b border-white/10 text-white'
       }`}>
         {/* Left column: Logo */}
         <div className="flex items-center justify-start h-full py-1 sm:py-1 z-20">
@@ -102,10 +100,10 @@ export default function Navbar() {
                   href={item.href}
                   className={`inline-flex items-center justify-center px-6 py-3 text-xs tracking-[0.25em] font-bold uppercase transition-all duration-300 border rounded-[2px] hover-target ${
                     isContactActive
-                      ? 'bg-[#1915e1] text-white border-[#1915e1]'
+                      ? 'bg-[#16284C] text-white border-white'
                       : isHeaderWhite
-                        ? 'border-black/80 text-black hover:bg-[#1915e1] hover:text-white hover:border-black'
-                        : 'border-[#0a0862] text-white hover:bg-[#1915e1] hover:text-white hover:border-[#0a0862]'
+                        ? 'border-black/80 text-black hover:bg-[#16284C] hover:text-white hover:border-white'
+                        : 'border-white text-white hover:bg-[#16284C] hover:text-white hover:border-[#16284C]'
                   }`}
                 >
                   {item.label}
@@ -138,10 +136,10 @@ export default function Navbar() {
             aria-label="Toggle navigation menu"
             className={`relative z-50 p-1.5 sm:p-2 transition-colors duration-300 focus:outline-none hover-target ${
               isMenuOpen 
-                ? 'text-black hover:text-[#0a0862]'
+                ? 'text-black hover:text-[#16284C]'
                 : isHeaderWhite
-                  ? 'text-black hover:text-[#0a0862]'
-                  : 'text-white hover:text-[#0a0862]'
+                  ? 'text-black hover:text-[#16284C]'
+                  : 'text-white hover:text-[#16284C]'
             }`}
           >
             {isMenuOpen ? <X className="w-8 h-8 sm:w-9 sm:h-9" /> : <Menu className="w-8 h-8 sm:w-9 sm:h-9" />}

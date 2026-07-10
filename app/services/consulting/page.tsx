@@ -32,104 +32,65 @@ const consultingServices = [
   {
     num: '01',
     title: 'Growth Strategy',
-    description: 'A growth plan built on assumptions is a liability dressed as a strategy. We construct growth strategies from evidence: market sizing, competitive positioning, revenue architecture, and a candid assessment of where a business genuinely has the right to win. The output is a roadmap leadership can act on, with clear owners, sequencing, and metrics attached to every milestone.',
-    bullets: [
-      'Revenue growth planning and P&L architecture',
-      'Market sizing, whitespace mapping, and opportunity assessment',
-      'Expansion roadmaps with phased milestones and early-warning indicators',
-      'Pricing logic, margin architecture, and commercial model design'
+    description: [
+      "We help management teams build growth strategy on evidence rather than assumption, using market sizing, segmentation, and whitespace mapping to establish where a business has a genuine right to win and where it does not. This includes a candid assessment of competitive position, cost structure, and the capabilities required to defend or expand it.",
+      "The output is translated into P&L architecture, pricing logic, and margin design, structured as a phased roadmap with defined ownership, milestones, and performance indicators. Each phase carries its own set of leading indicators, so leadership can identify underperformance early rather than at the point a quarterly review confirms it."
     ]
   },
   {
     num: '02',
-    title: 'Go-to-Market Strategy',
-    description: 'Entering a new market is among the highest-stakes decisions a business makes. The cost of a poorly structured go-to-market is not just a missed quarter; it is reputational exposure in a market that rarely offers second introductions. We have led market entries across India, Saudi Arabia, the UAE, Kuwait, and South Korea. Define the segment with precision, align channel to buyer behaviour, and price for the position the business intends to hold.',
-    bullets: [
-      'Market entry strategy for new geographies and customer segments',
-      'Channel architecture: direct, partner-led, institutional, and D2C',
-      'Segment targeting, ideal customer profiling, and acquisition frameworks',
-      'Competitive positioning and sustainable differentiation strategy',
-      'Commercial model design and pricing strategy'
+    title: 'Market Entry and Go-to-Market Strategy',
+    description: [
+      "We support businesses entering new markets, including India, Saudi Arabia, the UAE, Kuwait, and South Korea, drawing on direct operating experience across each of these markets rather than advisory observation from outside them. Our work begins with regulatory assessment and compliance-aware commercial planning, since entry structure, licensing requirements, and permissible ownership models vary substantially by geography and sector.",
+      "From there, we define the target segment and ideal customer profile, evaluate direct, partner-led, institutional, and D2C channel options, and structure commercial terms with the channel partners best positioned to carry the business into the market. Pricing and positioning are localised to the competitive dynamics of that specific market rather than adapted from a template built for the home market."
     ]
   },
   {
     num: '03',
     title: 'Sales Transformation',
-    description: 'Sales underperformance is almost never a talent problem. It is a systems problem: the wrong pipeline architecture, absent governance, no reliable visibility into what is working. Companies that fix the system compound the gains. We have built sales operating models for consulting practices, EdTech businesses, and mid-market enterprises. The goal is always the same: build repeatability into the revenue engine and create the governance that allows performance to sustain itself.',
-    bullets: [
-      'Sales governance design: roles, KPIs, and accountability structures',
-      'Pipeline architecture and CRM-readiness frameworks',
-      'Performance management cadences and reporting dashboards',
-      'Sales team structuring, onboarding playbooks, and incentive design',
-      'Revenue forecasting models and funnel visibility frameworks'
+    description: [
+      "We address sales underperformance at a structural level, on the premise that most underperformance originates in pipeline architecture, governance, and forecasting rather than in the talent of the sales organisation itself. This includes redesigning roles, KPIs, and incentive structures so that individual and team incentives are aligned to the outcomes the business actually needs.",
+      "We build CRM-based pipeline and funnel visibility, and establish a reporting cadence and governance rhythm that sustains performance over multiple quarters rather than producing a single strong quarter followed by reversion. We have delivered these operating models for consulting practices, EdTech businesses, and mid-market enterprises across a range of sales motions, from high-touch B2B to volume-driven B2C."
     ]
   },
   {
     num: '04',
-    title: 'Organisational & Operating Model Design',
-    description: 'Strategy fails at implementation when the organisation is not designed to execute it. Accountability gaps, unclear decision rights, and role overlaps are structural problems, not management ones. We work with leadership teams to design the structures and governance models that allow a business to scale without fragmenting. This is most critical when a founder-led business is professionalising, or when a scaling company is expanding into a geography its existing structure was never built to handle.',
-    bullets: [
-      'Organisational design and restructuring across growth stages',
-      'Operating model architecture for scaling businesses',
-      'Governance frameworks and decision rights mapping',
-      'Role design, team structuring, and span-of-control optimisation',
-      'Founder-dependency reduction in critical commercial processes'
+    title: 'Organisational and Operating Model Design',
+    description: [
+      "We design the organisational structures that allow a business to scale, covering decision rights, span of control, and role clarity, distinct from an org chart exercise that documents reporting lines without addressing how decisions actually get made. This work typically surfaces where authority is informally concentrated in one or two individuals, and what needs to change structurally for that authority to be distributed without losing speed.",
+      "This is most relevant in two situations: when a founder-led business is professionalising and needs to reduce dependency on any single individual for critical commercial processes, and when a company is expanding into a geography or business line its existing structure was not designed to support. In both cases, the deliverable includes a transition plan, not only a target-state design."
     ]
   },
   {
     num: '05',
     title: 'Operational Excellence',
-    description: 'Process inefficiency is rarely the surface problem. It is what sits beneath it, invisible until it is costing money, customers, or compliance standing. We have led operational improvement programmes for a USD 3 billion QSR chain across three countries, for state government digital transformation mandates, and for professional services firms. The method: map the process as it actually exists, identify the real friction points, and redesign for efficiency without sacrificing quality or regulatory compliance.',
-    bullets: [
-      'End-to-end process mapping and redesign',
-      'Service delivery efficiency and customer journey improvement',
-      'Multi-geography operational standardisation frameworks',
-      'Performance tracking systems and operational KPI design'
+    description: [
+      "We identify the sources of process inefficiency that are not visible until they affect cost, customer experience, or compliance standing, typically because the process as documented differs materially from the process as actually run. Our approach begins with mapping the process as it currently operates, including the informal workarounds staff have built to compensate for gaps in the formal design, before redesigning service delivery and the customer journey around it.",
+      "For businesses operating across multiple geographies, we additionally establish the standardisation and KPI tracking required to hold quality consistent at scale, recognising that some degree of local adaptation is necessary and building the governance to distinguish acceptable variation from quality drift. This includes work for a USD 3 billion QSR chain across three countries, state government digital transformation mandates, and professional services firms."
     ]
   },
   {
     num: '06',
-    title: 'Market Entry & Geographic Expansion',
-    description: 'Cross-border expansion demands a different discipline than domestic growth. The regulatory environment is unfamiliar. Channels behave differently. Buyer behaviour does not follow domestic assumptions. We bring direct experience of entering India, Saudi Arabia, the UAE, Kuwait, and South Korea, not as advisors observing from a distance, but as operators accountable for outcomes. Map the regulatory terrain before the product arrives, define the segment with precision, and build the channel alongside the commercial model.',
-    bullets: [
-      'New geography entry strategy: India, GCC, and international markets',
-      'Regulatory landscape mapping and compliance-aware commercial strategy',
-      'Target segment definition and customer development frameworks',
-      'Channel partner identification, qualification, and commercial terms design',
-      'Localisation strategy across product, pricing, and market positioning'
+    title: 'Key Account and Channel Strategy',
+    description: [
+      "We build the senior relationship architecture and expansion frameworks required to grow a major account beyond its initial scope, on the premise that winning an account is the beginning of the commercial relationship rather than its conclusion. This includes structured account farming, refined value propositions tailored to each stakeholder within the account, and early identification of adjacent mandates before a competitor identifies them first.",
+      "This approach delivered 4x revenue expansion within a single government account, and the same framework now informs how we design channel partner performance and retention, including the incentive structures and account planning cadence that keep a partner network expanding rather than plateauing after the initial agreement."
     ]
   },
   {
     num: '07',
-    title: 'Key Account & Channel Strategy',
-    description: 'Winning a significant account or channel relationship is the beginning of the commercial opportunity, not the completion of it. We have driven 4x revenue expansion within a single government account through sharper value propositions, structured account farming, and early identification of adjacent mandates. The method transfers directly to commercial enterprise and channel relationships.',
-    bullets: [
-      'Enterprise account planning and senior relationship architecture',
-      'Revenue expansion frameworks within existing account portfolios',
-      'Channel partner design, onboarding, and performance management',
-      'Account retention programmes and value proposition sharpening'
+    title: 'Digital Transformation',
+    description: [
+      "We treat digital transformation as a business redesign that uses technology as an enabler rather than as the objective, beginning with the intended business outcome and working backward to the systems required to deliver it. This includes the change management and adoption planning that, in our experience, determines whether a transformation is sustained after go-live or reverts to legacy behaviour within two quarters.",
+      "We deliver strategy through to build within a single engagement, using in-house development capability rather than handing execution to a third party once the strategy phase concludes. This includes work for state government clients recognised at the World Economic Forum, applied with the same rigor to commercial digital transformation engagements."
     ]
   },
   {
     num: '08',
-    title: 'Digital Transformation',
-    description: 'Digital transformation that produces durable change is a business redesign that uses technology as the instrument, not the objective. We have led digital transformation programmes for state government clients recognised at the World Economic Forum. We approach commercial digital transformation with the same discipline: start with the business outcome, design backward to the technology, and deliver through our own development capability rather than outsourcing the execution.',
-    bullets: [
-      'Technology-led business process modernisation and redesign',
-      'Website, application, and digital infrastructure delivery',
-      'In-house development capability: strategy through to build in a single engagement',
-      'Digital governance, change management, and adoption frameworks'
-    ]
-  },
-  {
-    num: '09',
-    title: 'Marketing & Brand Execution',
-    description: 'A commercial strategy that never reaches its buyers is an internal document. We work with clients to translate competitive positioning into brand strategy, content, and campaign execution, delivered through a curated network of specialist partners held to the same standard as the strategy work that precedes it.',
-    bullets: [
-      'Brand strategy, narrative architecture, and market positioning',
-      'Content development and editorial direction aligned to GTM objectives',
-      'Performance marketing strategy and campaign execution',
-      'Delivered through a curated specialist partner network, quality-controlled by Arventis'
+    title: 'Marketing and Brand Execution',
+    description: [
+      "We translate commercial strategy and competitive positioning into brand narrative, content, and performance marketing aligned to the underlying GTM objectives, so that execution reinforces the strategic position rather than drifting into generic category messaging. This includes defining the campaign architecture, channel mix, and measurement framework required to track performance against the original commercial objective, not only against marketing-specific metrics.",
+      "Execution is delivered through a curated network of specialist partners, managed to the same quality standard and reporting discipline as the preceding strategy work, so that the client relationship remains with Arventis throughout rather than being handed off at the point of execution."
     ]
   }
 ];
@@ -191,7 +152,7 @@ export default function ConsultingPage() {
         <div className="max-w-7xl mx-auto w-full relative z-20 mt-4 md:mt-8">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#0a0862] text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/20 hover:border-[#0a0862] px-5 py-3 transition-all duration-300 hover-target backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#16284C] text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/20 hover:border-[#16284C] px-5 py-3 transition-all duration-300 hover-target backdrop-blur-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>BACK TO OUR SERVICES</span>
@@ -203,7 +164,7 @@ export default function ConsultingPage() {
             <RevealHeading>ARVENTIS CONSULTING</RevealHeading>
           </h1>
           <p className="scroll-fade-up font-sans text-sm sm:text-base md:text-lg text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            Senior strategy advisory engineered for execution. Engineering sustainable growth, operating models, and market expansion across global jurisdictions.
+            Strategy consulting for growth, operating model design, and market expansion, delivered across India, the GCC, and international jurisdictions.
           </p>
         </div>
       </section>
@@ -226,7 +187,6 @@ export default function ConsultingPage() {
                 num={service.num}
                 title={service.title}
                 description={service.description}
-                bullets={service.bullets}
                 isOpen={activeService === idx}
                 onToggle={() => setActiveService(activeService === idx ? null : idx)}
                 theme="consulting"
@@ -234,6 +194,7 @@ export default function ConsultingPage() {
             ))}
           </div>
         </div>
+           <h3 className="m-5 p-5">For further information on any of these practice areas, please contact us at <a href="mailto:hello@arventispartners.com" className="text-[#004be1] hover:underline">hello@arventispartners.com</a> or visit <a href="https://arventispartners.com/contact" className="text-[#004be1] hover:underline">arventispartners.com/contact</a>.</h3>
       </section>
 
       {/* CONTACT CTA SECTION */}

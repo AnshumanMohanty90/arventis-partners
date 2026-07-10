@@ -62,7 +62,7 @@ export default function CustomCursor() {
       });
       gsap.to(dot, {
         scale: 1,
-        backgroundColor: '#0a0862',
+        backgroundColor: '#16284C',
         duration: 0.25,
       });
     };

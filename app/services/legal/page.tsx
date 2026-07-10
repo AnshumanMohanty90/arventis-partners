@@ -31,7 +31,7 @@ function RevealHeading({ children, className = "" }: { children: string; classNa
 const legalPractices = [
   {
     num: '01',
-    title: 'Civil & Commercial Litigation',
+    title: 'Civil and Commercial Litigation',
     description: [
       "Commercial disputes require more than technical legal knowledge. They require a thorough understanding of the commercial context in which the dispute arose, a candid assessment of litigation risk on both sides, and the quality of advocacy before trial courts, High Courts, and the Supreme Court to protect or advance the client's position as proceedings develop.",
       "Arventis Legal represents businesses and individuals in contract disputes, recovery proceedings, and multi-party commercial litigation. Our bench's standing before the Supreme Court of India means that complex, high-value matters do not require a change of counsel as they escalate through the judicial hierarchy. Clients benefit from continuity: the same team that understands the matter at inception argues it at the apex court."
@@ -46,7 +46,7 @@ const legalPractices = [
   },
   {
     num: '02',
-    title: 'Business & Corporate Law',
+    title: 'Business and Corporate Law',
     description: [
       "The legal infrastructure of a business determines its resilience when conditions are favourable and its exposure when they are not. Businesses that treat corporate law as a compliance exercise rather than a strategic input tend to encounter avoidable problems at the points of highest consequence: a fundraise, an acquisition, a regulatory investigation, or a leadership transition.",
       "Arventis Legal advises businesses at every stage of their lifecycle on entity formation, governance frameworks, commercial contracts, and the legal dimensions of growth decisions. Our counsel is delivered with an awareness of what the legal position means for the client's broader commercial strategy, informed directly by the consulting practice that operates alongside this bench."
@@ -62,7 +62,7 @@ const legalPractices = [
   },
   {
     num: '03',
-    title: 'Estate Planning & Succession',
+    title: 'Estate Planning and Succession',
     description: [
       "Matters involving family estates, succession, and inheritance carry consequences that extend far beyond the legal outcome. They affect relationships built across generations, the transfer of wealth that has taken decades to accumulate, and the continuity of businesses families intend to preserve. Clients who bring these matters to Arventis Legal receive the same quality of preparation and seniority of counsel as our institutional clients, because the stakes are equally significant.",
       "We advise high-net-worth individuals, business families, and NRI clients on testamentary instruments, trust structures, and succession frameworks designed to withstand legal challenge and faithfully reflect the intentions of the person giving the instructions."
@@ -78,7 +78,7 @@ const legalPractices = [
   },
   {
     num: '04',
-    title: 'Real Estate & Property Law',
+    title: 'Real Estate and Property Law',
     description: [
       "Real estate transactions carry significant financial exposure at every stage. The quality of legal preparation at the outset, from title verification through to the structure of transaction documents, determines the client's exposure to dispute, delay, and financial loss at every stage that follows. A transaction structured correctly at the beginning rarely requires the litigation that a poorly documented one almost inevitably does.",
       "Arventis Legal advises individual homeowners, commercial occupiers, developers, and institutional investors across the full real estate lifecycle: transactional advisory, RERA compliance, property disputes, and real estate litigation. Where a matter proceeds to contested proceedings, clients have continuity of counsel from advisory through to courtroom representation."
@@ -110,7 +110,7 @@ const legalPractices = [
   },
   {
     num: '06',
-    title: 'Intellectual Property & Technology',
+    title: 'Intellectual Property and Technology',
     description: [
       "For businesses competing on the basis of proprietary processes, brand equity, creative output, or technology platforms, intellectual property protection is a core asset management question. IP that is inadequately protected, improperly licensed, or carelessly assigned represents a material vulnerability that often only becomes visible when a dispute makes it so.",
       "Arventis Legal advises businesses on the full spectrum of intellectual property: trademarks, copyrights, patents, and trade secrets, from registration and licensing through to enforcement. We also counsel clients on technology agreements, software licensing, digital commerce, and data protection obligations under India's evolving regulatory framework."
@@ -143,7 +143,7 @@ const legalPractices = [
   },
   {
     num: '08',
-    title: 'Dispute Resolution & Arbitration',
+    title: 'Dispute Resolution and Arbitration',
     description: [
       "As commercial relationships span more jurisdictions, arbitration has become the preferred mechanism for resolving disputes in cross-border and high-value commercial contexts. It offers confidentiality, party autonomy in the choice of governing law and procedure, and, where institutional rules are properly incorporated into the underlying contract, a degree of procedural predictability that litigation rarely matches.",
       "Arventis Legal represents parties in domestic and international arbitration proceedings, including institutional arbitrations under recognised arbitral rules. We advise on the drafting of arbitration clauses at the contract stage, where a well-structured clause materially reduces the cost and complexity of any dispute that arises, and represent clients through proceedings and the enforcement of awards."
@@ -159,7 +159,7 @@ const legalPractices = [
   },
   {
     num: '09',
-    title: 'Constitutional & Writ Matters',
+    title: 'Constitutional and Writ Matters',
     description: [
       "Writ jurisdiction before the High Courts and the Supreme Court of India represents the most demanding arena of legal practice. The quality of preparation required, the depth of constitutional analysis, the precision of the pleadings, and the standard of oral advocacy, is categorically different from what most matters demand. Access to this level of representation at the right moment can determine outcomes that no other legal mechanism could produce.",
       "Arventis Legal's practice in constitutional and writ matters reflects the bench's direct standing before the Supreme Court of India. We represent individuals, institutions, and businesses whose rights or legitimate interests require intervention at the constitutional level."
@@ -231,7 +231,7 @@ export default function LegalPage() {
         <div className="max-w-7xl mx-auto w-full relative z-20 mt-4 md:mt-8">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#0a0862] text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/20 hover:border-[#0a0862] px-5 py-3 transition-all duration-300 hover-target backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#16284C] text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/20 hover:border-[#16284C] px-5 py-3 transition-all duration-300 hover-target backdrop-blur-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>BACK TO OUR SERVICES</span>
@@ -243,8 +243,7 @@ export default function LegalPage() {
             <RevealHeading>ARVENTIS LEGAL</RevealHeading>
           </h1>
           <p className="scroll-fade-up font-sans text-sm sm:text-base md:text-lg text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            Elite advocacy and legal counsel delivered by Supreme Court practitioners. <br className="hidden sm:block" />
-            Protecting commercial interests, navigating high-stakes disputes, and structuring defensible compliance frameworks.
+            Legal advisory and advocacy across trial courts, High Courts, arbitral tribunals, and the Supreme Court of India.
           </p>
         </div>
       </section>
@@ -255,7 +254,7 @@ export default function LegalPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 scroll-fade-up">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-black">
-              Legal Mandate Coverage
+              Legal Practices
             </h2>
           </div>
 
@@ -274,6 +273,7 @@ export default function LegalPage() {
             ))}
           </div>
         </div>
+        <h3 className="m-5 p-5">For further information on any of these practice areas, please contact us at <a href="mailto:hello@arventispartners.com" className="text-[#004be1] hover:underline">hello@arventispartners.com</a> or visit <a href="https://arventispartners.com/contact" className="text-[#004be1] hover:underline">arventispartners.com/contact</a>.</h3>
       </section>
 
       <ContactUs />

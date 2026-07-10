@@ -74,7 +74,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
           <div>
             <Link
               href="/our-people"
-              className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#0a0862] hover:text-black text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/10 px-5 py-3 transition-all duration-300 hover-target shadow-md"
+              className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#16284C] hover:text-black text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/10 px-5 py-3 transition-all duration-300 hover-target shadow-md"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>BACK TO OUR PEOPLE</span>
@@ -85,7 +85,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide text-white drop-shadow-md">
               {person.name}
             </h1>
-            <p className="font-sans text-xs sm:text-sm md:text-base text-[#0a0862]/90 font-medium tracking-wider uppercase mt-2">
+            <p className="font-sans text-xs sm:text-sm md:text-base text-[#16284C]/90 font-medium tracking-wider uppercase mt-2">
               {person.title}
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
             
             {/* Credentials Banner */}
             {person.credentials && (
-              <div className="bg-white p-6 border-l-4 border-[#0a0862] shadow-md">
+              <div className="bg-white p-6 border-l-4 border-[#16284C] shadow-md">
                 <p className="font-serif text-lg sm:text-xl font-normal text-black leading-snug">
                   {person.credentials}
                 </p>
@@ -127,7 +127,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
             {/* Biography */}
             <div className="space-y-4 bg-white p-8 sm:p-10 border border-black/10 shadow-md">
               <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-wide text-black border-b border-black/10 pb-4">
-                Biography & Professional Background
+                Biography and Professional Background
               </h3>
               <div className="space-y-4 font-sans text-xs sm:text-sm md:text-base text-black/85 leading-relaxed font-light">
                 {person.bio.map((paragraph, idx) => (
@@ -138,9 +138,9 @@ export default function DedicatedProfilePage({ params }: PageProps) {
 
             {/* Custom Section (e.g. THE CONSULTING NETWORK) */}
             {person.customSectionTitle && person.customSectionContent && (
-              <div className="bg-[#000000] text-white p-8 sm:p-10 border border-[#0a0862]/30 shadow-2xl space-y-6">
+              <div className="bg-[#000000] text-white p-8 sm:p-10 border border-[#16284C]/30 shadow-2xl space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 bg-[#0a0862]" />
+                  <div className="w-2.5 h-2.5 bg-[#16284C]" />
                   <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-wide text-white">
                     {person.customSectionTitle}
                   </h3>
@@ -157,7 +157,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
             {person.clientList && person.clientList.length > 0 && (
               <div className="bg-white p-8 sm:p-10 border border-black/10 shadow-md space-y-4">
                 <h3 className="font-serif text-xl sm:text-2xl font-light text-black tracking-wide border-b border-black/10 pb-3">
-                  Key Institutional Clients & Representative Mandates
+                  Key Institutional Clients and Representative Mandates
                 </h3>
                 <div className="flex flex-wrap gap-2.5 pt-2">
                   {person.clientList.map((client, idx) => (
@@ -165,7 +165,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
                       key={idx}
                       className="inline-flex items-center gap-2 bg-white px-4 py-2 border border-black/10 text-black text-xs font-semibold tracking-wider uppercase"
                     >
-                      <Building2 size={13} className="text-[#0a0862]" />
+                      <Building2 size={13} className="text-[#16284C]" />
                       <span>{client}</span>
                     </span>
                   ))}
@@ -177,12 +177,12 @@ export default function DedicatedProfilePage({ params }: PageProps) {
             {person.highlights && person.highlights.length > 0 && (
               <div className="bg-white p-8 sm:p-10 border border-black/10 shadow-md space-y-4">
                 <h3 className="font-serif text-xl sm:text-2xl font-light text-black tracking-wide border-b border-black/10 pb-3">
-                  Key Practice Highlights & Representative Experience
+                  Key Practice Highlights and Representative Experience
                 </h3>
                 <div className="space-y-3 pt-2">
                   {person.highlights.map((item, idx) => (
                     <div key={item.id || idx} className="flex items-start gap-3 bg-white p-4 border border-black/5">
-                      <span className="w-2 h-2 rounded-full bg-[#0a0862] mt-2 flex-shrink-0" />
+                      <span className="w-2 h-2 rounded-full bg-[#16284C] mt-2 flex-shrink-0" />
                       <span className="font-sans text-xs sm:text-sm text-black font-medium leading-relaxed">
                         {item.text}
                       </span>
@@ -193,9 +193,9 @@ export default function DedicatedProfilePage({ params }: PageProps) {
             )}
 
             {/* DEDICATED HEADING NAMED "CONTACT" WITH LINKEDIN AND INSTAGRAM */}
-            <div className="bg-[#000000] text-white p-8 sm:p-10 border border-[#0a0862]/30 shadow-2xl space-y-6">
+            <div className="bg-[#000000] text-white p-8 sm:p-10 border border-[#16284C]/30 shadow-2xl space-y-6">
               <div>
-                <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#0a0862] font-bold block mb-1">
+                <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#16284C] font-bold block mb-1">
                   DIRECT ADVISORY CHANNEL
                 </span>
                 <h3 className="font-serif text-3xl sm:text-4xl font-light tracking-wide text-white">
@@ -212,7 +212,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
                   href={person.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-[#0a0862] text-white hover:text-white font-sans text-xs font-bold tracking-[0.2em] uppercase px-6 py-3.5 border border-white/20 transition-all duration-300 shadow-md hover-target"
+                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-[#16284C] text-white hover:text-white font-sans text-xs font-bold tracking-[0.2em] uppercase px-6 py-3.5 border border-white/20 transition-all duration-300 shadow-md hover-target"
                 >
                   <LinkedInIcon className="w-4 h-4" />
                   <span>LINKEDIN PROFILE</span>
@@ -223,7 +223,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
                   href={person.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-[#0a0862] text-white hover:text-white font-sans text-xs font-bold tracking-[0.2em] uppercase px-6 py-3.5 border border-white/20 transition-all duration-300 shadow-md hover-target"
+                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-[#16284C] text-white hover:text-white font-sans text-xs font-bold tracking-[0.2em] uppercase px-6 py-3.5 border border-white/20 transition-all duration-300 shadow-md hover-target"
                 >
                   <InstagramIcon className="w-4 h-4" />
                   <span>INSTAGRAM</span>
@@ -243,15 +243,15 @@ export default function DedicatedProfilePage({ params }: PageProps) {
       <section className="relative w-full bg-black py-10 md:py-12 px-6 md:px-16 text-center text-white z-20">
         <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-white">
-            Let's Start the Conversation
+            Start the Conversation
           </h2>
           <p className="font-sans text-sm md:text-base text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
-            Establish a direct partner relationship or initiate a mandate. Our strategy and legal practices operate under strict NDA protocols.
+            Establish a direct partner relationship, or initiate a new mandate. Both practices operate under standard NDA protocols.
           </p>
           <div className="pt-4">
             <Link
               href="/contact-us"
-              className="inline-block bg-[#0a0862] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase px-10 py-4 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
+              className="inline-block bg-[#16284C] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase px-10 py-4 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
             >
               CONTACT US
             </Link>

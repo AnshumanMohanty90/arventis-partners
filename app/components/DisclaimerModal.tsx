@@ -65,7 +65,7 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
         <div className="flex flex-col sm:flex-row gap-4 w-full">
           <button
             onClick={handleProceed}
-            className="flex-1 py-3.5 px-6 bg-[#0a0862] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase transition-all duration-300 rounded-[1px] shadow-lg shadow-[#0a0862]/10"
+            className="flex-1 py-3.5 px-6 bg-[#16284C] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase transition-all duration-300 rounded-[1px] shadow-lg shadow-[#16284C]/10"
           >
             I AGREE
           </button>
