@@ -120,13 +120,13 @@ export default function FAQPage() {
       {/* 1. HERO BANNER (LIGHT THEME) */}
       <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto relative z-10 space-y-4">
-          <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#16284C] font-bold block">
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#02029c] font-bold block">
             KNOWLEDGE BASE and MANDATE GUIDANCE
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-black leading-tight">
             <RevealHeading>FREQUENTLY ASKED QUESTIONS</RevealHeading>
           </h1>
-          <p className="scroll-fade-up font-sans text-sm sm:text-base text-black/70 font-light leading-relaxed max-w-2xl pt-2">
+          <p className="scroll-fade-up font-sans text-sm sm:text-base text-black/90 font-normal leading-relaxed max-w-2xl pt-2">
             Clear insights into our dual-discipline practice model, office locations, confidentiality protocols, and mandate initiation workflows.
           </p>
         </div>
@@ -146,7 +146,7 @@ export default function FAQPage() {
                 className="w-full text-left p-6 sm:p-8 flex items-center justify-between gap-4 focus:outline-none hover:bg-slate-50/50 transition-colors duration-300"
               >
                 <div className="space-y-1">
-                  <span className="font-sans text-[10px] tracking-[0.25em] text-[#16284C] uppercase font-bold block">
+                  <span className="font-sans text-[10px] tracking-[0.25em] text-[#02029c] uppercase font-bold block">
                     {faq.category}
                   </span>
                   <h3 className="font-serif text-lg sm:text-xl font-medium text-black pr-4">
@@ -154,14 +154,14 @@ export default function FAQPage() {
                   </h3>
                 </div>
                 <div className={`w-8 h-8 rounded-full border border-black/15 flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
-                  openIndex === idx ? 'rotate-180 bg-[#16284C] text-white border-[#16284C]' : 'text-black'
+                  openIndex === idx ? 'rotate-180 bg-[#02029c] text-white border-[#02029c]' : 'text-black'
                 }`}>
                   <ChevronDown size={18} />
                 </div>
               </button>
 
               {openIndex === idx && (
-                <div className="px-6 pb-8 sm:px-8 pt-0 font-sans text-xs sm:text-sm text-black/80 leading-relaxed font-light mt-2 animate-fadeIn">
+                <div className="px-6 pb-8 sm:px-8 pt-0 font-sans text-xs sm:text-sm text-black/95 leading-relaxed font-normal mt-2 animate-fadeIn">
                   <p className="pt-4">{faq.answer}</p>
                 </div>
               )}
@@ -169,14 +169,14 @@ export default function FAQPage() {
           ))}
 
           {/* Direct CTA Box */}
-          <div className="scroll-fade-up mt-12 p-8 sm:p-10 bg-white border border-[#16284C]/40 rounded-[1px] shadow-md flex flex-col items-center text-center gap-6">
+          <div className="scroll-fade-up mt-12 p-8 sm:p-10 bg-white border border-[#02029c]/40 rounded-[1px] shadow-md flex flex-col items-center text-center gap-6">
             <div>
               <h4 className="font-serif text-2xl font-light text-black mb-2">Have a Specific Mandate Inquiry?</h4>
-              <p className="font-sans text-xs sm:text-sm text-black/70 font-light">Connect directly with our strategy practice or legal bench leads.</p>
+              <p className="font-sans text-xs sm:text-sm text-black/90 font-normal">Connect directly with our strategy practice or legal bench leads.</p>
             </div>
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 bg-[#16284C] text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-4 transition-colors duration-300 shadow-md"
+              className="inline-flex items-center gap-2 bg-[#02029c] text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-4 transition-colors duration-300 shadow-md"
             >
               <span>Initiate Contact</span>
               <ArrowRight size={14} />

@@ -7,6 +7,7 @@ import { ArrowUpRight, Scale, Globe, ShieldCheck, Mail, MapPin } from 'lucide-re
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
+import SplashScreen from './components/SplashScreen';
 
 // Custom component to reveal text word-by-word with a calming stagger
 function RevealHeading({ children, className = "" }: { children: string; className?: string }) {
@@ -153,7 +154,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative w-full bg-white text-black">
+    <main className="min-h-screen bg-white">
+      <SplashScreen />
       
       {/* 1. STICKY HEADER */}
       <Navbar />
@@ -161,7 +163,7 @@ export default function Home() {
       {/* 2. HERO BANNER WITH BACKGROUND IMAGE SLIDER */}
       <section 
         onClick={handleSlideClick}
-        className="relative w-full h-screen flex items-center justify-center px-6 md:px-16 overflow-hidden cursor-pointer select-none bg-white"
+        className="relative w-full h-[100dvh] flex items-center justify-center px-6 md:px-16 overflow-hidden cursor-pointer select-none bg-white"
       >
         
         {/* Background Image Slider Stacks */}
@@ -204,7 +206,7 @@ export default function Home() {
               <h1 className="text-white font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal tracking-tight leading-[1.1] max-w-5xl mb-4 sm:mb-6 drop-shadow-md">
                 {formatSliderText(slide.title)}
                 {slide.subtitle && (
-                  <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white/95 mt-2 font-sans">
+                  <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-white/95 mt-2 font-sans">
                     {formatSliderText(slide.subtitle)}
                   </span>
                 )}
@@ -228,7 +230,7 @@ export default function Home() {
                   {/* Horizontal Progress Bar above the title */}
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-white/20 overflow-hidden">
                     <div
-                      className={`h-full bg-[#16284C] transition-all ${
+                      className={`h-full bg-[#02029c] transition-all ${
                         currentSlide === idx ? 'w-full animate-slide-progress' : 'w-0'
                       }`}
                       style={{
@@ -259,7 +261,7 @@ export default function Home() {
               className="group cursor-pointer focus:outline-none mt-2"
             >
               <svg
-                className="w-5 h-5 text-white/80 group-hover:text-white transition-transform duration-300 group-hover:translate-y-1"
+                className="w-5 h-5 text-white/95 group-hover:text-white transition-transform duration-300 group-hover:translate-y-1"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -298,7 +300,7 @@ export default function Home() {
                 <h2 className="font-serif text-4xl sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-black lg:-mt-[10px]">
                   Strategy and Legal, <br/> Under One Mandate
                 </h2>
-                <div className="font-sans text-[17px] text-black/75 leading-relaxed font-light space-y-3">
+                <div className="font-sans text-[17px] text-black/95 leading-relaxed font-normal space-y-3">
                   <p>
                     Most clients engage separate advisors for strategy and for legal risk, then absorb the cost when the two are not aligned.
                   </p>
@@ -318,7 +320,7 @@ export default function Home() {
               <div className="flex justify-center w-full">
                 <Link
                   href="/our-people"
-                  className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                  className="inline-flex items-center gap-3 bg-[#02029c] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                 >
                   <span>MEET THE TEAM</span>
                   <span>&rarr;</span>
@@ -356,7 +358,7 @@ export default function Home() {
                 <h2 className="font-serif text-4xl sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-black lg:-mt-[10px]">
                   Experience Across Markets
                 </h2>
-                <div className="font-sans text-[17px] text-black/75 leading-relaxed font-light space-y-3">
+                <div className="font-sans text-[17px] text-black/95 leading-relaxed font-normal space-y-3">
                   <p>
                     Over more than a decade, our leadership has advised on market entry, government mandates, and enterprise strategy across India, the GCC, the UK, the US, and South Korea.
                   </p>
@@ -368,7 +370,7 @@ export default function Home() {
               <div className="flex justify-center w-full">
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                  className="inline-flex items-center gap-3 bg-[#02029c] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                 >
                   <span>SEE OUR EXPERTISE</span>
                   <span>&rarr;</span>
@@ -387,7 +389,7 @@ export default function Home() {
             <h2 className="font-serif text-[20px] sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-[#000000] md:whitespace-nowrap">
               Which Practice Would You Like to Start With?
             </h2>
-            <div className="font-sans text-[17px] text-[#000000]/75 leading-relaxed font-light mt-2">
+            <div className="font-sans text-[17px] text-[#000000]/95 leading-relaxed font-normal mt-2">
               <p>Most engagements ultimately involve both practices.<br/> Begin with whichever one matches the immediate need.</p>
             </div>
           </div>
@@ -409,14 +411,14 @@ export default function Home() {
                   <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-wider leading-tight text-black">
                     Strategy Consulting
                   </h3>
-                  <p className="font-sans text-[15px] text-black/70 font-light leading-relaxed">
+                  <p className="font-sans text-[15px] text-black/90 font-normal leading-relaxed">
                     Growth strategy, GTM expansion, and operational work for <br/> organisations that require execution alongside planning.
                   </p>
                 </div>
                 <div className="pt-6 flex justify-center">
                   <Link
                     href="/services/consulting"
-                    className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                    className="inline-flex items-center gap-3 bg-[#02029c] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                   >
                     <span>EXPLORE CONSULTING</span>
                     <span>&rarr;</span>
@@ -441,14 +443,14 @@ export default function Home() {
                   <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-wider leading-tight text-black">
                     Legal Advisory
                   </h3>
-                  <p className="font-sans text-[15px] text-black/75 font-light leading-relaxed">
+                  <p className="font-sans text-[15px] text-black/95 font-normal leading-relaxed">
                     Commercial dispute resolution and advocacy for<br/> businesses operating at scale.
                   </p>
                 </div>
                 <div className="pt-6 flex justify-center">
                   <Link
                     href="/services/legal"
-                    className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                    className="inline-flex items-center gap-3 bg-[#02029c] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                   >
                     <span>EXPLORE LEGAL</span>
                     <span>&rarr;</span>
@@ -465,6 +467,6 @@ export default function Home() {
       {/* 7. FOOTER */}
       <Footer />
 
-    </div>
+    </main>
   );
 }

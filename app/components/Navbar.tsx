@@ -65,8 +65,8 @@ export default function Navbar() {
     <>
       <header className={`fixed top-0 left-0 w-full z-50 h-[64px] sm:h-[78px] md:h-[92px] px-6 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between transition-all duration-500 ${
         isHeaderWhite 
-          ? 'bg-white/95 backdrop-blur-sm text-black' 
-          : 'bg-black/25 backdrop-blur-sm border-b border-white/10 text-white'
+          ? 'bg-gradient-to-b from-white/95 to-white/60 backdrop-blur-md text-black' 
+          : 'bg-gradient-to-b from-white/40 via-white/23 to-transparent backdrop-blur-md text-white'
       }`}>
         {/* Left column: Logo */}
         <div className="flex items-center justify-start h-full py-1 sm:py-1 z-20">
@@ -98,12 +98,12 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`inline-flex items-center justify-center px-6 py-3 text-xs tracking-[0.25em] font-bold uppercase transition-all duration-300 border rounded-[2px] hover-target ${
+                  className={`inline-flex items-center justify-center px-6 py-3 text-sm tracking-[0.25em] font-bold uppercase transition-all duration-300 border rounded-[2px] hover-target ${
                     isContactActive
-                      ? 'bg-[#16284C] text-white border-white'
+                      ? 'bg-[#02029c] text-white border-white'
                       : isHeaderWhite
-                        ? 'border-black/80 text-black hover:bg-[#16284C] hover:text-white hover:border-white'
-                        : 'border-white text-white hover:bg-[#16284C] hover:text-white hover:border-[#16284C]'
+                        ? 'border-black/80 text-black hover:bg-[#02029c] hover:text-white hover:border-white'
+                        : 'border-white text-white hover:bg-[#02029c] hover:text-white hover:border-[#02029c]'
                   }`}
                 >
                   {item.label}
@@ -115,12 +115,12 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`font-sans text-sm font-bold tracking-widest uppercase transition-all duration-300 hover-target nav-link-hover ${
+                className={`font-sans text-base font-bold tracking-widest uppercase transition-all duration-300 hover-target nav-link-hover ${
                   isActive
-                    ? 'text-[#16284C] font-bold border-b-2 border-[#16284C] pb-1 after:hidden'
+                    ? 'text-[#02029c] font-bold border-b-2 border-[#02029c] pb-1 after:hidden'
                     : isHeaderWhite
-                      ? 'text-black/85 hover:text-[#16284C]'
-                      : 'text-white hover:text-[#16284C]'
+                      ? 'text-black hover:text-[#02029c]'
+                      : 'text-white hover:text-[#02029c]'
                 }`}
               >
                 {item.label}
@@ -136,10 +136,10 @@ export default function Navbar() {
             aria-label="Toggle navigation menu"
             className={`relative z-50 p-1.5 sm:p-2 transition-colors duration-300 focus:outline-none hover-target ${
               isMenuOpen 
-                ? 'text-black hover:text-[#16284C]'
+                ? 'text-black hover:text-[#02029c]'
                 : isHeaderWhite
-                  ? 'text-black hover:text-[#16284C]'
-                  : 'text-white hover:text-[#16284C]'
+                  ? 'text-black hover:text-[#02029c]'
+                  : 'text-white hover:text-[#02029c]'
             }`}
           >
             {isMenuOpen ? <X className="w-8 h-8 sm:w-9 sm:h-9" /> : <Menu className="w-8 h-8 sm:w-9 sm:h-9" />}
@@ -166,7 +166,7 @@ export default function Navbar() {
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 className={`font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl tracking-widest uppercase transition-all duration-300 hover:scale-105 hover-target nav-link-hover ${
-                  isActive ? 'text-[#16284C] font-bold after:hidden' : 'text-black/80 hover:text-[#16284C]'
+                  isActive ? 'text-[#02029c] font-bold after:hidden' : 'text-black/95 hover:text-[#02029c]'
                 }`}
               >
                 {item.label}
@@ -176,8 +176,7 @@ export default function Navbar() {
         </nav>
 
         {/* Drawer Footer */}
-        <div className="relative z-10 border-t border-black/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-widest text-black/55 uppercase font-sans">
-          <div>Where Strategy meets standing</div>
+        <div className="relative z-10 border-t border-black/10 pt-6 flex flex-col items-center justify-center gap-4 text-xs tracking-widest text-black/55 uppercase font-sans">
           <div>ARVENTIS PARTNERS &copy; {new Date().getFullYear()}</div>
         </div>
       </div>

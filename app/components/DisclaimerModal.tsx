@@ -10,6 +10,8 @@ interface DisclaimerModalProps {
 export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -20,6 +22,11 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
   }, []);
 
   const handleProceed = () => {
+    if (!isChecked) {
+      setShowError(true);
+      return;
+    }
+    
     if (typeof window !== 'undefined') {
       document.body.style.overflow = '';
     }
@@ -47,7 +54,7 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
         <div className="h-[1px] w-full bg-black/10 my-4" />
 
         {/* Disclaimer Body Text */}
-        <div className="space-y-4 font-sans text-xs sm:text-sm text-black/75 font-light leading-relaxed max-h-[45vh] overflow-y-auto pr-2 custom-scrollbar">
+        <div className="space-y-4 font-sans text-xs sm:text-sm text-black/95 font-normal leading-relaxed max-h-[45vh] overflow-y-auto pr-2 custom-scrollbar">
           <p>
             The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website, <strong className="text-black font-semibold">www.arventispartners.com</strong>, you acknowledge and confirm that you are seeking information relating to <br/> <strong className="text-black font-semibold">Arventis Partners</strong> of your own accord and that there has been no form of solicitation, advertisement or inducement by Arventis Partners or its members.
           </p>
@@ -62,23 +69,40 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
         <div className="h-[1px] w-full bg-black/10 my-6" />
 
         {/* Action Toggles */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full">
+        <div className="flex flex-col gap-3 mt-4">
+          <label className="flex items-center gap-3 cursor-pointer group w-fit">
+            <div className={`w-5 h-5 flex items-center justify-center border transition-colors duration-200 ${isChecked ? 'border-[#02029c]' : 'border-black/30 group-hover:border-[#02029c]'}`}>
+              {isChecked && (
+                <svg className="w-3.5 h-3.5 text-[#02029c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                </svg>
+              )}
+            </div>
+            <span className="font-sans text-sm sm:text-base text-black group-hover:text-black/80 transition-colors duration-200">
+              I accept the above.
+            </span>
+            <input 
+              type="checkbox" 
+              className="hidden" 
+              checked={isChecked}
+              onChange={(e) => {
+                setIsChecked(e.target.checked);
+                if (e.target.checked) setShowError(false);
+              }}
+            />
+          </label>
+          
+          {showError && (
+            <span className="text-red-600 font-sans text-sm font-semibold tracking-wide">
+              Please accept the above
+            </span>
+          )}
+
           <button
             onClick={handleProceed}
-            className="flex-1 py-3.5 px-6 bg-[#16284C] hover:bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase transition-all duration-300 rounded-[1px] shadow-lg shadow-[#16284C]/10"
+            className="w-full sm:w-[320px] py-3.5 mt-2 bg-white border border-[#02029c] hover:bg-[#02029c]/5 text-[#02029c] font-sans text-[15px] tracking-wide uppercase transition-all duration-300 rounded-[1px]"
           >
-            I AGREE
-          </button>
-          <button
-            onClick={() => {
-              if (typeof window !== 'undefined') {
-                document.body.style.overflow = '';
-                window.location.href = 'https://google.com';
-              }
-            }}
-            className="flex-1 py-3.5 px-6 bg-transparent hover:bg-black/5 border border-black/20 text-black/70 hover:text-black font-bold text-xs tracking-[0.2em] uppercase transition-all duration-300 rounded-[1px]"
-          >
-            DECLINE
+            PROCEED TO WEBSITE
           </button>
         </div>
 

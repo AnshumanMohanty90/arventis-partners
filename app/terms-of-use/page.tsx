@@ -8,7 +8,7 @@ export default function TermsOfUsePage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Top Thin Accent Border */}
-      <div className="w-full h-1 bg-[#16284C]"></div>
+      <div className="w-full h-1 bg-[#02029c]"></div>
       
       <Navbar />
 
@@ -20,7 +20,7 @@ export default function TermsOfUsePage() {
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight mb-4 text-black">
               Terms of Use
             </h1>
-            <p className="font-sans text-lg md:text-xl font-medium text-black/60 uppercase tracking-widest">
+            <p className="font-sans text-lg md:text-xl font-medium text-black/95 uppercase tracking-widest">
               Arventis Partners
             </p>
           </div>

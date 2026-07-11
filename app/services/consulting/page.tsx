@@ -152,7 +152,7 @@ export default function ConsultingPage() {
         <div className="max-w-7xl mx-auto w-full relative z-20 mt-4 md:mt-8">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#16284C] text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/20 hover:border-[#16284C] px-5 py-3 transition-all duration-300 hover-target backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#02029c] text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/20 hover:border-[#02029c] px-5 py-3 transition-all duration-300 hover-target backdrop-blur-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>BACK TO OUR SERVICES</span>
@@ -163,9 +163,9 @@ export default function ConsultingPage() {
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight text-white mb-6 drop-shadow-lg">
             <RevealHeading>ARVENTIS   CONSULTING</RevealHeading>
           </h1>
-          <p className="scroll-fade-up font-sans text-sm sm:text-base md:text-lg text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
+          <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
             Strategy consulting for growth, operating model design, and market expansion, 
-            <br/>delivered across India, the GCC, and international jurisdictions.
+            <br className="hidden md:block" />delivered across India, the GCC, and international jurisdictions.
           </p>
         </div>
       </section>

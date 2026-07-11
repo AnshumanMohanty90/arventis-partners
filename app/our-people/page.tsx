@@ -117,7 +117,7 @@ export default function OurPeoplePage() {
     <div 
       key={person.id} 
       onClick={() => setSelectedPerson(person)}
-      className="bg-white rounded-none cursor-pointer group flex flex-col w-full border border-black/5 hover:bg-[#16284C] hover:shadow-xl transition-all duration-300 pb-4"
+      className="bg-white rounded-none cursor-pointer group flex flex-col w-full border border-black/5 hover:bg-[#02029c] hover:shadow-xl transition-all duration-300 pb-4"
     >
       <div className="relative w-full overflow-hidden bg-neutral-50 aspect-[4/5]">
         <Image
@@ -129,10 +129,10 @@ export default function OurPeoplePage() {
         />
       </div>
       <div className="px-4 pt-6 flex flex-col items-center text-center w-full">
-        <h3 className="text-lg sm:text-xl md:text-2xl font-serif text-[#16284C] font-semibold group-hover:text-white transition-colors duration-300 w-full leading-tight">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-serif text-[#02029c] font-semibold group-hover:text-white transition-colors duration-300 w-full leading-tight">
           {person.cardName || person.name}
         </h3>
-        <p className="text-xs sm:text-sm md:text-base font-sans text-black/60 mt-2 font-medium w-full group-hover:text-white/80 transition-colors duration-300">
+        <p className="text-xs sm:text-sm md:text-base font-sans text-black/95 mt-2 font-medium w-full group-hover:text-white/95 transition-colors duration-300">
           {getDomainPosition(person)}
         </p>
       </div>
@@ -163,8 +163,8 @@ export default function OurPeoplePage() {
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-normal text-white mb-6 drop-shadow-lg">
             <RevealHeading>OUR  PEOPLE</RevealHeading>
           </h1>
-          <p className="scroll-fade-up font-sans text-sm sm:text-base md:text-lg text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            Strategy consultants and Supreme Court advocates,<br/> working as a single team across every engagement.
+          <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
+            Strategy consultants and Supreme Court advocates,<br className="hidden md:block" /> working as a single team across every engagement.
           </p>
         </div>
       </section>
@@ -177,7 +177,7 @@ export default function OurPeoplePage() {
             <h2 className="text-2xl md:text-3xl font-serif font-light text-black  text-center">
               Founding Partners
             </h2>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vw] h-[2px] bg-gradient-to-r from-transparent via-[#16284C] to-transparent opacity-90" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vw] h-[2px] bg-gradient-to-r from-transparent via-[#02029c] to-transparent opacity-90" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-2xl mx-auto hover:text-white">
             {foundingPartners.map(renderCard)}
@@ -190,7 +190,7 @@ export default function OurPeoplePage() {
             <h2 className="text-2xl md:text-3xl font-serif font-light text-black text-center">
               Team
             </h2>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vw] h-[2px] bg-gradient-to-r from-transparent via-[#16284C] to-transparent opacity-90" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vw] h-[2px] bg-gradient-to-r from-transparent via-[#02029c] to-transparent opacity-90" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 max-w-4xl mx-auto hover:text-white">
             {otherMembers.map(renderCard)}
@@ -204,7 +204,7 @@ export default function OurPeoplePage() {
           className="fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-sm animate-in fade-in duration-300"
           data-lenis-prevent="true"
         >
-          <div className="min-h-full flex items-center justify-center p-4 md:p-8 lg:p-12">
+          <div className="min-h-full flex items-center justify-center p-4 md:p-6 lg:p-8">
             <div 
               className="bg-white w-full max-w-6xl rounded-none shadow-2xl relative animate-in slide-in-from-bottom-8 duration-500"
             >
@@ -218,8 +218,8 @@ export default function OurPeoplePage() {
 
             <div className="flex flex-col md:flex-row">
               {/* Left Column */}
-              <div className="w-full md:w-[35%] lg:w-[30%] bg-neutral-50 p-6 md:p-8 border-r border-black/5 flex flex-col">
-                <div className="relative w-full mb-4 md:mb-6 overflow-hidden shadow-md aspect-[4/5]">
+              <div className="w-full md:w-[35%] lg:w-[30%] bg-neutral-50 p-5 md:p-6 lg:p-8 border-r border-black/5 flex flex-col">
+                <div className="relative w-full mb-4 md:mb-5 overflow-hidden shadow-md aspect-[4/5]">
                   <Image
                     src={selectedPerson.imagePath}
                     alt={selectedPerson.name}
@@ -229,20 +229,20 @@ export default function OurPeoplePage() {
                   />
                 </div>
                 <h2 className="text-xl md:text-2xl lg:text-3xl font-serif text-black mb-1 tracking-tight leading-snug">{selectedPerson.name}</h2>
-                <div className="mb-6 space-y-1 mt-2">
-                  <p className="text-black/80 font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.title}</p>
-                  {selectedPerson.badge && <p className="text-[#16284C] font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.badge}</p>}
+                <div className="mb-4 space-y-1 mt-1">
+                  <p className="text-black/95 font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.title}</p>
+                  {selectedPerson.badge && <p className="text-[#02029c] font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.badge}</p>}
                 </div>
 
                 {/* Geographies shifted below the name section */}
                 {selectedPerson.geographies && selectedPerson.geographies.length > 0 && (
-                  <div className="mt-4 pt-4 border-t border-black/10">
-                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
+                  <div className="mt-2">
+                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-2">
                       Geographies
                     </h4>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
                       {selectedPerson.geographies.map((geo, idx) => (
-                        <div key={idx} className="flex items-center text-xs md:text-sm font-medium text-black/80">
+                        <div key={idx} className="flex items-center text-xs md:text-sm font-medium text-black/95">
                           <MapPin className="w-3.5 h-3.5 mr-1.5 text-black/40 shrink-0" />
                           <span>{geo}</span>
                         </div>
@@ -253,21 +253,19 @@ export default function OurPeoplePage() {
               </div>  
 
               {/* Right Column */}
-              <div className="w-full md:w-[65%] lg:w-[70%] p-6 md:p-8 pr-8 md:pr-12 flex flex-col justify-start bg-white">
-                <div className="space-y-4 mb-4">
+              <div className="w-full md:w-[65%] lg:w-[70%] p-5 md:p-6 lg:p-8 pr-6 md:pr-10 flex flex-col justify-start bg-white">
+                <div className="space-y-3 mb-3">
                   {selectedPerson.bio.map((paragraph, idx) => (
-                    <p key={idx} className="text-sm md:text-[15px] text-black/75 leading-relaxed">
-                      {paragraph}
-                    </p>
+                    <p key={idx} className="text-sm md:text-[15px] text-black/95 leading-relaxed" dangerouslySetInnerHTML={{ __html: paragraph }} />
                   ))}
                 </div>
 
                 {selectedPerson.customSectionTitle && selectedPerson.customSectionContent && (
-                  <div className="mb-4">
-                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
+                  <div className="mb-3">
+                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-2">
                       {selectedPerson.customSectionTitle}
                     </h4>
-                    <div className="space-y-3 text-sm md:text-[15px] text-black/75 leading-relaxed">
+                    <div className="space-y-2 text-sm md:text-[15px] text-black/95 leading-relaxed">
                       {selectedPerson.customSectionContent.map((para, idx) => (
                         <p key={idx}>{para}</p>
                       ))}
@@ -275,15 +273,15 @@ export default function OurPeoplePage() {
                   </div>
                 )}
 
-                <div className="mt-4 pt-2 space-y-6">
+                <div className="mt-2 pt-2 space-y-4">
                   {selectedPerson.clientList && selectedPerson.clientList.length > 0 && (
                     <div>
-                      <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
+                      <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-2">
                         Representative Clients
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedPerson.clientList.map((client, idx) => (
-                          <span key={idx} className="bg-black/5 px-3 py-1.5 text-[10px] md:text-xs font-medium text-black/80 rounded-sm">
+                          <span key={idx} className="bg-black/5 px-3 py-1 text-[10px] md:text-xs font-medium text-black/95 rounded-sm">
                             {client}
                           </span>
                         ))}
@@ -292,16 +290,14 @@ export default function OurPeoplePage() {
                   )}
 
                   <div>
-                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
+                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-2">
                       Practice Highlights
                     </h4>
-                    <ul className="space-y-3 w-full">
+                    <ul className="space-y-2 w-full">
                       {selectedPerson.highlights.map(highlight => (
                         <li key={highlight.id} className="flex items-start group w-full">
-                          <CheckCircle2 className="w-4 h-4 mr-3 text-[#16284C] shrink-0 mt-0.5 opacity-80 group-hover:opacity-100 transition-opacity" />
-                          <span className="text-xs md:text-sm text-black/80 leading-snug font-medium group-hover:text-black transition-colors w-full">
-                            {highlight.text}
-                          </span>
+                          <CheckCircle2 className="w-4 h-4 mr-2.5 text-[#02029c] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                          <span className="text-sm md:text-[15px] text-black/95 font-medium leading-snug w-full">{highlight.text}</span>
                         </li>
                       ))}
                     </ul>
@@ -312,9 +308,9 @@ export default function OurPeoplePage() {
           </div>
         </div>
       </div>
-    )}
+      )}
 
-       <ContactUs />
+      <ContactUs />
 
       <Footer />
     </main>

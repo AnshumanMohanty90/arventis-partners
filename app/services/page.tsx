@@ -101,8 +101,8 @@ export default function ServicesPage() {
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-normal text-white mb-6 drop-shadow-lg">
             <RevealHeading>SERVICES</RevealHeading>
           </h1>
-          <p className="scroll-fade-up font-sans text-[15px] sm:text-[17px] md:text-[19px] text-white/90 font-light leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            Strategy consulting and legal advisory delivered as a single engagement,<br/> for clients across India, the GCC, and international markets.
+          <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
+            Strategy consulting and legal advisory delivered as a single engagement,<br className="hidden md:block" /> for clients across India, the GCC, and international markets.
           </p>
         </div>
       </section>
@@ -126,14 +126,14 @@ export default function ServicesPage() {
                 <h2 className="font-serif text-2xl sm:text-3xl font-light tracking-wider leading-tight text-black text-center">
                   ARVENTIS CONSULTING
                 </h2>
-                <p className="font-sans text-[15px] text-black/70 font-light leading-relaxed text-center">
+                <p className="font-sans text-[15px] text-black/90 font-normal leading-relaxed text-center">
                   Strategy consulting covering growth planning, sales transformation, operating model design, and market expansion, for clients across India, the GCC, and international markets.
                 </p>
               </div>
               <div className="pt-6 flex justify-center w-full">
                 <Link
                   href="/services/consulting"
-                  className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                  className="inline-flex items-center gap-3 bg-[#02029c] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                 >
                   <span>EXPLORE CONSULTING</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -157,14 +157,14 @@ export default function ServicesPage() {
                 <h2 className="font-serif text-2xl sm:text-3xl font-light tracking-wider leading-tight text-black text-center">
                   ARVENTIS LEGAL
                 </h2>
-                <p className="font-sans text-[15px] text-black/75 font-light leading-relaxed text-center">
+                <p className="font-sans text-[15px] text-black/95 font-normal leading-relaxed text-center">
                   Legal advisory and advocacy across Trial Courts, High Courts, Arbitral Tribunals, and the Supreme Court of India, covering litigation, corporate law, and constitutional matters.
                 </p>
               </div>
               <div className="pt-6 flex justify-center w-full">
                 <Link
                   href="/services/legal"
-                  className="inline-flex items-center gap-3 bg-[#16284C] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
+                  className="inline-flex items-center gap-3 bg-[#02029c] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
                 >
                   <span>EXPLORE LEGAL</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -192,8 +192,8 @@ export default function ServicesPage() {
               {/* 3 columns of industry text items with thin bottom border */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4 scroll-fade-up transition-delay-200">
                 {industries.map((ind, idx) => (
-                  <div key={idx} className={ind ? "border-b border-black/10 pb-3 pt-1 hover:border-[#16284C]/30 transition-all duration-300" : "pb-3 pt-1"}>
-                    <span className={`font-sans text-[13px] sm:text-[15px] font-semibold tracking-wider block ${ind ? 'text-[#16284C] hover:text-black transition-colors duration-300' : 'opacity-0 select-none'}`}>
+                  <div key={idx} className={ind ? "border-b border-black/10 pb-3 pt-1 hover:border-[#02029c]/30 transition-all duration-300" : "pb-3 pt-1"}>
+                    <span className={`font-sans text-[13px] sm:text-[15px] font-semibold tracking-wider block ${ind ? 'text-[#02029c] hover:text-black transition-colors duration-300' : 'opacity-0 select-none'}`}>
                       {ind || 'Spacer'}
                     </span>
                   </div>

@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
 
           {/* Right: Disclaimer, FAQ & Legal Links (Parallel with ARVENTIS PARTNERS) */}
-          <div className="space-y-2.5 md:text-right font-sans text-xs text-black/80">
+          <div className="space-y-2.5 md:text-right font-sans text-xs text-black/95">
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 md:justify-end font-medium">
               <Link href="/disclaimer" className="hover:underline hover:text-black">
                 Disclaimer
@@ -33,15 +33,15 @@ const Footer = () => {
               <Link href="/faq" className="hover:underline hover:text-black">
                 FAQ
               </Link>
-              <Link href="/privacy-policy" className="hover:underline hover:text-black hover:text-[#16284C] transition-colors">
+              <Link href="/privacy-policy" className="hover:underline hover:text-black hover:text-[#02029c] transition-colors">
                 Privacy policy
               </Link>
-              <Link href="/terms-of-use" className="hover:underline hover:text-black hover:text-[#16284C] transition-colors">
+              <Link href="/terms-of-use" className="hover:underline hover:text-black hover:text-[#02029c] transition-colors">
                 Terms of use
               </Link>
             </div>
 
-            <p className="text-[11px] text-black/50 pt-1">
+            <p className="text-[11px] text-black/90 pt-1">
               © 2026 Arventis Partners. All rights reserved. Statutory Compliance.
             </p>
           </div>

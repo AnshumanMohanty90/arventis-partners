@@ -161,7 +161,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased selection:bg-[#16284C] selection:text-[#000000] ${graphik.variable} ${playfair.variable}`}
+      className={`h-full antialiased selection:bg-[#02029c] selection:text-[#000000] ${graphik.variable} ${playfair.variable}`}
     >
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" sizes="any" />

@@ -55,7 +55,7 @@ export default function ServiceDrawerItem({
       {/* GSAP Hover Accent Bar */}
       <div
         ref={accentBarRef}
-        className="absolute left-0 top-0 bottom-0 w-1 origin-left pointer-events-none z-20 bg-[#16284C]"
+        className="absolute left-0 top-0 bottom-0 w-1 origin-left pointer-events-none z-20 bg-[#02029c]"
         style={{ transform: 'scaleX(0)' }}
       />
 
@@ -76,7 +76,7 @@ export default function ServiceDrawerItem({
 
         <div
           className={`w-8 h-8 rounded-full border border-black/15 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-            isOpen ? 'rotate-180 bg-[#16284C] text-white border-[#16284C]' : 'text-black group-hover:border-black/40'
+            isOpen ? 'rotate-180 bg-[#02029c] text-white border-[#02029c]' : 'text-black group-hover:border-black/40'
           }`}
         >
           <ChevronDown className="w-4 h-4" />
@@ -91,11 +91,11 @@ export default function ServiceDrawerItem({
         onClick={(e) => e.stopPropagation()}
         style={{ maxHeight: isOpen ? '1200px' : '0px' }}
       >
-        <div className="px-6 sm:px-8 pb-8 pt-4 font-sans text-[13px] sm:text-[15px] text-black/80 leading-relaxed font-light">
+        <div className="px-6 sm:px-8 pb-8 pt-4 font-sans text-[13px] sm:text-[15px] text-black/95 leading-relaxed font-normal">
           {/* Description Paragraphs */}
           <div className="space-y-3 mb-6">
             {descriptions.map((desc, dIdx) => (
-              <p key={dIdx} className="text-black/85 text-[15px] sm:text-[17px] leading-relaxed max-w-5xl">
+              <p key={dIdx} className="text-black text-[15px] sm:text-[17px] leading-relaxed max-w-5xl">
                 {desc}
               </p>
             ))}

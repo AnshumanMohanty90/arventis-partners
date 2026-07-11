@@ -74,7 +74,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
           <div>
             <Link
               href="/our-people"
-              className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#16284C] hover:text-black text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/10 px-5 py-3 transition-all duration-300 hover-target shadow-md"
+              className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#02029c] hover:text-black text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/10 px-5 py-3 transition-all duration-300 hover-target shadow-md"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>BACK TO OUR PEOPLE</span>
@@ -85,7 +85,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide text-white drop-shadow-md">
               {person.name}
             </h1>
-            <p className="font-sans text-xs sm:text-sm md:text-base text-[#16284C]/90 font-medium tracking-wider uppercase mt-2">
+            <p className="font-sans text-xs sm:text-sm md:text-base text-[#02029c]/90 font-medium tracking-wider uppercase mt-2">
               {person.title}
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
             
             {/* Credentials Banner */}
             {person.credentials && (
-              <div className="bg-white p-6 border-l-4 border-[#16284C] shadow-md">
+              <div className="bg-white p-6 border-l-4 border-[#02029c] shadow-md">
                 <p className="font-serif text-lg sm:text-xl font-normal text-black leading-snug">
                   {person.credentials}
                 </p>
@@ -129,23 +129,23 @@ export default function DedicatedProfilePage({ params }: PageProps) {
               <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-wide text-black border-b border-black/10 pb-4">
                 Biography and Professional Background
               </h3>
-              <div className="space-y-4 font-sans text-xs sm:text-sm md:text-base text-black/85 leading-relaxed font-light">
+              <div className="space-y-4 font-sans text-xs sm:text-sm md:text-base text-black leading-relaxed font-normal">
                 {person.bio.map((paragraph, idx) => (
-                  <p key={idx}>{paragraph}</p>
+                  <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
                 ))}
               </div>
             </div>
 
             {/* Custom Section (e.g. THE CONSULTING NETWORK) */}
             {person.customSectionTitle && person.customSectionContent && (
-              <div className="bg-[#000000] text-white p-8 sm:p-10 border border-[#16284C]/30 shadow-2xl space-y-6">
+              <div className="bg-[#000000] text-white p-8 sm:p-10 border border-[#02029c]/30 shadow-2xl space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 bg-[#16284C]" />
+                  <div className="w-2.5 h-2.5 bg-[#02029c]" />
                   <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-wide text-white">
                     {person.customSectionTitle}
                   </h3>
                 </div>
-                <div className="space-y-4 font-sans text-xs sm:text-sm md:text-base text-white/80 leading-relaxed font-light">
+                <div className="space-y-4 font-sans text-xs sm:text-sm md:text-base text-white/95 leading-relaxed font-normal">
                   {person.customSectionContent.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}
@@ -165,7 +165,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
                       key={idx}
                       className="inline-flex items-center gap-2 bg-white px-4 py-2 border border-black/10 text-black text-xs font-semibold tracking-wider uppercase"
                     >
-                      <Building2 size={13} className="text-[#16284C]" />
+                      <Building2 size={13} className="text-[#02029c]" />
                       <span>{client}</span>
                     </span>
                   ))}
@@ -182,7 +182,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
                 <div className="space-y-3 pt-2">
                   {person.highlights.map((item, idx) => (
                     <div key={item.id || idx} className="flex items-start gap-3 bg-white p-4 border border-black/5">
-                      <span className="w-2 h-2 rounded-full bg-[#16284C] mt-2 flex-shrink-0" />
+                      <span className="w-2 h-2 rounded-full bg-[#02029c] mt-2 flex-shrink-0" />
                       <span className="font-sans text-xs sm:text-sm text-black font-medium leading-relaxed">
                         {item.text}
                       </span>
@@ -193,16 +193,16 @@ export default function DedicatedProfilePage({ params }: PageProps) {
             )}
 
             {/* DEDICATED HEADING NAMED "CONTACT" WITH LINKEDIN AND INSTAGRAM */}
-            <div className="bg-[#000000] text-white p-8 sm:p-10 border border-[#16284C]/30 shadow-2xl space-y-6">
+            <div className="bg-[#000000] text-white p-8 sm:p-10 border border-[#02029c]/30 shadow-2xl space-y-6">
               <div>
-                <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#16284C] font-bold block mb-1">
+                <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#02029c] font-bold block mb-1">
                   DIRECT ADVISORY CHANNEL
                 </span>
                 <h3 className="font-serif text-3xl sm:text-4xl font-light tracking-wide text-white">
                   Contact
                 </h3>
               </div>
-              <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed max-w-2xl">
+              <p className="font-sans text-xs sm:text-sm text-white/90 font-normal leading-relaxed max-w-2xl">
                 Connect directly with {person.name} via professional networks or initiate a formal confidential mandate evaluation through Arventis Partners.
               </p>
 
@@ -212,7 +212,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
                   href={person.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-[#16284C] text-white hover:text-white font-sans text-xs font-bold tracking-[0.2em] uppercase px-6 py-3.5 border border-white/20 transition-all duration-300 shadow-md hover-target"
+                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-[#02029c] text-white hover:text-white font-sans text-xs font-bold tracking-[0.2em] uppercase px-6 py-3.5 border border-white/20 transition-all duration-300 shadow-md hover-target"
                 >
                   <LinkedInIcon className="w-4 h-4" />
                   <span>LINKEDIN PROFILE</span>
@@ -223,7 +223,7 @@ export default function DedicatedProfilePage({ params }: PageProps) {
                   href={person.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-[#16284C] text-white hover:text-white font-sans text-xs font-bold tracking-[0.2em] uppercase px-6 py-3.5 border border-white/20 transition-all duration-300 shadow-md hover-target"
+                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-[#02029c] text-white hover:text-white font-sans text-xs font-bold tracking-[0.2em] uppercase px-6 py-3.5 border border-white/20 transition-all duration-300 shadow-md hover-target"
                 >
                   <InstagramIcon className="w-4 h-4" />
                   <span>INSTAGRAM</span>
@@ -245,13 +245,13 @@ export default function DedicatedProfilePage({ params }: PageProps) {
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-white">
             Start the Conversation
           </h2>
-          <p className="font-sans text-sm md:text-base text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="font-sans text-sm md:text-base text-white/90 font-normal max-w-2xl mx-auto leading-relaxed">
             Establish a direct partner relationship, or initiate a new mandate. Both practices operate under standard NDA protocols.
           </p>
           <div className="pt-4">
             <Link
               href="/contact-us"
-              className="inline-block bg-[#16284C] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase px-10 py-4 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
+              className="inline-block bg-[#02029c] hover:bg-[#1915e1] text-white font-bold text-xs tracking-[0.2em] uppercase px-10 py-4 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
             >
               CONTACT US
             </Link>

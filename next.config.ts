@@ -12,10 +12,10 @@ const cspHeader = `
   form-action 'self';
   frame-ancestors 'none';
   frame-src 'self' https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/;
-  upgrade-insecure-requests;
 `;
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ['10.35.84.225'],
   turbopack: {
     root: __dirname,
   },
