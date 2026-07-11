@@ -62,7 +62,7 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
             The content of this website is for informational purposes only and should not be interpreted as soliciting or advertisement. No material/information provided on this website should be construed as legal advice.
           </p>
           <p>
-            Arventis Partners shall not be liable for consequences of any action taken by relying on the material/information provided on this website. The contents of this website are the intellectual property of Arventis Partners.
+            <strong className="text-black font-semibold">Arventis Partners</strong> shall not be liable for consequences of any action taken by relying on the material/information provided on this website. The contents of this website are the intellectual property of <strong className="text-black font-semibold">Arventis Partners</strong>.
           </p>
         </div>
 

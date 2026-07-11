@@ -95,7 +95,7 @@ export default function AboutPage() {
       <section className="relative w-full bg-white pt-16 md:pt-24 pb-8 md:pb-12 px-6 md:px-16 text-center">
         <div className="max-w-6xl mx-auto scroll-fade-up">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light leading-snug text-black">
-            &quot;Whether it is a domestic business, a family managing an estate, or an international company entering India or the GCC,<br/> <span className="lg:whitespace-nowrap">every engagement receives the same standard of preparation and delivery.</span>&quot;
+            &quot;Whether it is a domestic business, a family managing an estate, or an international company entering India or the GCC, <span className="md:block lg:inline">every engagement receives the same standard of preparation and delivery.</span>&quot;
           </h2>
         </div>
       </section>

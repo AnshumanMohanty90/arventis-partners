@@ -192,7 +192,7 @@ export default function ServicesPage() {
               {/* 3 columns of industry text items with thin bottom border */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4 scroll-fade-up transition-delay-200">
                 {industries.map((ind, idx) => (
-                  <div key={idx} className={ind ? "border-b border-black/10 pb-3 pt-1 hover:border-[#02029c]/30 transition-all duration-300" : "pb-3 pt-1"}>
+                  <div key={idx} className={ind ? "border-b border-black/10 pb-3 pt-1 hover:border-[#02029c]/30 transition-all duration-300" : "hidden md:block pb-3 pt-1"}>
                     <span className={`font-sans text-[13px] sm:text-[15px] font-semibold tracking-wider block ${ind ? 'text-[#02029c] hover:text-black transition-colors duration-300' : 'opacity-0 select-none'}`}>
                       {ind || 'Spacer'}
                     </span>

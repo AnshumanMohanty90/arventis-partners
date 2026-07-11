@@ -7,7 +7,6 @@ import { ArrowUpRight, Scale, Globe, ShieldCheck, Mail, MapPin } from 'lucide-re
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
-import SplashScreen from './components/SplashScreen';
 
 // Custom component to reveal text word-by-word with a calming stagger
 function RevealHeading({ children, className = "" }: { children: string; className?: string }) {
@@ -155,7 +154,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      <SplashScreen />
       
       {/* 1. STICKY HEADER */}
       <Navbar />

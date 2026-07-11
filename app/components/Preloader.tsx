@@ -16,18 +16,18 @@ export default function Preloader() {
     document.body.style.overflow = 'hidden';
 
     // Timeline for preloader stages:
-    // 1. Let the animation complete (takes ~1.8s)
+    // 1. Let the animation complete and hold (takes ~1.8s, holding for another ~2.2s)
     // 2. Trigger the slide up exit animation
     const exitTimer = setTimeout(() => {
       setExitAnimation(true);
-    }, 2500);
+    }, 3500);
 
     // 3. Remove from DOM after slide up finishes (1.2s duration)
     const removeTimer = setTimeout(() => {
       setShouldRender(false);
       // Restore scrolling
       document.body.style.overflow = '';
-    }, 3700);
+    }, 5200);
 
     return () => {
       clearTimeout(exitTimer);
