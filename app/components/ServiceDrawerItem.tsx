@@ -95,9 +95,7 @@ export default function ServiceDrawerItem({
           {/* Description Paragraphs */}
           <div className="space-y-3 mb-6">
             {descriptions.map((desc, dIdx) => (
-              <p key={dIdx} className="text-black text-[15px] sm:text-[17px] leading-relaxed max-w-5xl">
-                {desc}
-              </p>
+              <p key={dIdx} className="text-black text-[15px] sm:text-[17px] leading-relaxed max-w-5xl" dangerouslySetInnerHTML={{ __html: desc }} />
             ))}
           </div>
 

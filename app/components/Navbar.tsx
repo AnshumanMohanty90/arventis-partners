@@ -82,7 +82,7 @@ export default function Navbar() {
               height={120}
               priority
               unoptimized
-              className="h-full max-h-[54px] sm:max-h-[68px] md:max-h-[82px] w-auto object-contain transition-all duration-500 origin-left"
+              className="h-full max-h-[54px] sm:max-h-[68px] md:max-h-[82px] w-auto object-contain transition-transform duration-500 origin-left"
             />
           </Link>
         </div>

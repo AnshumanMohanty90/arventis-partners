@@ -108,7 +108,7 @@ export default function Preloader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#01142d] transition-transform duration-[1200ms] ${
+      className={`fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#42454d] transition-transform duration-[1200ms] ${
         exitAnimation ? '-translate-y-full' : 'translate-y-0'
       }`}
       style={{

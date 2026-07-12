@@ -10,7 +10,7 @@ interface DisclaimerModalProps {
 export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(true);
   const [showError, setShowError] = useState(false);
 
   useEffect(() => {
@@ -71,14 +71,14 @@ export default function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
         {/* Action Toggles */}
         <div className="flex flex-col gap-3 mt-4">
           <label className="flex items-center gap-3 cursor-pointer group w-fit">
-            <div className={`w-5 h-5 flex items-center justify-center border transition-colors duration-200 ${isChecked ? 'border-[#02029c]' : 'border-black/30 group-hover:border-[#02029c]'}`}>
+            <div className={`w-5 h-5 flex items-center justify-center border transition-colors duration-200 ${isChecked ? 'border-black' : 'border-black/30 group-hover:border-black'}`}>
               {isChecked && (
                 <svg className="w-3.5 h-3.5 text-[#02029c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               )}
             </div>
-            <span className="font-sans text-sm sm:text-base text-black group-hover:text-black/80 transition-colors duration-200">
+            <span className="font-sans text-xs sm:text-sm text-black/95 font-normal group-hover:text-black transition-colors duration-200">
               I accept the above.
             </span>
             <input 

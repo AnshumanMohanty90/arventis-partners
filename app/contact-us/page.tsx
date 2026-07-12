@@ -28,14 +28,9 @@ function RevealHeading({ children, className = "" }: { children: string; classNa
 
 const officeLocations = [
   { city: "Delhi", state: "Delhi", pin: "110001", country: "India", mapUrl: "https://maps.google.com/?q=HT+House,+Kasturba+Gandhi+Marg,+Connaught+Place,+New+Delhi" },
-  { city: "Shimla", state: "Himachal Pradesh", pin: "171001", country: "India", mapUrl: "https://maps.google.com/?q=Anoop+Sood+Building,+Paras+Dass+Garden,+Near+CPRI,+Shimla" },
-  { city: "Lucknow", state: "Uttar Pradesh", pin: "226001", country: "India", mapUrl: "https://maps.google.com/?q=110,+First+Floor+Durgma+Tower,+Lalbagh,+Lucknow" },
   { city: "Chandigarh", state: "Chandigarh", pin: "160002", country: "India", mapUrl: "https://maps.google.com/?q=Elante+Offices,+Industrial+Area+Phase+I,+Chandigarh" },
-  { city: "Hyderabad", state: "Telangana", pin: "500045", country: "India", mapUrl: "https://maps.google.com/?q=House+No+8-3-A/413,+Krishna+Nagar,+Yusufguda,+Hyderabad" },
-  { city: "Cuttack", state: "Odisha", pin: "753014", country: "India", mapUrl: "https://maps.google.com/?q=Plot+No+C/71,+Sector+8,+CDA,+Cuttack" },
-  { city: "Kolkata", state: "West Bengal", pin: "700091", country: "India", mapUrl: "https://maps.google.com/?q=Bengal+Intelligent+Park,+Sector+V,+Salt+Lake,+Kolkata" },
-  { city: "Mumbai", state: "Maharashtra", pin: "400021", country: "India", mapUrl: "https://maps.google.com/?q=Maker+Chambers+VI,+Nariman+Point,+Mumbai" },
-  { city: "Pune", state: "Maharashtra", pin: "411016", country: "India", mapUrl: "https://maps.google.com/?q=ICC+Trade+Tower,+Senapati+Bapat+Road,+Pune" }
+  { city: "Shimla", state: "Himachal Pradesh", pin: "171001", country: "India", mapUrl: "https://maps.google.com/?q=Anoop+Sood+Building,+Paras+Dass+Garden,+Near+CPRI,+Shimla" },
+  { city: "Lucknow", state: "Uttar Pradesh", pin: "226001", country: "India", mapUrl: "https://maps.google.com/?q=110,+First+Floor+Durgma+Tower,+Lalbagh,+Lucknow" }
 ];
 
 export default function ContactUsPage() {
@@ -141,7 +136,7 @@ export default function ContactUsPage() {
     <div className="relative w-full min-h-screen flex flex-col bg-[#ffffff] text-[#000000]">
       <Navbar />
 
-      <main className="flex-grow flex flex-col items-center justify-start pt-20 pb-16 px-6 relative">
+      <main className="flex-grow flex flex-col items-center justify-start pt-20 pb-8 px-6 relative">
         {/* Animated transparent heading banner */}
         <div className="text-center pt-10 pb-6 w-full max-w-5xl mx-auto z-10 px-2">
           <h1 className="font-serif text-[4.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-4xl font-light tracking-tight leading-normal text-black mb-6 drop-shadow-sm whitespace-nowrap">
@@ -361,7 +356,7 @@ export default function ContactUsPage() {
         </div>
 
         {/* Offices Section */}
-        <div className="w-full max-w-5xl mt-16 mb-8 z-10 flex flex-col items-center px-4">
+        <div className="w-full max-w-5xl mt-16 mb-0 z-10 flex flex-col items-center px-4">
           <div className="flex flex-col items-center mb-10">
             <h2 className="text-3xl md:text-4xl font-sans text-black text-center font-bold tracking-wide uppercase">
               Offices
@@ -371,7 +366,7 @@ export default function ContactUsPage() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 md:gap-x-24 gap-y-6 w-fit mx-auto font-sans text-sm md:text-base text-black font-normal tracking-wide">
+          <div className="flex flex-row items-center justify-center gap-4 sm:gap-8 md:gap-16 lg:gap-24 w-full font-sans text-[13px] sm:text-[15px] md:text-base text-black font-normal tracking-wide whitespace-nowrap overflow-x-auto pb-4">
             {officeLocations.map((office, idx) => (
               <div key={idx} className="flex items-start gap-2.5 transition-colors duration-300 text-black hover:text-[#02029c]">
                 <MapPin className="w-5 h-5 text-[#02029c] shrink-0 mt-0.5" />

@@ -14,7 +14,7 @@ const ContactUs = () => {
            <div className="pt-2">
              <Link
                href="/contact-us"
-               className="inline-block bg-white hover:bg-[#02029c] hover:border hover:border-white text-black hover:text-white font-bold text-xs  tracking-[0.2em] uppercase px-10 py-3.5 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
+               className="inline-block bg-white border border-transparent hover:bg-[#02029c] hover:border-white text-black hover:text-white font-bold text-xs tracking-[0.2em] uppercase px-10 py-3.5 transition-all duration-300 hover-target shadow-xl rounded-[1px]"
              >
                CONTACT US
              </Link>

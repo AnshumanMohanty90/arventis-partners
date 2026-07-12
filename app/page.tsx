@@ -91,7 +91,7 @@ export default function Home() {
     if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 10000);
+    }, 6000);
   };
 
   const handleSlideClick = () => {
@@ -195,10 +195,10 @@ export default function Home() {
           {slides.map((slide, idx) => (
             <div
               key={idx}
-              className={`slide-text-transition flex flex-col items-start text-left w-full transition-all duration-1000 ease-in-out ${
+              className={`slide-text-transition absolute inset-x-0 top-0 flex flex-col items-start text-left w-full transition-opacity duration-1000 ease-in-out ${
                 currentSlide === idx
-                  ? ' opacity-100 translate-y-0 relative z-10'
-                  : 'opacity-0 translate-y-6 absolute inset-x-0 top-0 pointer-events-none z-0'
+                  ? 'opacity-100 pointer-events-auto z-10'
+                  : 'opacity-0 pointer-events-none z-0'
               }`}
             >
               <h1 className="text-white font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal tracking-tight leading-[1.1] max-w-5xl mb-4 sm:mb-6 drop-shadow-md">
@@ -293,7 +293,7 @@ export default function Home() {
           {/* Feature 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Text */}
-            <div className="lg:col-span-6 lg:h-[400px] flex flex-col justify-between py-0 scroll-fade-up order-1">
+            <div className="lg:col-span-6 flex flex-col justify-between py-0 scroll-fade-up order-1">
               <div className="space-y-4 md:space-y-6">
                 <h2 className="font-serif text-4xl sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-black lg:-mt-[10px]">
                   Strategy and Legal, <br/> Under One Mandate
@@ -326,7 +326,7 @@ export default function Home() {
               </div>
             </div>
             {/* Right Column: Image */}
-            <div className="lg:col-span-6 scroll-fade-up relative h-[300px] lg:h-[400px] border border-black/10 rounded-[1px] overflow-hidden shadow-lg order-2">
+            <div className="lg:col-span-6 scroll-fade-up relative h-[300px] lg:h-full border border-black/10 rounded-[1px] overflow-hidden shadow-lg order-2">
               <Image
                 src="/TwoDisciplines-heropg.jpg"
                 alt="One Team, Start to Finish"
@@ -384,7 +384,7 @@ export default function Home() {
       <section className="relative w-full bg-[#ffffff] text-[#000000] py-12 md:py-16 px-6 md:px-16 relative z-20">
         <div className="max-w-7xl mx-auto space-y-8">
           <div className="scroll-fade-up text-center max-w-3xl mx-auto space-y-4">
-            <h2 className="font-serif text-[20px] sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-[#000000] md:whitespace-nowrap">
+            <h2 className="font-serif text-[20px] sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-[#000000]">
               Which Practice Would You Like to Start With?
             </h2>
             <div className="font-sans text-[17px] text-[#000000]/95 leading-relaxed font-normal mt-2">

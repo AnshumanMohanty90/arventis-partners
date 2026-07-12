@@ -297,7 +297,7 @@ export default function OurPeoplePage() {
                       {selectedPerson.highlights.map(highlight => (
                         <li key={highlight.id} className="flex items-start group w-full">
                           <CheckCircle2 className="w-4 h-4 mr-2.5 text-[#02029c] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                          <span className="text-sm md:text-[15px] text-black/95 font-medium leading-snug w-full">{highlight.text}</span>
+                          <span className="text-sm md:text-[15px] text-black/95 leading-relaxed w-full">{highlight.text}</span>
                         </li>
                       ))}
                     </ul>

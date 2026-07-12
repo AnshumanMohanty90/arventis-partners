@@ -106,7 +106,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             
             {/* Left Column: Image */}
-            <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-auto w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
+            <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-full w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
               <Image
                 src="/about-1.jpeg"
                 alt="Strategic Foresight"
@@ -145,7 +145,7 @@ export default function AboutPage() {
           {/* THE FIRM (TEXT LEFT, IMAGE RIGHT) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Text */}
-            <div className="lg:col-span-7 lg:min-h-[380px] flex flex-col justify-between pt-0 pb-0">
+            <div className="lg:col-span-7 flex flex-col justify-between pt-0 pb-0">
               <div>
                 <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-light tracking-tight leading-[1.15] text-black w-full scroll-fade-up lg:whitespace-nowrap lg:-mt-[8px]">
                   Built So Clients Don't Have to Choose
@@ -177,7 +177,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right Column: Image */}
-            <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
+            <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-full w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
               <Image
                 src="/about-2.jpg"
                 alt="Business Strategy"
@@ -199,9 +199,9 @@ export default function AboutPage() {
       {/* 4. WHO WE WORK WITH (IMAGE LEFT, TEXT RIGHT) */}
       <section className="relative w-full bg-white pt-8 md:pt-12 pb-16 md:pb-24 px-6 md:px-16 text-black">
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Image */}
-            <div className="lg:col-span-5 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1 mt-2">
+            <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-auto w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
               <Image
                 src="/work.jpeg"
                 alt="Professional Services"
