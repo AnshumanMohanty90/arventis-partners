@@ -63,17 +63,18 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 h-[64px] sm:h-[78px] md:h-[92px] px-6 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between transition-all duration-500 ${
+      <header className={`fixed top-0 left-0 w-full z-50 h-[64px] sm:h-[78px] md:h-[92px] px-6 md:px-16 transition-all duration-500 ${
         isHeaderWhite 
           ? 'bg-white/40 backdrop-blur-md text-black shadow-sm' 
           : 'bg-transparent backdrop-blur-sm text-white'
       }`}>
+        <div className="max-w-7xl mx-auto w-full h-full flex items-center justify-between">
         {/* Left column: Logo */}
         <div className="flex items-center justify-start h-full py-1 sm:py-1 z-20">
           <Link 
             href="/" 
             onClick={() => setIsMenuOpen(false)}
-            className="hover-target inline-flex items-center h-full relative transition-transform duration-300 hover:scale-[1.02]"
+            className="hover-target inline-flex items-center h-full relative transition-transform duration-300 hover:scale-[1.02] -ml-[3px]"
           >
             <Image
               src={isHeaderWhite ? "/logo-whitebg.png" : "/logo-Black-bg.png"}
@@ -144,6 +145,7 @@ export default function Navbar() {
           >
             {isMenuOpen ? <X className="w-8 h-8 sm:w-9 sm:h-9" /> : <Menu className="w-8 h-8 sm:w-9 sm:h-9" />}
           </button>
+        </div>
         </div>
       </header>
 

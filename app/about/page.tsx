@@ -191,7 +191,7 @@ export default function AboutPage() {
           {/* 3. BUILT THE WAY STRUCTURED PROBLEMS GET SOLVED (IMAGE LEFT, TEXT RIGHT) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Image */}
-            <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-[400px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
+            <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-[290px] xl:h-[300px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
               <Image
                 src="/about_3.jpg"
                 alt="Structured Problem Solving"
@@ -204,7 +204,7 @@ export default function AboutPage() {
             {/* Right Column: Text */}
             <div className="lg:col-span-7 flex flex-col justify-start pt-0 pb-0 order-1 lg:order-2">
               <div>
-                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-light tracking-tight leading-[1.15] text-black w-full scroll-fade-up lg:-mt-[8px]">
+                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-[32px] font-light tracking-tight leading-[1.15] text-black w-full scroll-fade-up lg:-mt-[8px] whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap">
                   Built the Way Structured Problems Get Solved
                 </h2>
                 <div className="space-y-4 mt-6 mb-4 font-sans text-[15px] sm:text-[17px] text-black/95 leading-relaxed font-normal scroll-fade-up transition-delay-200">
@@ -241,7 +241,7 @@ export default function AboutPage() {
                     Our legal practice is a full-service dispute resolution and advisory firm. We represent clients before the Supreme Court of India, High Courts, Tribunals, Appellate bodies, and regulatory authorities across the country.
                   </p>
                   <ul className="list-disc pl-5 space-y-2 marker:text-[#02029c] mt-4 mb-4">
-                    <li>Civil, commercial, and constitutional litigation, <br className="hidden xl:block" /> from Trial Courts to the Supreme Court of India</li>
+                    <li>Civil, commercial, and constitutional litigation, from Trial Courts to <br className="hidden xl:block" /> the Supreme Court of India</li>
                     <li>Domestic and institutional arbitration, from drafting through enforcement</li>
                     <li>Regulatory and tribunal proceedings across corporate, tax, and competition matters</li>
                     <li>Pre-dispute advisory and contract risk review, before a dispute becomes one</li>
