@@ -92,7 +92,7 @@ export default function AboutPage() {
       </section>
 
       {/* QUOTE HEADLINE */}
-      <section className="relative w-full bg-white pt-10 md:pt-14 pb-4 md:pb-6 px-6 md:px-16 text-center">
+      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-center">
         <div className="max-w-7xl mx-auto scroll-fade-up">
           <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-light leading-relaxed text-black/90 w-full">
             &quot;Whether it is a domestic business, a family managing an estate, or an international company entering India or the GCC, <span className="md:block lg:inline">every engagement receives the same standard of preparation and delivery.</span>&quot;
@@ -101,7 +101,7 @@ export default function AboutPage() {
       </section>
 
       {/* 1. FIRM OVERVIEW HEADER */}
-      <section className="relative w-full bg-white pt-4 md:pt-6 pb-16 md:pb-24 px-6 md:px-16">
+      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             
@@ -188,7 +188,82 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* SECTION REMOVED AS PER REQUEST */}
+          {/* 3. BUILT THE WAY STRUCTURED PROBLEMS GET SOLVED (IMAGE LEFT, TEXT RIGHT) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
+            {/* Left Column: Image */}
+            <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-[400px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up order-2 lg:order-1">
+              <Image
+                src="/about_3.jpg"
+                alt="Structured Problem Solving"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
+            
+            {/* Right Column: Text */}
+            <div className="lg:col-span-7 flex flex-col justify-start pt-0 pb-0 order-1 lg:order-2">
+              <div>
+                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-light tracking-tight leading-[1.15] text-black w-full scroll-fade-up lg:-mt-[8px]">
+                  Built the Way Structured Problems Get Solved
+                </h2>
+                <div className="space-y-4 mt-6 mb-4 font-sans text-[15px] sm:text-[17px] text-black/95 leading-relaxed font-normal scroll-fade-up transition-delay-200">
+                  <p>
+                    Hypothesis first, data second, recommendation last, in that order, every time.
+                  </p>
+                  <p>
+                    Our strategy consulting practice starts by defining the core issue, breaks it into testable hypotheses, validates each against data and market reality, then narrows to the few recommendations an executive can act on that week.
+                  </p>
+                  <p>
+                    We do not start with a template. We start with the question a founder or CXO is actually trying to answer, and build backward from there.
+                  </p>
+                  <p>
+                    One method, every engagement, no hedge-everything report.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 4. BUILT TO FOLLOW THE DISPUTE (TEXT LEFT, IMAGE RIGHT) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
+            {/* Left Column: Text */}
+            <div className="lg:col-span-7 flex flex-col justify-start pt-0 pb-0">
+              <div>
+                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-[33px] font-light tracking-tight leading-[1.15] text-black w-full scroll-fade-up lg:-mt-[8px] whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap">
+                  Built to Follow the Dispute, Not Just One Forum
+                </h2>
+                <div className="space-y-4 mt-6 mb-4 font-sans text-[15px] sm:text-[17px] text-black/95 leading-relaxed font-normal scroll-fade-up transition-delay-200">
+                  <p>
+                    Litigation, arbitration, regulatory proceedings, and pre-dispute advisory, carried by the same team from first notice to final order.
+                  </p>
+                  <p>
+                    Our legal practice is a full-service dispute resolution and advisory firm. We represent clients before the Supreme Court of India, High Courts, Tribunals, Appellate bodies, and regulatory authorities across the country.
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2 marker:text-[#02029c] mt-4 mb-4">
+                    <li>Civil, commercial, and constitutional litigation, <br className="hidden xl:block" /> from Trial Courts to the Supreme Court of India</li>
+                    <li>Domestic and institutional arbitration, from drafting through enforcement</li>
+                    <li>Regulatory and tribunal proceedings across corporate, tax, and competition matters</li>
+                    <li>Pre-dispute advisory and contract risk review, before a dispute becomes one</li>
+                  </ul>
+                  <p>
+                    One brief, every forum, no re-briefing halfway through.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Image */}
+            <div className="lg:col-span-5 relative h-[250px] sm:h-[320px] lg:h-full w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
+              <Image
+                src="/about_4.jpg"
+                alt="Dispute Resolution"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
+          </div>
 
         </div>
       </section>
@@ -197,7 +272,7 @@ export default function AboutPage() {
     
 
       {/* 4. WHO WE WORK WITH (IMAGE LEFT, TEXT RIGHT) */}
-      <section className="relative w-full bg-white pt-8 md:pt-12 pb-16 md:pb-24 px-6 md:px-16 text-black">
+      <section className="relative w-full bg-white py-16 md:py-24 px-6 md:px-16 text-black">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Image */}

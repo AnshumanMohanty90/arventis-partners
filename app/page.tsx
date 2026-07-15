@@ -277,8 +277,8 @@ export default function Home() {
       
 
       {/* 4. OVERVIEW SECTION (5 Items) */}
-      <section id="overview" className="relative w-full bg-white text-black pt-6 pb-12 md:pt-8 md:pb-16 px-6 md:px-16 relative z-20">
-        <div className="max-w-7xl mx-auto space-y-15">
+      <section id="overview" className="relative w-full bg-white text-black py-16 md:py-24 px-6 md:px-16 relative z-20">
+        <div className="max-w-7xl mx-auto space-y-16">
           <div className="scroll-fade-up max-w-2xl">
            
             
@@ -288,8 +288,8 @@ export default function Home() {
         </div>
       </section>
       {/* 5. DETAILED FEATURES */}
-      <section className="relative w-full bg-white text-black py-12 md:py-16 px-6 md:px-16 relative z-20">
-        <div className="max-w-7xl mx-auto space-y-16 md:space-y-20">
+      <section className="relative w-full bg-white text-black py-16 md:py-24 px-6 md:px-16 relative z-20">
+        <div className="max-w-7xl mx-auto space-y-16 md:space-y-24">
           {/* Feature 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             {/* Left Column: Text */}
@@ -381,8 +381,8 @@ export default function Home() {
       </section>
 
       {/* 6. WHERE TO START (Dual Cards) */}
-      <section className="relative w-full bg-[#ffffff] text-[#000000] py-12 md:py-16 px-6 md:px-16 relative z-20">
-        <div className="max-w-7xl mx-auto space-y-8">
+      <section className="relative w-full bg-[#ffffff] text-[#000000] py-16 md:py-24 px-6 md:px-16 relative z-20">
+        <div className="max-w-7xl mx-auto space-y-12 md:space-y-16">
           <div className="scroll-fade-up text-center max-w-3xl mx-auto space-y-4">
             <h2 className="font-serif text-[20px] sm:text-4xl md:text-5xl font-light tracking-tight leading-tight text-[#000000]">
               Which Practice Would You Like to Start With?

@@ -31,145 +31,110 @@ function RevealHeading({ children, className = "" }: { children: string; classNa
 const legalPractices = [
   {
     num: '01',
-    title: 'Civil and Commercial Litigation',
+    title: 'Dispute Resolution and Commercial Litigation',
     description: [
-      "Commercial disputes require more than technical legal knowledge. They require a thorough understanding of the commercial context in which the dispute arose, a candid assessment of litigation risk on both sides, and the quality of advocacy before Trial Courts, High Courts, and the Supreme Court to protect or advance the client's position as proceedings develop.",
-      "Arventis Legal represents businesses and individuals in contract disputes, recovery proceedings, and multi-party commercial litigation. Our bench's standing before the Supreme Court of India means that complex, high-value matters do not require a change of counsel as they escalate through the judicial hierarchy. Clients benefit from continuity: the same team that understands the matter at inception argues it at the apex court."
-    ],
-    bullets: [
-      'Contract disputes, breach of agreement claims, and enforcement actions',
-      'Commercial recovery proceedings: debt, damages, and specific performance',
-      'Inter-party commercial litigation: shareholder, partnership, joint venture',
-      'Multi-party disputes and applications for urgent interim relief',
-      'Representation before Trial Courts, High Courts, and the Supreme Court of India'
+      "Our dispute resolution practice offers services spanning litigation, arbitration, regulatory proceedings, and pre-dispute advisory. We represent clients before the Supreme Court of India, High Courts, District Courts, Tribunals, Appellate bodies, and Regulatory authorities across the country.",
+      "<strong>Execution.</strong> Our expertise covers complex commercial and civil disputes, constitutional writs, service matters, property and real estate litigation, and high-value contractual claims. We advise clients on litigation strategy from consultation through trial, appellate proceedings, and enforcement of judgments. Our team has particular strength in multi-jurisdictional disputes that require coordination between private parties, government agencies, and regulatory bodies.",
+      "<strong>Key Team:</strong> Kumar Suman, Uday Seth, Adarsh Prabhat Asthana, Jitesh Tomar"
     ]
   },
   {
     num: '02',
-    title: 'Business and Corporate Law',
+    title: 'Arbitration and Alternative Dispute Resolution',
     description: [
-      "The legal infrastructure of a business determines its resilience when conditions are favourable and its exposure when they are not. Businesses that treat corporate law as a compliance exercise rather than a strategic input tend to encounter avoidable problems at the points of highest consequence: a fundraise, an acquisition, a regulatory investigation, or a leadership transition.",
-      "Arventis Legal advises businesses at every stage of their lifecycle on entity formation, governance frameworks, commercial contracts, and the legal dimensions of growth decisions. Our counsel is delivered with an awareness of what the legal position means for the client's broader commercial strategy, informed directly by the consulting practice that operates alongside this bench."
-    ],
-    bullets: [
-      'Company formation, structuring, and governance frameworks',
-      'Shareholder agreements, joint venture documentation, and partnership deeds',
-      'Mergers, acquisitions, and corporate restructuring advisory',
-      'Commercial contracts: drafting, review, and negotiation',
-      'Legal due diligence for investments, acquisitions, and strategic partnerships',
-      'Regulatory approvals and statutory filings across sectors'
+      "We advise clients on complex domestic and international commercial arbitration matters, from pre-arbitration strategy and settlement discussions to representation during arbitral proceedings and recognition and enforcement of awards.",
+      "<strong>Execution.</strong> Our practice covers institutional and ad-hoc arbitration, with specific expertise in MSME disputes, infrastructure arbitration, construction contracts, and commercial disagreements arising from joint ventures, supply chains, and public-private partnerships. We represent corporate clients, developers, government bodies, and individuals before domestic arbitral tribunals and have deep experience in arbitration-related litigation before High Courts and the Supreme Court.",
+      "<strong>Key Team:</strong> Kumar Suman, Uday Seth, Yash Thakur, Vipin Kumar"
     ]
   },
   {
     num: '03',
-    title: 'Estate Planning and Succession',
+    title: 'Infrastructure, Land Acquisition and Regulatory Litigation',
     description: [
-      "Matters involving family estates, succession, and inheritance carry consequences that extend far beyond the legal outcome. They affect relationships built across generations, the transfer of wealth that has taken decades to accumulate, and the continuity of businesses families intend to preserve. Clients who bring these matters to Arventis Legal receive the same quality of preparation and seniority of counsel as our institutional clients, because the stakes are equally significant.",
-      "We advise high-net-worth individuals, business families, and NRI clients on testamentary instruments, trust structures, and succession frameworks designed to withstand legal challenge and faithfully reflect the intentions of the person giving the instructions."
-    ],
-    bullets: [
-      'Will drafting, codicils, and testamentary planning for complex and multi-asset estates',
-      'Trust structures: private family trusts, charitable trusts, and discretionary arrangements',
-      'Succession planning for family businesses, HNI estates, and multi-generational wealth',
-      'Family settlement agreements and mediated inheritance arrangements',
-      'Contested succession, inheritance disputes, and probate proceedings',
-      'Cross-border estate and succession matters involving NRI and internationally held assets'
+      "We are trusted counsel for public sector undertakings, infrastructure developers, and impacted communities in some of India's most capital intensive sectors.",
+      "<strong>Execution.</strong> Our practice handles the full lifecycle of infrastructure projects, including land acquisition and compensation claims, rehabilitation and resettlement matters, right of way disputes, environmental clearances, public procurement regulations, and project related litigation. We represent landowners in compensation enhancement proceedings, advise government bodies on acquisition frameworks, and act for corporate clients in disputes arising from EPC contracts, concession agreements, and public-private partnerships. Our practice also extends to public interest litigation concerning displacement and rehabilitation, where we have represented petitioners before the relevant courts.",
+      "<strong>Key Team:</strong> Kumar Suman, Sweta Sharma, Yash Thakur"
     ]
   },
   {
     num: '04',
-    title: 'Real Estate and Property Law',
+    title: 'Banking, Financial Litigation and Insolvency Resolution',
     description: [
-      "Real estate transactions carry significant financial exposure at every stage. The quality of legal preparation at the outset, from title verification through to the structure of transaction documents, determines the client's exposure to dispute, delay, and financial loss at every stage that follows. A transaction structured correctly at the beginning rarely requires the litigation that a poorly documented one almost inevitably does.",
-      "Arventis Legal advises individual homeowners, commercial occupiers, developers, and institutional investors across the full real estate lifecycle: transactional advisory, RERA compliance, property disputes, and real estate litigation. Where a matter proceeds to contested proceedings, clients have continuity of counsel from advisory through to courtroom representation."
-    ],
-    bullets: [
-      'Title due diligence, property verification, and encumbrance searches',
-      'Sale deeds, agreements to sell, development agreements, and lease documentation',
-      'RERA advisory, compliance structuring, and regulatory representation',
-      'Property and boundary disputes, adverse possession, and title challenges',
-      'Tenancy, lease, and landlord-tenant matters: residential and commercial',
-      'Real estate litigation: title disputes, land use, zoning, and condominium matters'
+      "We act as counsel for leading public and private sector banks, non-banking financial companies, and financial institutions across a broad spectrum of transactional, regulatory, and contentious matters.",
+      "<strong>Execution.</strong> Our dedicated financial litigation team handles debt recovery proceedings before the Debt Recovery Tribunal and Debt Recovery Appellate Tribunal, SARFAESI actions, and counter-claims. We represent financial creditors and operational creditors before the National Company Law Tribunal and National Company Law Appellate Tribunal in insolvency and resolution proceedings. Our practice also covers commercial disputes arising from banking transactions, recovery proceedings, and regulatory compliance advisory for financial institutions. We also appear before the Armed Forces Tribunal and consumer forums to defend financial institutions against service related complaints.",
+      "<strong>Key Team:</strong> Puja Dewan Seth (Advocate-on-Record), Uday Seth (Partner), Adarsh Prabhat Asthana"
     ]
   },
   {
     num: '05',
-    title: 'Employment Law',
+    title: 'White Collar Crime, Fraud and Investigations',
     description: [
-      "The legal relationship between an employer and its workforce has grown materially more complex. Statutory obligations governing wages, benefits, workplace safety, anti-discrimination, and termination create a compliance environment that businesses, domestic and international, must navigate carefully. The cost of getting this wrong is not merely regulatory; it is reputational, and increasingly, it is litigated.",
-      "Arventis Legal advises businesses on employment policy frameworks, executive contracts, and the legal dimensions of workforce management. Our counsel is proactive: the employment policies and contracts we design are intended to resolve disputes before they surface, not merely respond to them after."
-    ],
-    bullets: [
-      'Employment contract drafting and review: executive, senior management, and standard workforce',
-      'Employment policy frameworks: HR policies, codes of conduct, POSH compliance',
-      'Workplace investigations and employer guidance on disciplinary proceedings',
-      'Representation in employment disputes before courts, labour tribunals, and appellate authorities',
-      'Non-compete, non-solicitation, and confidentiality clause drafting and enforcement',
-      'Advisory on termination, severance, and workforce restructuring'
+      "Our practice covers anti-bribery, money laundering, asset tracing, banking frauds, cyber frauds including phishing, identity theft, and digital fraud matters, and sanctions related proceedings. We have seen a significant increase in whistleblower actions, internal investigations involving siphoning of funds, compliance programmes, and dawn raid preparedness, and we provide clients with an end to end solution.",
+      "<strong>Execution.</strong> We regularly advise on matters pertaining to investigations by the Enforcement Directorate, Central Bureau of Investigation, Serious Fraud Investigations Office, Economic Offence Wing, cyber cells, and other law enforcement agencies. Our practice covers representation in Prevention of Corruption Act trials, banking fraud cases, insider trading investigations, and securities market fraud matters. We handle high stakes anticipatory and regular bail applications, trials, and appeals across Sessions Courts, High Courts, and the Supreme Court. Our in-house trial advocacy capabilities allow us to manage trials, appeals, witness summons, and internal inquiries with the highest level of competence.",
+      "<strong>Key Team:</strong> Sweta Sharma, Uday Seth (Partner), Yash Thakur, Jitesh Tomar"
     ]
   },
   {
     num: '06',
-    title: 'Intellectual Property and Technology',
+    title: 'Real Estate and RERA Litigation',
     description: [
-      "For businesses competing on the basis of proprietary processes, brand equity, creative output, or technology platforms, intellectual property protection is a core asset management question. IP that is inadequately protected, improperly licensed, or carelessly assigned represents a material vulnerability that often only becomes visible when a dispute makes it so.",
-      "Arventis Legal advises businesses on the full spectrum of intellectual property: trademarks, copyrights, patents, and trade secrets, from registration and licensing through to enforcement. We also counsel clients on technology agreements, software licensing, digital commerce, and data protection obligations under India's evolving regulatory framework."
-    ],
-    bullets: [
-      'Trademark clearance, prosecution, registration, and protection: India and international',
-      'Copyright advisory, licensing, and registration',
-      'Patent advisory and coordination with specialist patent attorneys',
-      'Trade secret protection and confidentiality frameworks',
-      'Technology agreements: software licensing, SaaS contracts, and digital service agreements',
-      'IP enforcement, opposition proceedings, and infringement actions',
-      'Data protection and privacy compliance advisory under the Digital Personal Data Protection Act'
+      "We represent developers, homebuyer associations, contractors, and corporate entities before the Real Estate Regulatory Authority, Appellate Tribunals, High Courts, and civil courts.",
+      "<strong>Execution.</strong> Our practice covers the full spectrum of real estate disputes, including RERA compliance and regulatory matters, title investigations, acquisition and leasing of commercial and residential land, property litigation, and disputes arising from construction contracts and development agreements. We advise clients through each stage of litigation, from consultation and dispute resolution to trial, appellate proceedings, and enforcement of judgments.",
+      "<strong>Key Team:</strong> Puja Dewan Seth (Advocate-on-Record), Yash Thakur, Vipin Kumar"
     ]
   },
   {
     num: '07',
-    title: 'Construction Law',
+    title: 'Consumer Protection and Insurance Litigation',
     description: [
-      "Construction projects generate a volume and variety of legal disputes that few other industries match. Contract interpretation disputes, subcontractor defaults, delay claims, and payment enforcement actions arise in virtually every significant construction engagement. Legal exposure is heightened in cross-border projects where governing law, jurisdiction, and the enforceability of contract terms are themselves contested.",
-      "Arventis Legal advises developers, contractors, subcontractors, and project owners on construction contracts, regulatory compliance, and dispute resolution. We approach construction matters with an understanding of both the legal and commercial dynamics of a project, including the practical realities that determine whether litigation or negotiated resolution better serves the client's interests."
-    ],
-    bullets: [
-      'Construction contract drafting, review, and negotiation: EPC, FIDIC, and bespoke forms',
-      'Subcontractor agreements and supply chain documentation',
-      'Delay claims, variation disputes, and payment enforcement',
-      'Contractor and developer representation in construction disputes',
-      'Regulatory compliance: RERA, building codes, and environmental clearances',
-      'Dispute resolution and arbitration in construction and infrastructure matters'
+      "We represent large insurers, banks, manufacturers, and individual claimants before consumer forums, the National Consumer Disputes Redressal Commission, and civil courts.",
+      "<strong>Execution.</strong> Our practice covers consumer disputes across sectors, including insurance claims, product liability, deficiency in services, and class action complaints. We have particular experience in Motor Accident Claims Tribunal matters on behalf of claimants and institutional clients, handling high value third party claims and insurance recovery proceedings. Our team advises clients on litigation strategy, evidence preparation, and appellate strategy through to final resolution.",
+      "<strong>Key Team:</strong> Uday Seth, Yash Thakur, Vipin Kumar, Jitesh Tomar"
     ]
   },
   {
     num: '08',
-    title: 'Dispute Resolution and Arbitration',
+    title: 'Criminal Litigation and Trial Advocacy',
     description: [
-      "As commercial relationships span more jurisdictions, arbitration has become the preferred mechanism for resolving disputes in cross-border and high-value commercial contexts. It offers confidentiality, party autonomy in the choice of governing law and procedure, and, where institutional rules are properly incorporated into the underlying contract, a degree of procedural predictability that litigation rarely matches.",
-      "Arventis Legal represents parties in domestic and international arbitration proceedings, including institutional arbitrations under recognised arbitral rules. We advise on the drafting of arbitration clauses at the contract stage, where a well-structured clause materially reduces the cost and complexity of any dispute that arises, and represent clients through proceedings and the enforcement of awards."
-    ],
-    bullets: [
-      'Domestic arbitration: institutional and ad hoc proceedings',
-      'International commercial arbitration and cross-border dispute resolution',
-      'Arbitration clause drafting and pre-dispute contractual risk advisory',
-      'Emergency arbitration and interim measures applications',
-      'Enforcement of domestic and foreign arbitral awards',
-      'Mediation, conciliation, and structured alternative dispute resolution'
+      "We represent individuals, corporate entities, and institutions across the full spectrum of criminal litigation, from investigation and trial through appeal and revision.",
+      "<strong>Execution.</strong> Our practice covers criminal trials, bail applications, quashing petitions, and revision petitions before Sessions Courts, High Courts, and the Supreme Court. We handle matters ranging from white collar crime and financial fraud to cyber crime and regulatory offences. Our team has deep experience in trial advocacy, cross examination, and final arguments, with particular focus on complex, multi party criminal proceedings that require strategic coordination across multiple jurisdictions.",
+      "<strong>Key Team:</strong> Sweta Sharma, Uday Seth (Partner), Yash Thakur, Jitesh Tomar"
     ]
   },
   {
     num: '09',
-    title: 'Constitutional and Writ Matters',
+    title: 'Constitutional Law and Public Interest Litigation',
     description: [
-      "Writ jurisdiction before the High Courts and the Supreme Court of India represents the most demanding arena of legal practice. The quality of preparation required, the depth of constitutional analysis, the precision of the pleadings, and the standard of oral advocacy, is categorically different from what most matters demand. Access to this level of representation at the right moment can determine outcomes that no other legal mechanism could produce.",
-      "Arventis Legal's practice in constitutional and writ matters reflects the bench's direct standing before the Supreme Court of India. We represent individuals, institutions, and businesses whose rights or legitimate interests require intervention at the constitutional level."
-    ],
-    bullets: [
-      'Writ petitions before High Courts and the Supreme Court of India',
-      'Fundamental rights matters and constitutional challenges to legislation or executive action',
-      'Regulatory and statutory challenges through writ jurisdiction',
-      'Public interest matters before constitutional courts',
-      'Representation in matters requiring urgent or interim constitutional relief'
+      "We are frequent counsel in constitutional writ petitions and public interest litigations concerning service law, displacement, rehabilitation, and arbitrary state action.",
+      "<strong>Execution.</strong> Our practice covers representation of government employees and PSU staff in disciplinary actions, promotions, and termination disputes, writs challenging tax assessments, demand notices, and revenue recovery before Revenue Courts and High Courts, and public interest litigation concerning displacement and rehabilitation policies. We have represented petitioners before the relevant courts in matters involving social justice, land rights, and constitutional remedies.",
+      "<strong>Key Team:</strong> Kumar Suman (Founding Partner), Adarsh Prabhat Asthana, Jitesh Tomar"
+    ]
+  },
+  {
+    num: '10',
+    title: 'Corporate Advisory and Commercial Documentation',
+    description: [
+      "We advise leading companies and financial institutions on a wide spectrum of complex corporate and commercial issues.",
+      "<strong>Execution.</strong> Our expertise is built on experience advising on all commercial contracts, including joint ventures and strategic alliances, complex contractual collaborations, licensing arrangements, product development, manufacturing and supply alliances, and commercial agreements. We draft pleadings, commercial agreements, legal opinions, appeals, and written submissions. Our practice also covers regulatory compliance, corporate governance advisory, and legal risk management for corporate clients across sectors.",
+      "<strong>Key Team:</strong> Puja Dewan Seth (Advocate-on-Record), Uday Seth (Partner), Vipin Kumar"
+    ]
+  },
+  {
+    num: '11',
+    title: 'Labour, Employment and Service Law',
+    description: [
+      "We advise corporate clients, government bodies, and individuals on the full spectrum of labour and employment law matters.",
+      "<strong>Execution.</strong> Our practice covers employment contracts, disciplinary proceedings, termination disputes, service law matters before courts and tribunals, and regulatory compliance under the labour codes. We represent employers in employment related litigation and advise on workforce management, policy formulation, and dispute prevention strategies.",
+      "<strong>Key Team:</strong> Uday Seth (Partner), Vipin Kumar"
+    ]
+  },
+  {
+    num: '12',
+    title: 'Revenue, Taxation and Regulatory Matters',
+    description: [
+      "We represent individuals, businesses, and government organisations before Revenue Courts, High Courts, and regulatory authorities in matters concerning taxation, revenue recovery, and regulatory compliance.",
+      "<strong>Execution.</strong> Our practice covers writ petitions challenging tax assessments and demand notices, revenue recovery proceedings, bail matters arising from tax investigations, and advisory on regulatory compliance across sectors. We appear regularly before Revenue Courts, the High Court of Judicature at Allahabad, Lucknow Bench, District and Sessions Courts, and arbitral tribunals.",
+      "<strong>Key Team:</strong> Puja Dewan Seth and Uday Seth"
     ]
   }
 ];
