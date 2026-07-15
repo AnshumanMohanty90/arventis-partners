@@ -204,7 +204,7 @@ export default function ServicesPage() {
             {/* Right Column: Image */}
             <div className="lg:col-span-4 relative h-[380px] w-full bg-white border border-black/10 rounded-[1px] overflow-hidden shadow-xl scroll-fade-up">
               <Image
-                src="/industries.jpeg"
+                src="/industries.jpg"
                 alt="Industries sector mapping"
                 fill
                 className="object-cover"

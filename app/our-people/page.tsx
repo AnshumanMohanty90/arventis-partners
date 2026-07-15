@@ -250,7 +250,7 @@ export default function OurPeoplePage() {
                       {selectedPerson.geographies.map((geo, idx) => (
                         <div key={idx} className="flex items-center text-xs md:text-sm font-medium text-black/95">
                           <MapPin className="w-3.5 h-3.5 mr-1.5 text-black/40 shrink-0" />
-                          <span>{geo}</span>
+                          <span className="whitespace-nowrap">{geo}</span>
                         </div>
                       ))}
                     </div>

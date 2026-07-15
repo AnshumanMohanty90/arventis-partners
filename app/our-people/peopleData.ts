@@ -104,7 +104,7 @@ export const peopleData: Person[] = [
     name: 'Puja Dewan Seth',
     discipline: 'Advocates',
     category: 'Legal',
-    title: 'ADVOCATE-ON-RECORD, SUPREME COURT OF INDIA',
+    title: 'ADVOCATE-ON-RECORD, <br/> SUPREME COURT OF INDIA',
     experience: '15+ Years',
     geographies: ['Supreme Court of India', 'Delhi High Court'],
     shortBio: 'Puja Dewan Seth is an Advocate-on-Record before the Supreme Court of India, with over fifteen years of litigation experience.',

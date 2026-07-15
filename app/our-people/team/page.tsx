@@ -79,6 +79,14 @@ export default function TeamPage() {
   const otherMembers = peopleData.filter(p => p.category !== 'Founding Partner');
 
   function getDomainPosition(person: Person) {
+    if (person.id === 'puja-dewan-seth') {
+      return (
+        <>
+          Advocate-on-Record <br />
+          Supreme Court of India
+        </>
+      );
+    }
     return 'Advocate';
   }
 
@@ -143,14 +151,14 @@ export default function TeamPage() {
             <RevealHeading>OUR TEAM</RevealHeading>
           </h1>
           <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            A network of advocates and specialists across the country.
+            Advocates and senior counsel across Trial Courts, High Courts, Arbitral Tribunals, and the Supreme Court of India, serving clients across India and abroad.
           </p>
         </div>
       </section>
 
       {/* Team Grid */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 space-y-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 max-w-6xl mx-auto hover:text-white">
+      <section className="w-full px-6 sm:px-6 md:px-12 lg:px-16 py-20 space-y-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 hover:text-white w-full">
           {otherMembers.map(renderCard)}
         </div>
       </section>
@@ -175,38 +183,57 @@ export default function TeamPage() {
               <X className="w-4 h-4 group-hover:scale-110 transition-transform" />
             </button>
 
-            {/* Top Row */}
-            <div className="flex flex-col md:flex-row w-full">
-              {/* Top Left */}
-              <div className="w-full md:w-[35%] lg:w-[30%] bg-neutral-50 p-5 md:p-6 lg:p-8 md:pb-4 lg:pb-6 border-r border-black/5 flex flex-col">
-                <div className="relative w-full mb-4 overflow-hidden shadow-md aspect-[4/5]">
-                  <Image
-                    src={selectedPerson.imagePath}
-                    alt={selectedPerson.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 30vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="mt-auto pt-2">
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-serif text-black mb-1 tracking-tight leading-snug">{selectedPerson.name}</h2>
-                  <div className="space-y-1 mt-1">
-                    <p className="text-black/95 font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.title}</p>
-                    {selectedPerson.badge && <p className="text-[#02029c] font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.badge}</p>}
+            {/* Split Layout */}
+            <div className="flex flex-col md:flex-row w-full h-full">
+              
+              {/* Left Column */}
+              <div className="w-full md:w-[35%] lg:w-[30%] bg-neutral-50 p-5 md:p-6 lg:p-8 border-r border-black/5 flex flex-col justify-between">
+                <div>
+                  <div className="relative w-full mb-4 overflow-hidden shadow-md aspect-[4/5]">
+                    <Image
+                      src={selectedPerson.imagePath}
+                      alt={selectedPerson.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 30vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="pt-2">
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-serif text-black mb-1 tracking-tight leading-snug">{selectedPerson.name}</h2>
+                    <div className="space-y-1 mt-1">
+                      <p className="text-black/95 font-bold text-[10px] md:text-xs uppercase tracking-wider" dangerouslySetInnerHTML={{ __html: selectedPerson.title }}></p>
+                      {selectedPerson.badge && <p className="text-[#02029c] font-bold text-[10px] md:text-xs uppercase tracking-wider">{selectedPerson.badge}</p>}
+                    </div>
                   </div>
                 </div>
+
+                {selectedPerson.geographies && selectedPerson.geographies.length > 0 && (
+                  <div className="mt-8">
+                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
+                      Geographies
+                    </h4>
+                    <div className="flex flex-col gap-y-3">
+                      {selectedPerson.geographies.map((geo, idx) => (
+                        <div key={idx} className="flex items-center text-xs md:text-sm font-medium text-black/95">
+                          <MapPin className="w-3.5 h-3.5 mr-1.5 text-black/40 shrink-0" />
+                          <span>{geo}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>  
 
-              {/* Top Right */}
-              <div className="w-full md:w-[65%] lg:w-[70%] p-5 md:p-6 lg:p-8 pr-6 md:pr-10 md:pb-4 lg:pb-6 flex flex-col justify-start bg-white">
-                <div className="space-y-3 mb-4">
+              {/* Right Column */}
+              <div className="w-full md:w-[65%] lg:w-[70%] p-5 md:p-6 lg:p-8 pr-6 md:pr-10 bg-white flex flex-col">
+                <div className="space-y-3 mb-8">
                   {selectedPerson.bio.map((paragraph, idx) => (
                     <p key={idx} className="text-sm md:text-[15px] text-black/95 leading-relaxed" dangerouslySetInnerHTML={{ __html: paragraph }} />
                   ))}
                 </div>
 
                 {selectedPerson.customSectionTitle && selectedPerson.customSectionContent && (
-                  <div className="mt-auto">
+                  <div className="mb-8">
                     <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-2">
                       {selectedPerson.customSectionTitle}
                     </h4>
@@ -217,34 +244,9 @@ export default function TeamPage() {
                     </div>
                   </div>
                 )}
-              </div>
-            </div>
 
-            {/* Bottom Row */}
-            <div className="flex flex-col md:flex-row w-full">
-              {/* Bottom Left */}
-              <div className="w-full md:w-[35%] lg:w-[30%] bg-neutral-50 p-5 md:p-6 lg:p-8 md:pt-4 lg:pt-4 border-r border-black/5 flex flex-col h-full">
-                {selectedPerson.geographies && selectedPerson.geographies.length > 0 && (
-                  <div>
-                    <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
-                      Geographies
-                    </h4>
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-3">
-                      {selectedPerson.geographies.map((geo, idx) => (
-                        <div key={idx} className="flex items-center text-xs md:text-sm font-medium text-black/95">
-                          <MapPin className="w-3.5 h-3.5 mr-1.5 text-black/40 shrink-0" />
-                          <span>{geo}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Bottom Right */}
-              <div className="w-full md:w-[65%] lg:w-[70%] p-5 md:p-6 lg:p-8 pr-6 md:pr-10 md:pt-4 lg:pt-4 flex flex-col h-full bg-white space-y-5">
                 {selectedPerson.clientList && selectedPerson.clientList.length > 0 && (
-                  <div>
+                  <div className="mb-8">
                     <h4 className="text-[10px] md:text-xs font-bold text-black uppercase tracking-widest mb-3">
                       Representative Clients
                     </h4>
