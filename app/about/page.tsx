@@ -92,16 +92,16 @@ export default function AboutPage() {
       </section>
 
       {/* QUOTE HEADLINE */}
-      <section className="relative w-full bg-white pt-16 md:pt-24 pb-8 md:pb-12 px-6 md:px-16 text-center">
-        <div className="max-w-6xl mx-auto scroll-fade-up">
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light leading-snug text-black">
+      <section className="relative w-full bg-white pt-10 md:pt-14 pb-4 md:pb-6 px-6 md:px-16 text-center">
+        <div className="max-w-7xl mx-auto scroll-fade-up">
+          <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-light leading-relaxed text-black/90 w-full">
             &quot;Whether it is a domestic business, a family managing an estate, or an international company entering India or the GCC, <span className="md:block lg:inline">every engagement receives the same standard of preparation and delivery.</span>&quot;
           </h2>
         </div>
       </section>
 
       {/* 1. FIRM OVERVIEW HEADER */}
-      <section className="relative w-full bg-white pt-8 md:pt-12 pb-16 md:pb-24 px-6 md:px-16">
+      <section className="relative w-full bg-white pt-4 md:pt-6 pb-16 md:pb-24 px-6 md:px-16">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
             

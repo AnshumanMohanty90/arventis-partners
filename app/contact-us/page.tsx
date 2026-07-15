@@ -138,9 +138,9 @@ export default function ContactUsPage() {
 
       <main className="flex-grow flex flex-col items-center justify-start pt-20 pb-8 px-6 relative">
         {/* Animated transparent heading banner */}
-        <div className="text-center pt-10 pb-6 w-full max-w-5xl mx-auto z-10 px-2">
-          <h1 className="font-serif text-[4.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-4xl font-light tracking-tight leading-normal text-black mb-6 drop-shadow-sm whitespace-nowrap">
-            <RevealHeading className="!flex-nowrap">Thank You for Showing Your Interest</RevealHeading>
+        <div className="flex justify-center py-10 md:py-12 w-full max-w-3xl mx-auto z-10 px-0">
+          <h1 className="font-serif text-[5vw] sm:text-[4vw] md:text-[3.5vw] lg:text-[3vw] xl:text-[44px] font-light tracking-tight leading-normal text-black drop-shadow-sm w-full">
+            <RevealHeading className="!flex-nowrap justify-between w-full">Thank You for Showing Your Interest</RevealHeading>
           </h1>
         </div>
 
@@ -173,7 +173,7 @@ export default function ContactUsPage() {
                   We work with ambitious leaders who want to define the future, not hide from it.<br/> Together, we achieve extraordinary outcomes.
                 </p>
                 <p className="font-sans text-xs sm:text-sm text-black/95 text-center font-normal italic">
-                  Required fields are marked with an asterisk (<span className="text-[#02029c]">*</span>).
+                  Required fields are marked with an asterisk (<span className="text-red-600">*</span>).
                 </p>
               </div>
 

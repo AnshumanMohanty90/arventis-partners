@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MapPin, CheckCircle2, X } from 'lucide-react';
-import { peopleData, Person } from './peopleData';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import ContactUs from '../components/ContactUs';
+import { MapPin, CheckCircle2, X, ArrowLeft } from 'lucide-react';
+import { peopleData, Person } from '../peopleData';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import ContactUs from '../../components/ContactUs';
 
 // Custom component to reveal text word-by-word with a calming stagger
 function RevealHeading({ children, className = "" }: { children: string; className?: string }) {
@@ -28,7 +28,7 @@ function RevealHeading({ children, className = "" }: { children: string; classNa
   );
 }
 
-export default function OurPeoplePage() {
+export default function TeamPage() {
   const [selectedPerson, setSelectedPerson] = useState<Person | null>(null);
 
   // Prevent scrolling on body when modal is open
@@ -76,16 +76,9 @@ export default function OurPeoplePage() {
     return () => observer.disconnect();
   }, []);
 
-  const foundingPartners = [
-    peopleData.find(p => p.id === 'anshuman'),
-    peopleData.find(p => p.id === 'suman-thakur')
-  ].filter(Boolean) as Person[];
+  const otherMembers = peopleData.filter(p => p.category !== 'Founding Partner');
 
   function getDomainPosition(person: Person) {
-    if (person.category === 'Founding Partner') {
-      if (person.id === 'anshuman') return 'Strategy Consulting Services';
-      if (person.id === 'suman-thakur') return 'Legal Services';
-    }
     return 'Advocate';
   }
 
@@ -119,7 +112,7 @@ export default function OurPeoplePage() {
     <main className="min-h-screen bg-white pb-0">
       <Navbar />
       {/* HERO VIDEO BANNER */}
-      <section className="relative w-full min-h-[60vh] md:min-h-[75vh] flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-16 border-b border-white/10 text-white overflow-hidden pt-28 bg-black">
+      <section className="relative w-full min-h-[60vh] md:min-h-[75vh] flex flex-col justify-between pb-16 md:pb-24 px-6 md:px-16 border-b border-white/10 text-white overflow-hidden pt-28 bg-black">
         {/* Background Video */}
         <video 
           autoPlay 
@@ -128,51 +121,41 @@ export default function OurPeoplePage() {
           playsInline 
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
-          <source src="https://pub-e76f3c2b747241f99a84d7c073d76e11.r2.dev/people_page.mp4" type="video/mp4" />
+          <source src="https://pub-e76f3c2b747241f99a84d7c073d76e11.r2.dev/team_subpage.mp4" type="video/mp4" />
         </video>
         
         {/* Overlays for text readability */}
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/30 z-10"></div>
 
-        <div className="max-w-7xl mx-auto w-full relative z-20">
+        <div className="max-w-7xl mx-auto w-full relative z-20 mt-4 md:mt-8">
+          <Link
+            href="/our-people"
+            className="inline-flex items-center gap-2 bg-white/5 hover:bg-[#02029c] text-white text-xs tracking-[0.2em] font-bold uppercase border border-white/20 hover:border-[#02029c] px-5 py-3 transition-all duration-300 hover-target backdrop-blur-sm"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>BACK TO OUR PEOPLE</span>
+          </Link>
+        </div>
+
+        <div className="max-w-7xl mx-auto w-full relative z-20 mt-auto pt-16">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-normal text-white mb-6 drop-shadow-lg">
-            <RevealHeading>OUR  PEOPLE</RevealHeading>
+            <RevealHeading>OUR TEAM</RevealHeading>
           </h1>
           <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed max-w-3xl transition-delay-300 drop-shadow-md">
-            Strategy consultants and Supreme Court advocates,<br className="hidden md:block" /> working as a single team across every engagement.
+            A network of advocates and specialists across the country.
           </p>
         </div>
       </section>
 
-      {/* 2. Team Sections */}
+      {/* Team Grid */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 space-y-20">
-        {/* Founding Partners */}
-        <div className="space-y-12">
-          <div className="relative flex flex-col items-center justify-center pb-6 scroll-fade-up">
-            <h2 className="text-2xl md:text-3xl font-serif font-light text-black  text-center">
-              Founding Partners
-            </h2>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vw] h-[2px] bg-gradient-to-r from-transparent via-[#02029c] to-transparent opacity-90" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-2xl mx-auto hover:text-white">
-            {foundingPartners.map(renderCard)}
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <div className="w-full flex justify-center scroll-fade-up">
-          <Link
-            href="/our-people/team"
-            className="inline-flex items-center gap-3 bg-[#02029c] text-white font-bold text-xs tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover-target shadow-xl"
-          >
-            <span>MEET OUR ENTIRE TEAM</span>
-            <span>&rarr;</span>
-          </Link>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 max-w-6xl mx-auto hover:text-white">
+          {otherMembers.map(renderCard)}
         </div>
       </section>
 
-      {/* 3. The Detail View (Modal) */}
+      {/* The Detail View (Modal) */}
       {selectedPerson && (
         <div 
           className="fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-sm animate-in fade-in duration-300"
@@ -298,7 +281,6 @@ export default function OurPeoplePage() {
       )}
 
       <ContactUs />
-
       <Footer />
     </main>
   );

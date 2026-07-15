@@ -73,18 +73,23 @@ export const peopleData: Person[] = [
     category: 'Founding Partner',
     title: ' LEGAL  |  ADVOCATE',
     experience: '13+ Years',
-    geographies: ['Delhi', 'Himachal Pradesh'],
+    geographies: ['Delhi', 'Chandigarh', 'Himachal Pradesh'],
     shortBio: 'Thirteen years of advocacy, litigation, and public interest law, with a focus on arbitration, land acquisition, infrastructure, and public law.',
     shortDesc: 'Supreme Court advocate specialising in commercial litigation, arbitration, infrastructure, and public law.',
-    fullBio: 'Kumar Suman has built his practice from the ground up across thirteen years of advocacy, litigation, and public interest law. His focus is arbitration, land acquisition, infrastructure, and public law. He comes to each mandate not as an advisor offering opinions, but as a litigator accountable for outcomes in high-stakes disputes.\nHis work is defined by cases that carry real consequence: landowners displaced by acquisition, communities navigating rehabilitation, infrastructure projects caught between private enterprise and regulatory complexity. He brings to Arventis Legal the discipline of someone whose practice has been tested in contested terrain, across Courts, Arbitral Tribunals, and policy forums.',
+    fullBio: 'As the Founding Partner of Arventis Partners, Kumar Suman establishes the firm\'s strategic vision and leads its most critical legal matters. With over thirteen years of experience, Mr. Suman has cultivated a robust practice that bridges the legal landscapes of Delhi, Chandigarh, and Himachal Pradesh, making him a uniquely versatile advocate for clients navigating complex regulatory and infrastructural challenges.\nHis practice is defined by a deep expertise in arbitration, land acquisition, and infrastructure disputes. He is the firm’s principal authority on public law and constitutional writs, frequently representing individuals, landowners, and business entities before civil courts, tribunals, and regulatory authorities. Mr. Suman is particularly distinguished by his work in complex, multi-stakeholder litigation involving infrastructure projects, where he expertly coordinates between private parties, government agencies, and affected communities to achieve practical and favorable resolutions.\nBeyond his commercial practice, Mr. Suman demonstrates a profound commitment to public interest law, particularly concerning displacement, rehabilitation, and social justice. He has successfully represented petitioners before the High Courts in high-stakes public interest litigations, underscoring his dedication to advocating for equitable outcomes in matters of national significance.\nA graduate of the prestigious Faculty of Law, Delhi University, Mr. Suman’s leadership and legal acumen serve as the cornerstone of Arventis Partners, ensuring the firm delivers unparalleled representation and strategic counsel across the region.',
     bio: [
-      'Kumar Suman has built his practice from the ground up across thirteen years of advocacy, litigation, and public interest law. His focus is arbitration, land acquisition, infrastructure, and public law. He comes to each mandate not as an advisor offering opinions, but as a litigator accountable for outcomes in high-stakes disputes.',
-      'His work is defined by cases that carry real consequence: landowners displaced by acquisition, communities navigating rehabilitation, infrastructure projects caught between private enterprise and regulatory complexity. He brings to Arventis Legal the discipline of someone whose practice has been tested in contested terrain, across Courts, Arbitral Tribunals, and policy forums.'
+      'As the Founding Partner of Arventis Partners, Kumar Suman establishes the firm\'s strategic vision and leads its most critical legal matters. With over thirteen years of experience, Mr. Suman has cultivated a robust practice that bridges the legal landscapes of Delhi, Chandigarh, and Himachal Pradesh, making him a uniquely versatile advocate for clients navigating complex regulatory and infrastructural challenges.',
+      'His practice is defined by a deep expertise in arbitration, land acquisition, and infrastructure disputes. He is the firm’s principal authority on public law and constitutional writs, frequently representing individuals, landowners, and business entities before civil courts, tribunals, and regulatory authorities. Mr. Suman is particularly distinguished by his work in complex, multi-stakeholder litigation involving infrastructure projects, where he expertly coordinates between private parties, government agencies, and affected communities to achieve practical and favorable resolutions.',
+      'Beyond his commercial practice, Mr. Suman demonstrates a profound commitment to public interest law, particularly concerning displacement, rehabilitation, and social justice. He has successfully represented petitioners before the High Courts in high-stakes public interest litigations, underscoring his dedication to advocating for equitable outcomes in matters of national significance.',
+      'A graduate of the prestigious Faculty of Law, Delhi University, Mr. Suman’s leadership and legal acumen serve as the cornerstone of Arventis Partners, ensuring the firm delivers unparalleled representation and strategic counsel across the region.'
     ],
     highlights: [
-      { id: 's1', text: 'Represented landowners in land acquisition disputes on rehabilitation and compensation, holding government accountability through statutory frameworks' },
-      { id: 's2', text: 'Handled arbitration and infrastructure litigation involving private enterprises, government agencies, and affected communities' },
-      { id: 's3', text: 'Public interest litigation and policy advocacy on displacement and equitable development, achieving real-world impact for vulnerable populations' }
+      { id: 's1', text: 'Arbitration and Alternative Dispute Resolution' },
+      { id: 's2', text: 'Land Acquisition and Compensation' },
+      { id: 's3', text: 'Infrastructure and Regulatory Litigation' },
+      { id: 's4', text: 'Public Interest Litigation' },
+      { id: 's5', text: 'Corporate Advisory and Commercial Disputes' },
+      { id: 's6', text: 'Civil litigation' }
     ],
     imagePath: '/s-sir.png',
     image: '/s-sir.png',
@@ -94,60 +99,99 @@ export const peopleData: Person[] = [
     instagram: 'https://instagram.com'
   },
   {
-    id: 'sweta',
-    slug: 'sweta',
-    name: 'Sweta Verma',
+    id: 'puja-dewan-seth',
+    slug: 'puja-dewan-seth',
+    name: 'Puja Dewan Seth',
     discipline: 'Advocates',
     category: 'Legal',
-    title: 'ADVOCATE – HIGH COURT and ARBITRAL ADVOCACY',
+    title: 'ADVOCATE-ON-RECORD, SUPREME COURT OF INDIA',
     experience: '15+ Years',
-    geographies: ['High Court of Himachal Pradesh', 'District Courts', 'Arbitral Tribunals'],
-    shortBio: 'Fifteen years representing institutions and individuals navigating complex disputes, criminal prosecutions, and infrastructure litigation.',
-    shortDesc: 'Extensive experience in High Court litigation, civil disputes, criminal prosecutions, and institutional arbitration.',
-    fullBio: 'Sweta has built her practice across fifteen years representing institutions and individuals where the stakes are real - government bodies, public sector undertakings, financial institutions, and corporate organisations navigating complex disputes, criminal prosecutions, and infrastructure-related litigation.\nHer work has been shaped by the mandates others find difficult: NHAI, NHIDCL, NTPC, Adani Cement, IL and FS, Punjab National Bank, SBI Life Insurance. These are not clients who retain counsel for appearances. They retain counsel when the matter carries consequence - and she has carried those matters, across arbitration, commercial disputes, banking recovery proceedings, construction and infrastructure law, and regulatory compliance.\nShe appears regularly before the High Court of Himachal Pradesh and District Courts across the state. The practice she brings to each matter is defined by meticulous preparation, litigation strategy built around the specific facts on record, and the kind of advocacy that earns institutional confidence over time - not once, but repeatedly, across matters and across years.',
+    geographies: ['Supreme Court of India', 'Delhi High Court'],
+    shortBio: 'Puja Dewan Seth is an Advocate-on-Record before the Supreme Court of India, with over fifteen years of litigation experience.',
+    shortDesc: 'Advocate-on-Record, Supreme Court of India with 15+ years experience.',
+    fullBio: 'Puja Dewan Seth is an Advocate-on-Record before the Supreme Court of India, with over fifteen years of litigation experience. She holds a Master of Business Laws from the National Law School of India University, Bengaluru, and appears regularly before the Supreme Court, the Delhi High Court, the Debt Recovery Tribunal, the Debt Recovery Appellate Tribunal, the National Company Law Tribunal, the Armed Forces Tribunal, and consumer forums.\nHer practice covers banking and financial disputes, commercial litigation, recovery proceedings, consumer law, corporate advisory, and civil litigation. Ms. Seth drafts pleadings, commercial agreements, legal opinions, appeals, and written submissions, and conducts trials, cross-examinations, and final arguments on behalf of financial institutions, corporate clients, and individuals.',
     bio: [
-      'Sweta has built her practice across fifteen years of representing institutions and individuals where the stakes are real - government bodies, public sector undertakings, financial institutions, and corporate organisations navigating complex disputes, criminal prosecutions, and infrastructure-related litigation.',
-      'She appears regularly before the High Court of Himachal Pradesh and District Courts across the state. The practice she brings to each matter is defined by meticulous preparation, litigation strategy built around the specific facts on record, and the kind of advocacy that earns institutional confidence over time - not once, but repeatedly, across matters and across years.'
+      'Puja Dewan Seth is an Advocate-on-Record before the Supreme Court of India, with over fifteen years of litigation experience. She holds a Master of Business Laws from the National Law School of India University, Bengaluru, and appears regularly before the Supreme Court, the Delhi High Court, the Debt Recovery Tribunal, the Debt Recovery Appellate Tribunal, the National Company Law Tribunal, the Armed Forces Tribunal, and consumer forums.',
+      'Her practice covers banking and financial disputes, commercial litigation, recovery proceedings, consumer law, corporate advisory, and civil litigation. Ms. Seth drafts pleadings, commercial agreements, legal opinions, appeals, and written submissions, and conducts trials, cross-examinations, and final arguments on behalf of financial institutions, corporate clients, and individuals.'
+    ],
+    customSectionTitle: 'EDUCATION',
+    customSectionContent: [
+      'Master of Business Laws (M.B.L.), National Law School of India University, Bengaluru'
     ],
     highlights: [
-      { id: 'sw1', text: 'High Court of Himachal Pradesh Standing and District Courts' },
-      { id: 'sw2', text: 'Institutional and Ad-Hoc Arbitral Proceedings in Infrastructure and Construction' },
-      { id: 'sw3', text: 'Banking Recovery Proceedings and Regulatory Compliance' }
+      { id: 'p1', text: 'Supreme Court Litigation' },
+      { id: 'p2', text: 'Banking and Financial Disputes' },
+      { id: 'p3', text: 'Commercial and Corporate Litigation' },
+      { id: 'p4', text: 'Civil and Property Litigation' },
+      { id: 'p5', text: 'Commercial Documentation and Legal Advisory' },
+      { id: 'p6', text: 'Contract Drafting & Negotiation' }
     ],
-    imagePath: '/Sweta_new.png',
-    image: '/Sweta_new.png',
+    imagePath: '/Puja_Dewan.jpeg',
+    image: '/Puja_Dewan.jpeg',
     badge: '15+ Years Experience',
-    credentials: 'Bar Council – 15+ Years – High Court of Himachal Pradesh – District Courts – Arbitral Tribunals',
+    credentials: '15+ Years Experience',
     linkedin: 'https://linkedin.com',
     instagram: 'https://instagram.com'
   },
   {
-    id: 'adarsh',
-    slug: 'adarsh-prabhat-asthana',
-    name: 'Adarsh Prabhat Asthana',
-    cardName: 'Adarsh Asthana',
+    id: 'sweta-sharma',
+    slug: 'sweta-sharma',
+    name: 'Sweta Sharma',
     discipline: 'Advocates',
     category: 'Legal',
-    title: 'ADVOCATE – HIGH COURT and BANKING APPELLATE',
-    experience: '14+ Years',
-    geographies: ['Allahabad High Court', 'Lucknow Bench', 'DRT'],
-    shortBio: 'Fourteen years building a practice defined by results in contested terrain: civil litigation, debt recovery, banking and financial disputes, revenue matters, arbitration, and bail.',
-    shortDesc: 'Senior advocate with 14+ years standing across Allahabad High Court, Lucknow Bench, DRT, and Revenue Courts.',
-    fullBio: 'Adarsh Prabhat Asthana has spent fourteen years building a practice defined by one thing: results in contested terrain. His focus is civil litigation, debt recovery, banking and financial disputes, revenue matters, arbitration, and bail - the areas where procedural command and strategic clarity determine outcomes rather than decoration.\nHe appears regularly before the High Court of Judicature at Allahabad (Lucknow Bench), District and Sessions Courts, Revenue Courts, the Debt Recovery Tribunal, and Arbitral Tribunals. His value is not found in the breadth of forums he navigates, but in what he delivers inside them - positions built on sound legal analysis, argued with the discipline of someone accountable for the outcome.\nClients who work with Adv. Asthana get an advocate who has stood on the right side of difficult disputes, across judicial and quasi-judicial forums, for over a decade. He does not offer opinions at a distance. He takes the brief, builds the position, and sees it through.',
+    title: 'ADVOCATE, HIGH COURT OF HIMACHAL PRADESH, DISTRICT COURT BILASPUR',
+    experience: '15+ Years',
+    geographies: ['High Court of Himachal Pradesh', 'District Court Bilaspur'],
+    shortBio: 'Over fifteen years of experience across criminal law, construction disputes, banking and financial litigation, arbitration, infrastructure projects, and regulatory compliance.',
+    shortDesc: 'Advocate, High Court of Himachal Pradesh, District Court Bilaspur.',
+    fullBio: 'Sweta has over fifteen years of experience across criminal law, construction disputes, banking and financial litigation, arbitration, infrastructure projects, and regulatory compliance. She has advised and represented government bodies, public sector undertakings, financial institutions, and corporate organizations, including the National Highways Authority of India, the National Highways and Infrastructure Development Corporation Limited, the National Thermal Power Corporation, Infrastructure Leasing and Financial Services, Punjab National Bank, SBI Life Insurance Company, and the Himachal Pradesh Building and Other Construction Workers Welfare Board.\nMs. Sweta appears regularly before the High Court of Himachal Pradesh and District Courts, and her practice covers commercial disputes, arbitration proceedings, contractual matters, infrastructure related litigation, banking recovery proceedings, and criminal prosecutions.',
     bio: [
-      'Adarsh Prabhat Asthana has spent fourteen years building a practice defined by one thing: results in contested terrain. His focus is civil litigation, debt recovery, banking and financial disputes, revenue matters, arbitration, and bail - the areas where procedural command and strategic clarity determine outcomes rather than decoration.',
-      'He appears regularly before the High Court of Judicature at Allahabad (Lucknow Bench), District and Sessions Courts, Revenue Courts, the Debt Recovery Tribunal, and Arbitral Tribunals. His value is not found in the breadth of forums he navigates, but in what he delivers inside them - positions built on sound legal analysis, argued with the discipline of someone accountable for the outcome.',
-      'Clients who work with Adv. Asthana get an advocate who has stood on the right side of difficult disputes, across judicial and quasi-judicial forums, for over a decade. He does not offer opinions at a distance. He takes the brief, builds the position, and sees it through.'
+      'Sweta has over fifteen years of experience across criminal law, construction disputes, banking and financial litigation, arbitration, infrastructure projects, and regulatory compliance. She has advised and represented government bodies, public sector undertakings, financial institutions, and corporate organizations, including the National Highways Authority of India, the National Highways and Infrastructure Development Corporation Limited, the National Thermal Power Corporation, Infrastructure Leasing and Financial Services, Punjab National Bank, SBI Life Insurance Company, and the Himachal Pradesh Building and Other Construction Workers Welfare Board.',
+      'Ms. Sweta appears regularly before the High Court of Himachal Pradesh and District Courts, and her practice covers commercial disputes, arbitration proceedings, contractual matters, infrastructure related litigation, banking recovery proceedings, and criminal prosecutions.'
     ],
     highlights: [
-      { id: 'ad1', text: 'Allahabad High Court (Judicature and Lucknow Bench) Standing' },
-      { id: 'ad2', text: 'Debts Recovery Tribunal (DRT) and Revenue Courts Practice' },
-      { id: 'ad3', text: 'Banking and Financial Disputes, Debt Recovery and Bail Advocacy' }
+      { id: 'ss1', text: 'Criminal Litigation' },
+      { id: 'ss2', text: 'Land acquisition matters' },
+      { id: 'ss3', text: 'Banking and Financial Litigation' },
+      { id: 'ss4', text: 'Commercial and Civil Disputes' },
+      { id: 'ss5', text: 'Regulatory and Legal Compliance' },
+      { id: 'ss6', text: 'Government Litigation' }
     ],
-    imagePath: '/Adarsh_new.png',
-    image: '/Adarsh_new.png',
+    imagePath: '/Sweta_new.png',
+    image: '/Sweta_new.png',
+    badge: '15+ Years Experience',
+    credentials: '15+ Years Experience',
+    linkedin: 'https://linkedin.com',
+    instagram: 'https://instagram.com'
+  },
+  {
+    id: 'uday-seth',
+    slug: 'uday-seth',
+    name: 'Uday Seth',
+    discipline: 'Advocates',
+    category: 'Legal',
+    title: 'ADVOCATE, DELHI HIGH COURT',
+    experience: '14+ Years',
+    geographies: ['Supreme Court of India', 'Delhi High Court', 'Civil and Criminal Courts'],
+    shortBio: 'Partner at Arventis Partners with over fourteen years of experience in dispute resolution, representing clients before the Supreme Court, Delhi High Court, and various courts.',
+    shortDesc: 'Advocate, Delhi High Court with 14+ years experience.',
+    fullBio: 'Uday Seth is a Partner at Arventis Partners with over fourteen years of experience in dispute resolution. He represents clients before the Supreme Court of India, the Delhi High Court, the Debt Recovery Tribunal, the Debt Recovery Appellate Tribunal, the National Company Law Tribunal, the Armed Forces Tribunal, consumer forums, and civil and criminal courts across the country. He advises banks, financial institutions, corporate entities, and private clients on recovery proceedings, insolvency matters, regulatory litigation, and high value contractual disputes.\nPrior to independent practice, Mr. Seth served as a Law Researcher at the Delhi High Court, where he worked on legal research and judicial process. His practice combines litigation before multiple judicial and quasi-judicial forums with advisory work on commercial negotiations and financial documentation.',
+    bio: [
+      'Uday Seth is a Partner at Arventis Partners with over fourteen years of experience in dispute resolution. He represents clients before the Supreme Court of India, the Delhi High Court, the Debt Recovery Tribunal, the Debt Recovery Appellate Tribunal, the National Company Law Tribunal, the Armed Forces Tribunal, consumer forums, and civil and criminal courts across the country. He advises banks, financial institutions, corporate entities, and private clients on recovery proceedings, insolvency matters, regulatory litigation, and high value contractual disputes.',
+      'Prior to independent practice, Mr. Seth served as a Law Researcher at the Delhi High Court, where he worked on legal research and judicial process. His practice combines litigation before multiple judicial and quasi-judicial forums with advisory work on commercial negotiations and financial documentation.'
+    ],
+    highlights: [
+      { id: 'us1', text: 'Banking and Financial Litigation' },
+      { id: 'us2', text: 'Insolvency and Recovery Proceedings' },
+      { id: 'us3', text: 'Commercial and Civil Litigation' },
+      { id: 'us4', text: 'Criminal Litigation, including White Collar Crime, Financial Fraud, and Cyber Crime' },
+      { id: 'us5', text: 'Property and Real Estate Disputes' },
+      { id: 'us6', text: 'Commercial Contracts and Financial Documentation' }
+    ],
+    imagePath: '/Uday_Seth.jpeg',
+    image: '/Uday_Seth.jpeg',
     badge: '14+ Years Experience',
-    credentials: 'Bar Council of Uttar Pradesh – 14+ Years – Allahabad High Court – Lucknow Bench – DRT',
+    credentials: '14+ Years Experience',
     linkedin: 'https://linkedin.com',
     instagram: 'https://instagram.com'
   },
@@ -157,31 +201,126 @@ export const peopleData: Person[] = [
     name: 'Yash Thakur',
     discipline: 'Advocates',
     category: 'Legal',
-    title: 'ADVOCATE – LITIGATION and DISPUTE RESOLUTION',
+    title: 'ADVOCATE, DELHI HIGH COURT & HIGH COURT OF HIMACHAL PRADESH',
     experience: '20+ Years',
-    geographies: ['Supreme Court', 'Delhi High Court', 'Tribunals'],
+    geographies: ['Supreme Court of India', 'Delhi High Court', 'High Court of Himachal Pradesh', 'District Courts'],
     shortBio: 'Over 20 years of experience in litigation, dispute resolution, and legal advisory across judicial and quasi-judicial forums in India.',
-    shortDesc: 'Advocate with 20+ years of experience in civil, criminal, and commercial litigation.',
-    fullBio: 'Yash Thakur is an Advocate with over 20 years of experience in litigation, dispute resolution, and legal advisory, representing individuals, corporates, financial institutions, and government bodies before judicial and quasi-judicial forums across India.\nHis practice combines meticulous legal research, strategic advocacy, and commercially grounded counsel, earning him the trust of both corporate and individual clients across a wide range of contentious and advisory matters.',
+    shortDesc: 'Advocate, Delhi High Court & High Court of Himachal Pradesh',
+    fullBio: 'Yash Thakur has over twenty years of experience in litigation, dispute resolution, and legal advisory. He represents individuals, corporate entities, financial institutions, and government bodies before judicial and quasi-judicial forums across India, including the Supreme Court of India, the Delhi High Court, District Courts, the National Company Law Tribunal, the National Consumer Disputes Redressal Commission, and various arbitral tribunals.\nHis practice covers criminal litigation, civil disputes, land acquisition matters, property litigation, consumer disputes, arbitration, and commercial litigation, with particular experience in Motor Accident Claims Tribunal matters on behalf of claimants and institutional clients. Mr. Thakur also serves as panel advocate for corporate clients on litigation strategy, contractual disputes, regulatory compliance, recovery proceedings, and risk management.',
     bio: [
-      'Yash Thakur is an Advocate with over 20 years of experience in litigation, dispute resolution, and legal advisory, representing individuals, corporates, financial institutions, and government bodies before judicial and quasi-judicial forums across India.',
-      'His practice combines meticulous legal research, strategic advocacy, and commercially grounded counsel, earning him the trust of both corporate and individual clients across a wide range of contentious and advisory matters.'
-    ],
-    customSectionTitle: 'PRACTICE AREAS and FORUMS',
-    customSectionContent: [
-      'Practice Areas: Criminal Litigation · Civil Litigation · Land Acquisition and Compensation Matters · Property and Real Estate Disputes · Motor Accident Claims (MACT) · Consumer Protection and Litigation · Arbitration and Alternative Dispute Resolution',
-      'Courts and Forums: Supreme Court of India · Delhi High Court · District Courts · National Company Law Tribunal (NCLT) · National Consumer Disputes Redressal Commission (NCDRC) · Arbitral Tribunals',
-      'Additional Roles: Panel Advocate to several corporates and institutions, advising on litigation strategy, contractual disputes, regulatory compliance, recovery proceedings, and risk management.'
+      'Yash Thakur has over twenty years of experience in litigation, dispute resolution, and legal advisory. He represents individuals, corporate entities, financial institutions, and government bodies before judicial and quasi-judicial forums across India, including the Supreme Court of India, the Delhi High Court, District Courts, the National Company Law Tribunal, the National Consumer Disputes Redressal Commission, and various arbitral tribunals.',
+      'His practice covers criminal litigation, civil disputes, land acquisition matters, property litigation, consumer disputes, arbitration, and commercial litigation, with particular experience in Motor Accident Claims Tribunal matters on behalf of claimants and institutional clients. Mr. Thakur also serves as panel advocate for corporate clients on litigation strategy, contractual disputes, regulatory compliance, recovery proceedings, and risk management.'
     ],
     highlights: [
-      { id: 'y1', text: 'Criminal and Civil Litigation' },
-      { id: 'y2', text: 'Property, Land and Real Estate Disputes' },
-      { id: 'y3', text: 'Arbitration and Corporate Advisory' }
+      { id: 'y1', text: 'Land Acquisition and Compensation Matters' },
+      { id: 'y2', text: 'Motor Accident Claims (MACT)' },
+      { id: 'y3', text: 'Criminal Litigation' },
+      { id: 'y4', text: 'Civil Litigation' },
+      { id: 'y5', text: 'Consumer Protection and Consumer Litigation' },
+      { id: 'y6', text: 'Arbitration and Alternative Dispute Resolution' }
     ],
     imagePath: '/Yash_new.png',
     image: '/Yash_new.png',
     badge: '20+ Years Experience',
-    credentials: 'Bar Council – 20+ Years Experience – Supreme Court – Delhi High Court',
+    credentials: '20+ Years Experience',
+    linkedin: 'https://linkedin.com',
+    instagram: 'https://instagram.com'
+  },
+  {
+    id: 'vipin-kumar',
+    slug: 'vipin-kumar',
+    name: 'Vipin Kumar',
+    discipline: 'Advocates',
+    category: 'Legal',
+    title: 'ADVOCATE, PUNJAB AND HARYANA HIGH COURT',
+    experience: '12+ Years',
+    geographies: ['Punjab and Haryana High Court', 'Civil Courts'],
+    shortBio: 'Over twelve years of experience before the Punjab and Haryana High Court, Chandigarh, covering civil and commercial litigation.',
+    shortDesc: 'Advocate, Punjab and Haryana High Court',
+    fullBio: 'Vipin Kumar has over twelve years of experience before the Punjab and Haryana High Court, Chandigarh. His practice covers civil and commercial litigation, with a focus on real estate matters under RERA, consumer protection, and corporate law. He represents individuals, businesses, developers, and corporate entities before the High Court, RERA authorities, Consumer Commissions, and civil courts.\nMr. Kumar advises clients through each stage of litigation, from consultation and dispute resolution to trial, appellate proceedings, and enforcement of judgments.',
+    bio: [
+      'Vipin Kumar has over twelve years of experience before the Punjab and Haryana High Court, Chandigarh. His practice covers civil and commercial litigation, with a focus on real estate matters under RERA, consumer protection, and corporate law. He represents individuals, businesses, developers, and corporate entities before the High Court, RERA authorities, Consumer Commissions, and civil courts.',
+      'Mr. Kumar advises clients through each stage of litigation, from consultation and dispute resolution to trial, appellate proceedings, and enforcement of judgments.'
+    ],
+    customSectionTitle: 'BAR ADMISSIONS',
+    customSectionContent: [
+      'Bar Council of Punjab and Haryana',
+      'Practising before the Punjab and Haryana High Court, Chandigarh, and various courts, tribunals, and regulatory authorities'
+    ],
+    highlights: [
+      { id: 'vk1', text: 'Real Estate Litigation and Regulatory Matters (RERA)' },
+      { id: 'vk2', text: 'Civil and Commercial Litigation' },
+      { id: 'vk3', text: 'Property and Land Laws' },
+      { id: 'vk4', text: 'Consumer Disputes & Labour Disputes' },
+      { id: 'vk5', text: 'Writ Jurisdiction before the High Court' },
+      { id: 'vk6', text: 'Arbitration Related Proceedings & Family Law' }
+    ],
+    imagePath: '/Vipin_Kumar.jpg',
+    image: '/Vipin_Kumar.jpg',
+    badge: '12+ Years Experience',
+    credentials: '12+ Years Experience',
+    linkedin: 'https://linkedin.com',
+    instagram: 'https://instagram.com'
+  },
+  {
+    id: 'adarsh-prabhat-asthana',
+    slug: 'adarsh-prabhat-asthana',
+    name: 'Adarsh Prabhat Asthana',
+    cardName: 'Adarsh Asthana',
+    discipline: 'Advocates',
+    category: 'Legal',
+    title: 'ADVOCATE, HIGH COURT OF JUDICATURE AT ALLAHABAD, LUCKNOW BENCH',
+    experience: '14+ Years',
+    geographies: ['High Court of Judicature at Allahabad', 'Lucknow Bench', 'District and Sessions Courts', 'Revenue Courts'],
+    shortBio: 'Over fourteen years of experience in litigation, dispute resolution, and legal advisory based in Lucknow, Uttar Pradesh.',
+    shortDesc: 'Advocate, High Court of Judicature at Allahabad, Lucknow Bench',
+    fullBio: 'Adarsh Prabhat Asthana has over fourteen years of experience in litigation, dispute resolution, and legal advisory. Based in Lucknow, Uttar Pradesh, his practice covers individuals, businesses, financial institutions, and government organizations across a range of civil and financial matters.\nHis practice is focused on civil litigation, revenue matters, debt recovery, banking and financial litigation, arbitration, and bail matters. Mr. Asthana appears regularly before the High Court of Judicature at Allahabad, Lucknow Bench, District and Sessions Courts, Revenue Courts, the Debt Recovery Tribunal, and arbitral tribunals, and provides legal consultancy alongside his litigation practice.',
+    bio: [
+      'Adarsh Prabhat Asthana has over fourteen years of experience in litigation, dispute resolution, and legal advisory. Based in Lucknow, Uttar Pradesh, his practice covers individuals, businesses, financial institutions, and government organizations across a range of civil and financial matters.',
+      'His practice is focused on civil litigation, revenue matters, debt recovery, banking and financial litigation, arbitration, and bail matters. Mr. Asthana appears regularly before the High Court of Judicature at Allahabad, Lucknow Bench, District and Sessions Courts, Revenue Courts, the Debt Recovery Tribunal, and arbitral tribunals, and provides legal consultancy alongside his litigation practice.'
+    ],
+    highlights: [
+      { id: 'ad1', text: 'Civil Litigation' },
+      { id: 'ad2', text: 'Revenue Matters' },
+      { id: 'ad3', text: 'Debt Recovery' },
+      { id: 'ad4', text: 'Banking and Financial Litigation' },
+      { id: 'ad5', text: 'Arbitration' },
+      { id: 'ad6', text: 'Bail Matters & Recovery Proceedings' }
+    ],
+    imagePath: '/Adarsh_new.png',
+    image: '/Adarsh_new.png',
+    badge: '14+ Years Experience',
+    credentials: '14+ Years Experience',
+    linkedin: 'https://linkedin.com',
+    instagram: 'https://instagram.com'
+  },
+  {
+    id: 'jitesh-tomar',
+    slug: 'jitesh-tomar',
+    name: 'Jitesh Tomar',
+    discipline: 'Advocates',
+    category: 'Legal',
+    title: 'ADVOCATE, DELHI DISTRICT COURTS AND HIGH COURT OF DELHI',
+    experience: '13+ Years',
+    geographies: ['Delhi District Courts', 'High Court of Delhi'],
+    shortBio: 'Over thirteen years of experience representing individuals, corporations, and institutions before the Delhi District Courts and the High Court of Delhi.',
+    shortDesc: 'Advocate, Delhi District Courts and High Court of Delhi',
+    fullBio: 'Jitesh Tomar has over thirteen years of experience representing individuals, corporations, and institutions before the Delhi District Courts, the High Court of Delhi, and the National Company Law Tribunal. His practice covers corporate and commercial disputes, civil litigation, constitutional writs, criminal litigation, white collar crime, consumer disputes, and debt recovery matters.\nMr. Tomar advises clients across these forums on litigation strategy and case preparation, and has handled complex, high value, and multi-jurisdictional disputes on behalf of corporate and individual clients.',
+    bio: [
+      'Jitesh Tomar has over thirteen years of experience representing individuals, corporations, and institutions before the Delhi District Courts, the High Court of Delhi, and the National Company Law Tribunal. His practice covers corporate and commercial disputes, civil litigation, constitutional writs, criminal litigation, white collar crime, consumer disputes, and debt recovery matters.',
+      'Mr. Tomar advises clients across these forums on litigation strategy and case preparation, and has handled complex, high value, and multi-jurisdictional disputes on behalf of corporate and individual clients.'
+    ],
+    highlights: [
+      { id: 'jt1', text: 'Corporate and Commercial Disputes' },
+      { id: 'jt2', text: 'Civil Litigation' },
+      { id: 'jt3', text: 'Criminal Litigation and White Collar Crime' },
+      { id: 'jt4', text: 'Consumer Disputes' },
+      { id: 'jt5', text: 'Debt Recovery' }
+    ],
+    imagePath: '/Jitesh_Tomar.jpg',
+    image: '/Jitesh_Tomar.jpg',
+    badge: '13+ Years Experience',
+    credentials: '13+ Years Experience',
     linkedin: 'https://linkedin.com',
     instagram: 'https://instagram.com'
   }
