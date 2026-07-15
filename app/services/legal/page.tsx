@@ -27,8 +27,14 @@ function RevealHeading({ children, className = "" }: { children: string; classNa
     </span>
   );
 }
+interface PracticeItem {
+  num: string;
+  title: string;
+  description: string[];
+  bullets?: string[];
+}
 
-const legalPractices = [
+const legalPractices: PracticeItem[] = [
   {
     num: '01',
     title: 'Dispute Resolution and Commercial Litigation',
